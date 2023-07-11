@@ -194,11 +194,12 @@ new Swiper('.js-mv-swiper', {
 /*Campaignスライダー*/
 const swiper1 = new Swiper(".js-swiper1__container", {
   loop: true, // デフォルトはfalse
-  // autoplay: { // 自動再生
-  //   delay: 1500, // 1秒後に次のスライド（初期値：3000）
-  //   disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
-  //   // スライドの表示枚数  
-  // },
+  autoplay: { // 自動再生
+    delay: 3000, // 1秒後に次のスライド（初期値：3000）
+    disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
+    // スライドの表示枚数  
+  },
+  speed: 2000,
 
   centeredSlides: true, // アクティブなスライドを中央にする
 
