@@ -1,0 +1,134 @@
+@use "global"as *;
+
+.about {
+  @include mq(md) {
+    position: relative;
+  }
+}
+
+.about::before {
+  @include mq(md) {
+    content: "";
+    background: url(../images/common/isogincyaku.png)no-repeat top / contain;
+    display: block;
+    width: rem(194);
+    height: rem(181);
+    position: absolute;
+    bottom: rem(-90);
+    right: rem(83);
+  }
+}
+
+.about__title {
+  max-width: rem(300);
+  word-break: break-word;
+  margin: 0 auto;
+}
+
+.about__wrap1 {
+  margin-top: rem(27);
+
+  @include mq(md) {
+    margin-top: rem(39);
+    position: relative;
+  }
+}
+
+.about__wrap2 {
+  display: flex;
+}
+
+.about__img1 {
+  width: calc(128 / 345 * 100%);
+}
+
+.about__img1 img {
+  aspect-ratio: 128/194;
+  width: 100%;
+  object-fit: cover;
+
+  @include mq(md) {
+    aspect-ratio: 399/606;
+  }
+}
+
+.about__img2 {
+  width: calc(281 / 345 * 100%);
+  margin-top: rem(26);
+  margin-left: rem(-64);
+  position: relative;
+  z-index: -1;
+
+  @include mq(md) {
+    margin-top: rem(80);
+    margin-left: rem(-201);
+  }
+}
+
+.about__img2 img {
+  aspect-ratio: 281/186;
+  width: 100%;
+  object-fit: cover;
+
+  @include mq(md) {
+    aspect-ratio: 880/581;
+  }
+}
+
+.about__wrap3 {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    display: flex;
+    gap: 0 rem(40);
+    margin-top: 0;
+    width: rem(840);
+    position: absolute;
+    top: 30.5%;
+    left: 18.5%;
+  }
+}
+
+.about__text1 {
+  font-size: rem(40);
+  line-height: 1;
+  font-weight: $regular;
+  font-family: $gotu;
+  color: $green;
+  word-break: break-word;
+
+  @include mq(md) {
+    font-size: rem(80);
+    line-height: calc(100 / 80);
+    color: $white;
+    flex-shrink: 0;
+    max-width: rem(400);
+  }
+}
+
+.about__text2 {
+  margin-top: rem(16);
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  font-weight: $regular;
+
+  @include mq(md) {
+    margin-top: 0;
+    color: $white;
+    padding-right: rem(20);
+    display: -webkit-box;
+    -webkit-line-clamp: 14;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+.about__btn {
+  text-align: center;
+  max-width: rem(300);
+  margin: rem(39) auto 0;
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}

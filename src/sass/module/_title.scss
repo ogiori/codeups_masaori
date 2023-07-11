@@ -1,0 +1,59 @@
+@use "global"as *;
+
+.title {
+  text-align: center;
+  gap: rem(4) 0;
+  font-size: rem(32);
+  line-height: calc(40 / 32);
+  font-family: $gotu;
+  font-weight: $regular;
+
+  @include mq(md) {
+    font-size: rem(40);
+    line-height: 1;
+  }
+}
+
+.title::first-letter {
+  text-transform: uppercase;
+  color: $green;
+}
+
+.title::after {
+  content: attr(data-text);
+  display: flex;
+  justify-content: center;
+  margin-top: rem(4);
+  font-size: rem(12);
+  line-height: calc(18 / 12);
+  font-weight: $regular;
+  font-family: $main;
+  color: $green;
+
+  @include mq(md) {
+    margin-top: rem(8);
+  }
+}
+
+// 白
+.title.title--white,
+.title.title--white::first-letter,
+.title.title--white::after {
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+// large
+.title.title--large {
+  font-size: rem(80);
+  line-height: 1;
+}
+
+.title.title--large::after {
+  margin-top: rem(-4);
+
+  @include mq(md) {
+    margin-top: rem(-7);
+  }
+}

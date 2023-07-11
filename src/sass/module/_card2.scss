@@ -1,0 +1,44 @@
+@use "global"as *;
+
+.card2 {
+  display: block;
+  padding: rem(16) rem(17) rem(24);
+  background-color: $white;
+  box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
+}
+
+.card2:hover {
+  @include mq(md) {
+    opacity: 0.7;
+  }
+}
+
+.card2__img img {
+  aspect-ratio: 301 /202;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card2__time {
+  display: block;
+  margin-top: rem(24);
+  font-size: rem(12);
+  line-height: calc(18 / 12);
+  font-family: $gotu;
+  font-weight: $regular;
+}
+
+.card2__title {
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  font-weight: $medium;
+  padding-bottom: rem(4);
+  border-bottom: rem(1) solid $green;
+}
+
+.card2__text {
+  margin-top: rem(16);
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  font-weight: $regular;
+}

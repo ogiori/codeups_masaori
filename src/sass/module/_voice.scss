@@ -1,0 +1,58 @@
+@use "global"as *;
+
+.voice {
+  @include mq(md) {
+    position: relative;
+  }
+}
+
+.voice::before {
+  @include mq(md) {
+    content: "";
+    background: url(../images/common/fishs_r.png)no-repeat top / contain;
+    display: block;
+    width: rem(301);
+    height: rem(138);
+    position: absolute;
+    top: rem(-121);
+    left: rem(101);
+  }
+}
+
+.voice::after {
+  @include mq(md) {
+    content: "";
+    background: url(../images/common/tatunootosigo.png)no-repeat top / contain;
+    display: block;
+    width: rem(71);
+    height: rem(162);
+    position: absolute;
+    bottom: rem(-71);
+    right: rem(179);
+  }
+}
+
+.voice__title {
+  max-width: rem(300);
+  word-break: break-word;
+  margin: 0 auto;
+
+}
+
+.voice__cards {
+  margin-top: rem(42);
+
+  @include mq(md) {
+    margin-top: rem(28);
+  }
+}
+
+.voice__btn {
+  text-align: center;
+  max-width: rem(300);
+  margin: rem(40) auto 0;
+
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}

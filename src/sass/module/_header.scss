@@ -1,0 +1,142 @@
+@use "global"as *;
+
+.header {
+  padding: rem(21) rem(5) rem(21) rem(15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: rem(80);
+  background: rgba(13, 41, 54, 0.68);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+
+  @include mq(md) {
+    height: rem(90);
+    padding: rem(20) rem(30) rem(20) rem(40);
+  }
+}
+
+.header__logo img {
+  position: relative;
+  z-index: 110;
+  width: rem(102);
+
+  @include mq(md) {
+    width: rem(133);
+  }
+}
+
+.header__logo a {
+  @include mq(md) {
+    transition: 0.3s ease;
+  }
+}
+
+.header__logo a:hover {
+  @include mq(md) {
+    opacity: 0.7;
+  }
+}
+
+// sp
+.header__hamburger {
+  position: relative;
+  z-index: 110;
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.header__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background-color: $green;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.header__modal.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.header__nav-sp {
+  height: inherit;
+  margin-top: rem(94);
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+
+//pc
+.header__nav-pc {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.header__lists {
+  display: flex;
+  gap: 0 rem(13);
+}
+
+.header__list {
+  display: grid;
+  place-content: center;
+}
+
+.header__list a {
+  padding: rem(10);
+  font-size: rem(18);
+  line-height: 1;
+  font-weight: $regular;
+  font-family: $gotu;
+  color: $white;
+  text-align: center;
+  position: relative;
+}
+
+.header__list a::after {
+  margin-top: rem(4);
+  content: attr(data-text);
+  display: flex;
+  justify-content: center;
+  font-size: rem(10);
+  line-height: calc(15 / 10);
+  font-weight: $regular;
+  font-family: $main;
+}
+
+.header__list a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: rem(1);
+  background: $white;
+  transition: all .3s;
+  transform: scale(0, 1);
+  transform-origin: center top;
+}
+
+.header__list a:hover:before {
+  transform: scale(1, 1);
+}

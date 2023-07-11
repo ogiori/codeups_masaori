@@ -1,0 +1,25 @@
+@use "global"as *;
+
+.campaign__title {
+  max-width: rem(300);
+  word-break: break-word;
+  margin: 0 auto;
+}
+
+.campaign__slider {
+  margin-top: rem(28);
+
+  @include mq(md) {
+    margin-top: rem(-43);
+  }
+}
+
+.campaign__btn {
+  text-align: center;
+  max-width: rem(300);
+  margin: rem(29) auto 0;
+
+  @include mq(md) {
+    margin-top: rem(70);
+  }
+}

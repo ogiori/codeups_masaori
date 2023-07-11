@@ -1,0 +1,95 @@
+@use "global"as *;
+
+.price {
+  padding: rem(80) 0;
+  background-color: $blue;
+
+  @include mq(md) {
+    padding: rem(101) 0 rem(103);
+    position: relative;
+  }
+}
+
+.price::after {
+  @include mq(md) {
+    content: "";
+    background: url(../images/common/fishs_l.png)no-repeat top / contain;
+    display: block;
+    width: 30.35vw;
+    height: rem(201);
+    position: absolute;
+    left: rem(101);
+    bottom: rem(59);
+  }
+}
+
+.price__title {
+  max-width: rem(300);
+  word-break: break-word;
+  margin: 0 auto;
+}
+
+.price__wrap {
+  margin-top: rem(27);
+
+  @include mq(md) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: 0 rem(95);
+    margin-top: rem(40);
+  }
+}
+
+.price__img {
+  //アニメーション
+  position: relative;
+  --clippath: inset(0 0 0 100%);
+
+  @include mq(md) {
+    width: calc(493 / 1080 * 100%);
+  }
+}
+
+.price__img::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: $green;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: var(--clippath);
+}
+
+.price__img img {
+  aspect-ratio: 345 / 227;
+  width: 100%;
+  object-fit: cover;
+   //アニメーション
+   clip-path: inset(0 0 0 100%);
+
+  @include mq(md) {
+    aspect-ratio: 493 / 746;
+  }
+}
+
+.price__list {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    width: calc(492 / 1080 * 100%);
+    margin-top: 0;
+  }
+}
+
+.price__btn {
+  text-align: center;
+  max-width: rem(300);
+  margin: rem(40) auto 0;
+
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}

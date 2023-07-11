@@ -1,0 +1,62 @@
+@use "global"as *;
+
+.swiper1__btn-wrap {
+  display: none;
+
+  @include mq(md) {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0 rem(80);
+    padding: 0 rem(180);
+  }
+}
+
+.swiper1__container {
+  width: 100%;
+  height: auto;
+
+  @include mq(md) {
+    margin-top: rem(25);
+  }
+}
+
+.swiper1__wrapper {
+  padding-bottom: rem(10);
+}
+
+.swiper1__slide {
+  height: auto;
+  display: flex;
+}
+
+.swiper1__prev,
+.swiper1__next {
+  @include mq(md) {
+    width: rem(80);
+    height: rem(80);
+    position: static;
+    transition: 0.3s ease;
+  }
+}
+
+.swiper1__prev:hover,
+.swiper1__next:hover {
+  @include mq(md) {
+    opacity: 0.7;
+  }
+}
+
+.swiper1__prev::after,
+.swiper1__next::after {
+  content: "";
+  width: rem(80);
+  height: rem(80);
+}
+
+.swiper1__prev::after {
+  background: url(../images/common/swiper-arrow_L.svg)no-repeat center / contain;
+}
+
+.swiper1__next::after {
+  background: url(../images/common/swiper-arrow_R.svg)no-repeat center / contain;
+}
