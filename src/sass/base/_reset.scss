@@ -57,7 +57,7 @@ img {
 }
 
 /* Natural flow and rhythm in articles by default */
-article > * + * {
+article>*+* {
   margin-top: 1em;
 }
 
@@ -115,5 +115,5 @@ select::-ms-expand {
 a {
   text-decoration: none;
   color: inherit;
-  transition: 0.3s;
+  transition: opacity 0.3s;
 }

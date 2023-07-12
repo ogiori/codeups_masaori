@@ -1,12 +1,12 @@
 @use "global"as *;
 
-.voice {
+.voice__inner {
   @include mq(md) {
     position: relative;
   }
 }
 
-.voice::before {
+.voice__inner::before {
   @include mq(md) {
     content: "";
     background: url(../images/common/fishs_r.png)no-repeat top / contain;
@@ -15,11 +15,11 @@
     height: rem(138);
     position: absolute;
     top: rem(-121);
-    left: rem(101);
+    left: calc(50% - min(43vw,#{rem(620)}));
   }
 }
 
-.voice::after {
+.voice__inner::after {
   @include mq(md) {
     content: "";
     background: url(../images/common/tatunootosigo.png)no-repeat top / contain;
@@ -29,6 +29,7 @@
     position: absolute;
     bottom: rem(-71);
     right: rem(179);
+    right: calc(50% - min(37.5vw,#{rem(540)}));
   }
 }
 

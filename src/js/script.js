@@ -52,7 +52,6 @@ function playAnimation() {
       autoAlpha: 1
     }, )
     .to(animation, {
-      scale: 1.5,
       autoAlpha: 0,
       duration: 1.5,
       ease: "power4.inOut",

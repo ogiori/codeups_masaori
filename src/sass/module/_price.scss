@@ -6,20 +6,25 @@
 
   @include mq(md) {
     padding: rem(101) 0 rem(103);
+  }
+}
+
+.price__inner {
+  @include mq(md) {
     position: relative;
   }
 }
 
-.price::after {
+.price__inner::after {
   @include mq(md) {
     content: "";
     background: url(../images/common/fishs_l.png)no-repeat top / contain;
     display: block;
-    width: 30.35vw;
+    width: rem(437);
     height: rem(201);
     position: absolute;
-    left: rem(101);
-    bottom: rem(59);
+    bottom: rem(-43);
+    left: calc(50% - min(49vw, #{rem(620)}));
   }
 }
 
@@ -67,8 +72,8 @@
   aspect-ratio: 345 / 227;
   width: 100%;
   object-fit: cover;
-   //アニメーション
-   clip-path: inset(0 0 0 100%);
+  //アニメーション
+  clip-path: inset(0 0 0 100%);
 
   @include mq(md) {
     aspect-ratio: 493 / 746;

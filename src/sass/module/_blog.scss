@@ -5,7 +5,7 @@
 
   @include mq(md) {
     padding-top: rem(100);
-    background: url(../images/common/blog_bg.jpg)no-repeat top / contain;
+    background: url(../images/common/blog_bg.jpg)repeat-x top / contain;
     position: relative;
   }
 }
@@ -19,7 +19,7 @@
     height: rem(201);
     position: absolute;
     top: rem(24);
-    left: rem(99);
+    left: calc(50% - min(43vw, #{rem(620)}));
   }
 }
 
