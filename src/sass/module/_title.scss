@@ -51,7 +51,7 @@
 }
 
 .title.title--large::after {
-  margin-top: rem(-4);
+  margin-top: rem(-8);
 
   @include mq(md) {
     margin-top: rem(-7);

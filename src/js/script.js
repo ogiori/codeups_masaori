@@ -210,7 +210,7 @@ const swiper1 = new Swiper(".js-swiper1__container", {
 
   breakpoints: {
     300: {
-      slidesPerView: 1.2,
+      slidesPerView: 1.3,
       spaceBetween: 25,
     },
     500: {
