@@ -82,7 +82,7 @@
   //アニメーション
   position: relative;
   --clippath: inset(0 0 0 100%);
-  
+
   @include mq(md) {
     width: rem(180);
   }

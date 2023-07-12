@@ -85,7 +85,7 @@
 
   @include mq(md) {
     display: flex;
-    gap: 0 rem(30);
+    gap: 0 rem(35);
     margin-top: 0;
     width: rem(840);
     position: absolute;
@@ -107,7 +107,7 @@
     line-height: calc(100 / 80);
     color: $white;
     flex-shrink: 0;
-    width: calc(410 / 840 * 100%);
+    width: calc(405 / 840 * 100%);
   }
 }
 
@@ -130,7 +130,6 @@
     -webkit-line-clamp: 14;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    padding-right: rem(4);
   }
 }
 

@@ -45,6 +45,7 @@
   color: $white;
   word-break: break-word;
   max-width: rem(300);
+
   @include mq(md) {
     max-width: rem(800);
   }

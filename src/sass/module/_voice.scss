@@ -15,7 +15,7 @@
     height: rem(138);
     position: absolute;
     top: rem(-121);
-    left: calc(50% - min(43vw,#{rem(620)}));
+    left: calc(50% - min(43vw, #{rem(620)}));
   }
 }
 
@@ -29,7 +29,7 @@
     position: absolute;
     bottom: rem(-71);
     right: rem(179);
-    right: calc(50% - min(37.5vw,#{rem(540)}));
+    right: calc(50% - min(37.5vw, #{rem(540)}));
   }
 }
 

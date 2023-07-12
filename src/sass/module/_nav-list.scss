@@ -5,7 +5,7 @@
   gap: 0 rem(7);
   background-color: $green;
   color: $white;
-  
+
   @include mq(md) {
     min-height: initial;
     gap: 0 rem(109);
