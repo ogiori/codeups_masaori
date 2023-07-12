@@ -18,9 +18,17 @@
   margin: 0 auto;
 
   @include mq(md) {
-    margin: 0;
-    padding-left: rem(180);
+    margin: 0 auto;
+    padding-left: 0;
+    max-width: rem(1080);
   }
+}
+
+//safariのみ対応
+::-webkit-full-page-media,
+:future,
+:root .footer__inner {
+padding: 0 rem(9);
 }
 
 .footer__wrap {

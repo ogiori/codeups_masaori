@@ -1,4 +1,4 @@
-/*クッキー登録*/  
+/*クッキー登録*/
 function setCookie(name, value, days) {
   const date = new Date();
   date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -6,7 +6,7 @@ function setCookie(name, value, days) {
   document.cookie = name + "=" + value + ";" + expires + ";path=/";
 };
 
-/*クッキーを取得*/ 
+/*クッキーを取得*/
 function getCookie(name) {
   const value = "; " + document.cookie; // 全てのクッキーの文字列を取得し、先頭に"; "を追加
   const parts = value.split("; " + name + "="); // クッキーの文字列を分割し、指定された名前の前にある部分と後ろにある部分を配列に格納
@@ -29,7 +29,7 @@ const animationTl = gsap.timeline({
   }
 });
 
-/*アニメーション再生*/ 
+/*アニメーション再生*/
 function playAnimation() {
   // タイムライン
   animationTl
@@ -65,17 +65,36 @@ function hideAnimation() {
   })
 };
 
+/*mvスライダー*/
+//オープニングアニメーションが 有・なし で、始まるタイミングをズラしたい。
+function mvSwiper() {
+  new Swiper('.js-mv-swiper', {
+    loop: true,
+    effect: 'fade',
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    speed: 2000,
+  });
+}
+
 // まず最初に読み込まれる所
 document.addEventListener("DOMContentLoaded", function () {
   const animationPlayed = getCookie("animationPlayed");
   if (animationPlayed) {
     hideAnimation();
+    mvSwiper();
   } else {
     playAnimation();
     setCookie("animationPlayed", "true", 1);
-  }
-});
 
+    setTimeout(function () {
+      mvSwiper();
+      //スライダーのズラした時間
+    }, 6000);
+  };
+});
 
 /*ページスクロール*/
 document.querySelectorAll('a[href^="#"]').forEach(function (link) {
@@ -135,7 +154,6 @@ window.addEventListener('scroll', function () {
   }
 });
 
-
 /*ハンバーガーボタン*/
 const hamburger = document.querySelector('.js-hamburger')
 const modal = document.querySelector('.js-header__modal')
@@ -178,18 +196,6 @@ triggers.forEach((trigger) => {
     }, )
 });
 
-/*mvスライダー*/
-new Swiper('.js-mv-swiper', {
-  loop: true,
-  effect: 'fade',
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-  speed: 2000,
-});
-
-
 /*Campaignスライダー*/
 const swiper1 = new Swiper(".js-swiper1__container", {
   loop: true, // デフォルトはfalse
@@ -204,7 +210,7 @@ const swiper1 = new Swiper(".js-swiper1__container", {
 
   breakpoints: {
     300: {
-      slidesPerView: 1.3,
+      slidesPerView: 1.2,
       spaceBetween: 25,
     },
     500: {
@@ -222,7 +228,7 @@ const swiper1 = new Swiper(".js-swiper1__container", {
   },
 
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next.swiper1__next",
+    prevEl: ".swiper-button-prev.swiper1__prev",
   },
 }, );
