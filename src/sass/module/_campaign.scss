@@ -14,6 +14,12 @@
   }
 }
 
+.campaign__slider-inner {
+ @include mq(md) {
+  margin-left: rem(175);
+ }
+}
+
 .campaign__btn {
   text-align: center;
   max-width: rem(300);

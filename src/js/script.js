@@ -77,7 +77,7 @@ function mvSwiper() {
     },
     speed: 2000,
   });
-}
+};
 
 // まず最初に読み込まれる所
 document.addEventListener("DOMContentLoaded", function () {
@@ -165,7 +165,7 @@ function toggleModal() {
   hamburger.classList.toggle('is-active');
   modal.classList.toggle('is-active');
   body.classList.toggle('is-active');
-}
+};
 // spのナビメニューをクリックしたら、モーダルを閉じる
 const headerLinks = document.querySelectorAll('.js-nav-list__item a')
 headerLinks.forEach((headerLink) => {
@@ -193,7 +193,7 @@ triggers.forEach((trigger) => {
     })
     .to(images, {
       'clipPath': 'inset(0 0 0 0%)'
-    }, )
+    }, );
 });
 
 /*Campaignスライダー*/
@@ -206,23 +206,25 @@ const swiper1 = new Swiper(".js-swiper1__container", {
   },
   speed: 2000,
 
-  centeredSlides: true, // アクティブなスライドを中央にする
-
   breakpoints: {
     300: {
       slidesPerView: 1.3,
-      spaceBetween: 25,
+      spaceBetween: 26,
     },
     500: {
       slidesPerView: 1.7,
       spaceBetween: 25,
     },
     768: {
-      slidesPerView: 3.2,
-      spaceBetween: 15,
+      slidesPerView: 2.5,
+      spaceBetween: 20,
     },
-    1440: {
-      slidesPerView: 4,
+    1380: {
+      slidesPerView: 3.5,
+      spaceBetween: 40,
+    },
+    1750: {
+      slidesPerView: 4.5,
       spaceBetween: 40,
     },
   },

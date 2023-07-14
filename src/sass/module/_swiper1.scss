@@ -22,6 +22,10 @@
 
 .swiper1__wrapper {
   padding-bottom: rem(10);
+  padding-left: rem(15);
+  @include mq(md) {
+    padding-left: rem(5);
+  }
 }
 
 .swiper1__slide {
