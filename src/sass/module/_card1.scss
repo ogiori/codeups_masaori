@@ -60,7 +60,6 @@
 
 .card1__body-bottom {
   padding: 0 rem(16) rem(24);
-  margin-top: auto;
 
   @include mq(md) {
     padding-bottom: rem(40);
@@ -83,11 +82,10 @@
 
 .card1__wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
   margin-top: rem(8);
   padding: 0 rem(19);
-  gap: 0 rem(10);
 }
 
 .card1__price1 {
@@ -95,16 +93,18 @@
   line-height: 1;
   font-family: $lato;
   font-weight: $bold;
-  position: relative;
-  max-width: rem(75);
+  width: calc(92 / 211 * 100%);
 
   @include mq(md) {
     font-size: rem(24);
-    max-width: rem(91);
   }
 }
 
-.card1__price1::before {
+.card1__price1 span {
+  position: relative;
+}
+
+.card1__price1 span::before {
   content: "";
   display: block;
   width: 100%;
@@ -122,10 +122,9 @@
   font-family: $lato;
   font-weight: $bold;
   color: $green;
-  max-width: rem(119);
+  width: calc(119 / 211 * 100%);
 
   @include mq(md) {
     font-size: rem(40);
-    max-width: rem(151);
   }
 }

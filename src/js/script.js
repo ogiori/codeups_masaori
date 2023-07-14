@@ -211,8 +211,16 @@ const swiper1 = new Swiper(".js-swiper1__container", {
       slidesPerView: 1.3,
       spaceBetween: 26,
     },
+    430: {
+      slidesPerView: 1.4,
+      spaceBetween: 26,
+    },
     500: {
       slidesPerView: 1.7,
+      spaceBetween: 25,
+    },
+    600: {
+      slidesPerView: 2,
       spaceBetween: 25,
     },
     768: {
@@ -220,11 +228,15 @@ const swiper1 = new Swiper(".js-swiper1__container", {
       spaceBetween: 20,
     },
     1380: {
+      slidesPerView: 3.2,
+      spaceBetween: 40,
+    },
+    1440: {
       slidesPerView: 3.5,
       spaceBetween: 40,
     },
     1750: {
-      slidesPerView: 4.5,
+      slidesPerView: 4.2,
       spaceBetween: 40,
     },
   },
