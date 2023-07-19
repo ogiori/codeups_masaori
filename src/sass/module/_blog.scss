@@ -5,8 +5,8 @@
 
   @include mq(md) {
     padding-top: rem(100);
-    background: url(../images/common/blog_bg.jpg)repeat-x top / contain;
-    position: relative;
+    background: url(../images/common/blog_bg.jpg) no-repeat top;
+    background-size: rem(1440), auto, contain;
   }
 }
 
@@ -24,11 +24,12 @@
 }
 
 .blog__inner {
-  padding: 0 rem(21);
+  max-width: rem(642);
+  padding: 0 21px;
   margin: 0 auto;
 
   @include mq(md) {
-    padding: 0 rem(25);
+    padding: 0 25px;
     max-width: rem(1129);
     position: relative;
   }

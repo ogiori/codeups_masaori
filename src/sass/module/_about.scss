@@ -1,6 +1,8 @@
 @use "global"as *;
 
 .about__inner {
+  max-width: rem(630);
+
   @include mq(md) {
     position: relative;
   }

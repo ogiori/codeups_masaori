@@ -1,5 +1,16 @@
 @use "global"as *;
 
+.campaign__inner {
+  padding: 0 10px;
+  max-width: rem(630);
+  margin: 0 auto;
+
+  @include mq(md) {
+    padding: 0 rem(25);
+    max-width: rem(1141);
+  }
+}
+
 .campaign__title {
   max-width: rem(300);
   word-break: break-word;
@@ -8,16 +19,11 @@
 
 .campaign__slider {
   margin-top: rem(28);
+  margin-right: calc(50% - 50vw);
 
   @include mq(md) {
     margin-top: rem(-43);
   }
-}
-
-.campaign__slider-inner {
- @include mq(md) {
-  margin-left: rem(175);
- }
 }
 
 .campaign__btn {

@@ -1,8 +1,17 @@
 @use "global"as *;
 
 .title {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: rem(4) 0;
+
+  @include mq(md) {
+    gap: rem(8) 0;
+  }
+}
+
+.title__en {
   font-size: rem(32);
   line-height: calc(40 / 32);
   font-family: $gotu;
@@ -14,46 +23,35 @@
   }
 }
 
-.title::first-letter {
+.title__en::first-letter {
   text-transform: uppercase;
   color: $green;
 }
 
-.title::after {
-  content: attr(data-text);
-  display: flex;
-  justify-content: center;
-  margin-top: rem(4);
+.title__jp {
   font-size: rem(12);
   line-height: calc(18 / 12);
   font-weight: $regular;
   font-family: $main;
   color: $green;
-
-  @include mq(md) {
-    margin-top: rem(8);
-  }
 }
 
-// 白
-.title.title--white,
-.title.title--white::first-letter,
-.title.title--white::after {
+
+//白
+.title__en--white,
+.title__en--white::first-letter,
+.title__jp--white {
   @include mq(md) {
     color: $white;
   }
 }
 
-// large
-.title.title--large {
+//サイズ
+.title__en.title__en--large {
   font-size: rem(80);
   line-height: 1;
 }
 
-.title.title--large::after {
-  margin-top: rem(-8);
-
-  @include mq(md) {
-    margin-top: rem(-7);
-  }
+.title__jp.title__jp--large {
+  margin-top: rem(-12);
 }

@@ -144,7 +144,7 @@ window.addEventListener('scroll', function () {
 
   //footer取得
   const footer = document.querySelector('footer');
-  console.log(footer.getBoundingClientRect().top)
+
   //footerの高さ
   const footerHeight = footer.offsetHeight;
   if (scrollHeight - scrollPosition - windowHeignt <= footerHeight) {
@@ -193,7 +193,7 @@ triggers.forEach((trigger) => {
     })
     .to(images, {
       'clipPath': 'inset(0 0 0 0%)'
-    }, );
+    })
 });
 
 /*Campaignスライダー*/
@@ -208,8 +208,12 @@ const swiper1 = new Swiper(".js-swiper1__container", {
 
   breakpoints: {
     300: {
-      slidesPerView: 1.3,
-      spaceBetween: 26,
+      slidesPerView: 1.15,
+      spaceBetween: 20,
+    },
+    374: {
+      slidesPerView: 1.27,
+      spaceBetween: 24,
     },
     430: {
       slidesPerView: 1.4,
@@ -219,12 +223,12 @@ const swiper1 = new Swiper(".js-swiper1__container", {
       slidesPerView: 1.7,
       spaceBetween: 25,
     },
-    600: {
-      slidesPerView: 2,
-      spaceBetween: 25,
-    },
     768: {
       slidesPerView: 2.5,
+      spaceBetween: 20,
+    },
+    1100: {
+      slidesPerView: 2.7,
       spaceBetween: 20,
     },
     1380: {
@@ -236,7 +240,7 @@ const swiper1 = new Swiper(".js-swiper1__container", {
       spaceBetween: 40,
     },
     1750: {
-      slidesPerView: 4.2,
+      slidesPerView: 3.8,
       spaceBetween: 40,
     },
   },

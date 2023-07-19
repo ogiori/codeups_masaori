@@ -12,10 +12,5 @@
 
 .cards3__item {
   display: flex;
-  max-width: rem(500);
   margin: 0 auto;
-
-  @include mq(md) {
-    max-width: rem(520);
-  }
 }

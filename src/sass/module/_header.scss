@@ -16,7 +16,7 @@
 
   @include mq(md) {
     height: rem(90);
-    padding: rem(20) rem(30) rem(20) rem(40);
+    padding: 0 rem(30) 0 rem(40);
   }
 }
 
@@ -89,21 +89,27 @@
 
   @include mq(md) {
     display: block;
+    height: inherit;
   }
 }
 
 .header__lists {
+  height: inherit;
   display: flex;
   gap: 0 rem(13);
 }
 
 .header__list {
+  height: inherit;
   display: grid;
   place-content: center;
 }
 
 .header__list a {
-  padding: rem(10);
+  display: grid;
+  place-content: center;
+  height: inherit;
+  padding: 0 rem(10);
   font-size: rem(18);
   line-height: 1;
   font-weight: $regular;
@@ -127,7 +133,7 @@
 .header__list a::before {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: rem(22);
   left: 10%;
   width: 80%;
   height: rem(1);

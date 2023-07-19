@@ -46,7 +46,7 @@
 }
 
 .card3__tag {
-  max-width: rem(140);
+  max-width: rem(150);
   display: inline-block;
   padding: rem(2) rem(11) rem(3) rem(11);
   border: rem(1) solid $green;
@@ -91,13 +91,14 @@
 .card3__img::before {
   content: "";
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 99%;
+  height: 98.5%;
   background-color: $green;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: rem(1);
+  left: rem(1);
   clip-path: var(--clippath);
+  opacity: var(--opacity);
 }
 
 .card3__img img {
