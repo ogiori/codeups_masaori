@@ -175,10 +175,9 @@ headerLinks.forEach((headerLink) => {
 
 /*画像アニメーション*/
 const triggers = document.querySelectorAll('.js-trigger');
-const imagesTl = gsap.timeline();
-
 triggers.forEach((trigger) => {
   const images = trigger.querySelectorAll('.js-trigger img');
+  //タイムラインでスクロールトリガーを定義
   const imagesTl = gsap.timeline({
     scrollTrigger: {
       trigger: trigger,
