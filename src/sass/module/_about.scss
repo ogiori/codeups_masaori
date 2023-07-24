@@ -17,7 +17,7 @@
     height: rem(181);
     position: absolute;
     bottom: rem(-90);
-    right: calc(50% - min(44.4vw, #{rem(638)}));
+    right: calc(50% - min(48.4vw, #{rem(638)}));
   }
 }
 
@@ -52,6 +52,8 @@
   aspect-ratio: 128/194;
   width: 100%;
   object-fit: cover;
+  position: relative;
+  z-index: 1;
 
   @include mq(md) {
     aspect-ratio: 399/606;
@@ -62,8 +64,7 @@
   width: calc(281 / 345 * 100%);
   margin-top: rem(26);
   margin-left: rem(-64);
-  position: relative;
-  z-index: -1;
+
 
   @include mq(md) {
     width: calc(890 / 1080 * 100%);
@@ -103,6 +104,8 @@
   font-family: $gotu;
   color: $green;
   word-break: break-word;
+  position: relative;
+  z-index: 1;
 
   @include mq(md) {
     font-size: rem(80);
@@ -137,7 +140,6 @@
 
 .about__btn {
   text-align: center;
-  max-width: rem(300);
   margin: rem(39) auto 0;
 
   @include mq(md) {

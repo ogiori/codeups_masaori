@@ -60,6 +60,7 @@
 
 .card1__body-bottom {
   padding: 0 rem(16) rem(24);
+  margin-top: auto;
 
   @include mq(md) {
     padding-bottom: rem(40);

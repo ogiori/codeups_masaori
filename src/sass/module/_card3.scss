@@ -26,7 +26,6 @@
 .card3__wrap3 {
   @include mq(md) {
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
     margin-top: rem(24);
   }
@@ -54,6 +53,7 @@
   line-height: calc(22 / 12);
   font-weight: $regular;
   color: $green;
+  margin-left: auto;
 
   @include mq(md) {
     padding: rem(6) rem(15) rem(6) rem(15);
