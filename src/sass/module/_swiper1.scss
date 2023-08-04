@@ -27,8 +27,12 @@
 }
 
 .swiper1__slide {
+  width: rem(281);
   height: auto;
   display: flex;
+  @include mq(md) {
+    width: rem(333);
+  }
 }
 
 .swiper1__prev,

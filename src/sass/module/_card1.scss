@@ -7,12 +7,6 @@
   word-break: break-word;
 }
 
-.card1:hover {
-  @include mq(md) {
-    opacity: 0.7;
-  }
-}
-
 .card1_img img {
   aspect-ratio: 280/186;
   width: 100%;
@@ -86,7 +80,6 @@
   justify-content: center;
   align-items: flex-end;
   margin-top: rem(8);
-  padding: 0 rem(19);
 }
 
 .card1__price1 {
@@ -95,6 +88,7 @@
   font-family: $lato;
   font-weight: $bold;
   width: calc(92 / 211 * 100%);
+  padding-left: rem(19);
 
   @include mq(md) {
     font-size: rem(24);

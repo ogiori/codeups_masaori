@@ -199,49 +199,17 @@ triggers.forEach((trigger) => {
 const swiper1 = new Swiper(".js-swiper1__container", {
   loop: true, // デフォルトはfalse
   autoplay: { // 自動再生
-    delay: 3000, // 1秒後に次のスライド（初期値：3000）
+    delay: 2000, // 1秒後に次のスライド（初期値：3000）
     disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
     // スライドの表示枚数  
   },
-  speed: 2000,
-
+  speed: 1000,
+  slidesPerView: "auto",
+  spaceBetween: 24,
   breakpoints: {
-    300: {
-      slidesPerView: 1.15,
-      spaceBetween: 20,
-    },
-    374: {
-      slidesPerView: 1.27,
-      spaceBetween: 24,
-    },
-    430: {
-      slidesPerView: 1.4,
-      spaceBetween: 26,
-    },
-    500: {
-      slidesPerView: 1.7,
-      spaceBetween: 25,
-    },
     768: {
-      slidesPerView: 2.5,
-      spaceBetween: 20,
-    },
-    1100: {
-      slidesPerView: 2.7,
-      spaceBetween: 20,
-    },
-    1380: {
-      slidesPerView: 3.2,
       spaceBetween: 40,
-    },
-    1440: {
-      slidesPerView: 3.5,
-      spaceBetween: 40,
-    },
-    1750: {
-      slidesPerView: 3.8,
-      spaceBetween: 40,
-    },
+    }
   },
 
   navigation: {

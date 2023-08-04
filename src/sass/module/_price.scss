@@ -22,11 +22,12 @@
     content: "";
     background: url(../images/common/fishs_l.png)no-repeat top / contain;
     display: block;
-    width: rem(437);
+    // width: rem(437);
+    width: min(30vw, #{rem(437)});
     height: rem(201);
     position: absolute;
     bottom: rem(-43);
-    left: calc(50% - min(49vw, #{rem(620)}));
+    left: calc(50% - min(46vw, #{rem(620)}));
   }
 }
 
