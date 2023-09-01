@@ -21,6 +21,15 @@
       center / cover;
   }
 }
+// about
+.archive-head.archive-head--about {
+  background: url(../images/common/archive-about-head_sp.jpg) no-repeat
+    center / cover;
+  @include mq(md) {
+    background: url(../images/common/archive-about-head_pc.jpg) no-repeat
+      center / cover;
+  }
+}
 
 .archive-head::before {
   content: "";
@@ -39,6 +48,7 @@
   font-weight: $regular;
   font-family: $lato;
   color: $white;
+	position: relative;
   @include mq(md) {
 		margin-top: rem(100);
     font-size: rem(80);
