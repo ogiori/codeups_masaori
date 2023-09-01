@@ -27,7 +27,7 @@
   margin: 0 auto;
 }
 
-.about__wrap1 {
+.about__wrap {
   margin-top: rem(27);
 
   @include mq(md) {
@@ -36,7 +36,7 @@
   }
 }
 
-.about__wrap2 {
+.about__images {
   display: flex;
 }
 
@@ -83,7 +83,7 @@
   }
 }
 
-.about__wrap3 {
+.about__container {
   margin-top: rem(40);
 
   @include mq(md) {
@@ -116,7 +116,7 @@
   }
 }
 
-.about__wrap4 {
+.about__contents {
   @include mq(md) {
     width: calc(400 / 840 * 100%);
   }

@@ -17,12 +17,12 @@ function getCookie(name) {
   }
 };
 /*オープニングアニメーション*/
-const animation = document.querySelector('.js-OP-animation');
-const mask = document.querySelector('.js-OP-animation__mask');
-const title1 = document.querySelector('.js-OP-animation__title1-block');
-const title2 = document.querySelector('.js-OP-animation__title2-block');
-const imgLeft = document.querySelector('.js-OP-animation__left');
-const imgRight = document.querySelector('.js-OP-animation__right');
+const animation = document.querySelector('.js-op-animation');
+const mask = document.querySelector('.js-op-animation-mask');
+const title1 = document.querySelector('.js-op-animation-title1-block');
+const title2 = document.querySelector('.js-op-animation-title2-block');
+const imgLeft = document.querySelector('.js-op-animation-left');
+const imgRight = document.querySelector('.js-op-animation-right');
 const animationTl = gsap.timeline({
   defaults: {
     duration: 1
@@ -60,7 +60,7 @@ function playAnimation() {
 
 // オープニングアニメーションに関わる要素を非表示
 function hideAnimation() {
-  gsap.set('.js-OP-animation', {
+  gsap.set('.js-op-animation', {
     autoAlpha: 0
   })
 };
@@ -121,7 +121,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 //スクロールした時に処理を実行
 window.addEventListener('scroll', function () {
   //トップへ戻るボタンを取得
-  let topBtn = document.querySelector('.js-footer__top-btn');
+  let topBtn = document.querySelector('.js-footer-top-btn');
 
   //画面上部からトップビジュアル下の位置取得
   const topVisual = document.querySelector('.js-mv').getBoundingClientRect().bottom;
@@ -156,7 +156,7 @@ window.addEventListener('scroll', function () {
 
 /*ハンバーガーボタン*/
 const hamburger = document.querySelector('.js-hamburger')
-const modal = document.querySelector('.js-header__modal')
+const modal = document.querySelector('.js-modal')
 const body = document.querySelector('body')
 
 hamburger.addEventListener('click', toggleModal);
@@ -166,12 +166,6 @@ function toggleModal() {
   modal.classList.toggle('is-active');
   body.classList.toggle('is-active');
 };
-// spのナビメニューをクリックしたら、モーダルを閉じる
-const headerLinks = document.querySelectorAll('.js-nav-list__item a')
-headerLinks.forEach((headerLink) => {
-  headerLink.addEventListener('click', toggleModal);
-});
-
 
 /*画像アニメーション*/
 const triggers = document.querySelectorAll('.js-trigger');
@@ -196,12 +190,13 @@ triggers.forEach((trigger) => {
 });
 
 /*Campaignスライダー*/
-const swiper1 = new Swiper(".js-swiper1__container", {
+const swiper1 = new Swiper(".js-campaign-swiper-container", {
   loop: true, // デフォルトはfalse
-  autoplay: { // 自動再生
+  autoplay: {
+    // 自動再生
     delay: 2000, // 1秒後に次のスライド（初期値：3000）
     disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
-    // スライドの表示枚数  
+    // スライドの表示枚数
   },
   speed: 1000,
   slidesPerView: "auto",
@@ -209,11 +204,11 @@ const swiper1 = new Swiper(".js-swiper1__container", {
   breakpoints: {
     768: {
       spaceBetween: 40,
-    }
+    },
   },
 
   navigation: {
     nextEl: ".swiper-button-next.swiper1__next",
     prevEl: ".swiper-button-prev.swiper1__prev",
   },
-}, );
+});

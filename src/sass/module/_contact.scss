@@ -75,7 +75,7 @@
   }
 }
 
-.contact__address-wrap {
+.contact__information {
   text-align: center;
   margin-top: rem(16);
 
@@ -85,14 +85,14 @@
   }
 }
 
-.contact__address {
+.contact__contents {
   @include mq(md) {
     padding-right: rem(22);
     flex-shrink: 0;
   }
 }
 
-.contact__contents {
+.contact__content {
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,6 +1,6 @@
 @use "global"as *;
 
-.swiper1__btn-wrap {
+.campaign-swiper__btn-wrap {
   display: none;
 
   @include mq(md) {
@@ -12,7 +12,7 @@
   }
 }
 
-.swiper1__container {
+.campaign-swiper__container {
   width: 100%;
   height: auto;
 
@@ -21,12 +21,12 @@
   }
 }
 
-.swiper1__wrapper {
+.campaign-swiper__wrapper {
   padding-bottom: rem(10);
   padding-left: rem(5);
 }
 
-.swiper1__slide {
+.campaign-swiper__slide {
   width: rem(281);
   height: auto;
   display: flex;
@@ -35,8 +35,8 @@
   }
 }
 
-.swiper1__prev,
-.swiper1__next {
+.campaign-swiper__prev,
+.campaign-swiper__next {
   @include mq(md) {
     width: rem(80);
     height: rem(80);
@@ -45,24 +45,24 @@
   }
 }
 
-.swiper1__prev:hover,
-.swiper1__next:hover {
+.campaign-swiper__prev:hover,
+.campaign-swiper__next:hover {
   @include mq(md) {
     opacity: 0.7;
   }
 }
 
-.swiper1__prev::after,
-.swiper1__next::after {
+.campaign-swiper__prev::after,
+.campaign-swiper__next::after {
   content: "";
   width: rem(80);
   height: rem(80);
 }
 
-.swiper1__prev::after {
+.campaign-swiper__prev::after {
   background: url(../images/common/swiper-arrow_L.svg)no-repeat center / contain;
 }
 
-.swiper1__next::after {
+.campaign-swiper__next::after {
   background: url(../images/common/swiper-arrow_R.svg)no-repeat center / contain;
 }
