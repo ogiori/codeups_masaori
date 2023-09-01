@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.category-tag {
+  display: block;
+	background-color: $white;
+  padding: rem(6) rem(6) rem(4);
+  min-width: rem(162);
+  text-align: center;
+  border: 1px solid $green;
+  font-size: rem(14);
+  line-height: calc(22 / 14);
+  font-weight: $regular;
+  color: $green;
+  transition: all 0.3s;
+}
+
+.category-tag:hover,
+.category-tag.current {
+  color: $white;
+  background-color: $green;
+}

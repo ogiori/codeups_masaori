@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.cards1 {
+	padding: 0 rem(32);
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: rem(40) 0;
+	@include mq(md) {
+		padding: 0;
+		grid-template-columns: repeat(2, 1fr);
+		gap: rem(80) rem(40);
+	}
+}
+
+.cards1__item {
+	display: flex;
+	max-width: rem(500);
+	margin: 0 auto;
+	@include mq(md) {
+		max-width: 100%;
+	}
+}

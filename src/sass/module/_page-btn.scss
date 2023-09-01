@@ -1,0 +1,87 @@
+@use "global" as *;
+
+.page-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-btn__warp {
+  display: flex;
+  gap: 0 rem(12);
+}
+
+.page-btn__prev {
+  margin-right: rem(40);
+	transition: all 0.3s;
+}
+
+.page-btn__next {
+  margin-left: rem(40);
+	transition: all 0.3s;
+}
+
+.page-btn__prev:hover,
+.page-btn__next:hover {
+  background-color: $green;
+}
+
+.page-btn__prev a,
+.page-btn__next a {
+  display: grid;
+  place-content: center;
+  width: rem(38);
+  height: rem(38);
+  border: 1px solid $green;
+	transition: all 0.3s;
+}
+
+.page-btn__prev a::before,
+.page-btn__next a::before {
+  content: "";
+  display: block;
+  width: rem(8);
+  height: rem(16);
+	transition: all 0.3s;
+}
+
+.page-btn__prev a::before {
+  background: url(../images/common/page-arrow_l.svg) no-repeat center / contain;
+}
+
+.page-btn__next a::before {
+   background: url(../images/common/page-arrow_r.svg) no-repeat center / contain;
+}
+
+.page-btn__prev a:hover::before {
+	 background: url(../images/common/page-arrow_l-white.svg) no-repeat center / contain;
+}
+
+.page-btn__next a:hover::before {
+  background: url(../images/common/page-arrow_r-white.svg) no-repeat center / contain;
+}
+
+.page-btn__number {
+  display: grid;
+  place-content: center;
+  width: rem(38);
+  height: rem(38);
+  border: 1px solid $green;
+}
+
+.page-btn__number a {
+  display: grid;
+  place-content: center;
+  width: inherit;
+  height: inherit;
+  font-size: rem(16);
+  line-height: calc(19 / 16);
+  font-weight: $bold;
+  color: $green;
+  transition: all 0.3s;
+}
+
+.page-btn__number a:hover,.page-btn__number a.current {
+  background-color: $green;
+  color: $white;
+}

@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.archive-campaign__inner.inner {
+  padding: 0 15px;
+  position: relative;
+	@include mq(md) {
+		padding: 0 25px;
+	}
+}
+
+.archive-campaign__inner::before {
+  content: "";
+  background: url(../images/common/fishs_r.png) no-repeat top / contain;
+  display: block;
+  width: rem(122);
+  height: rem(138);
+  position: absolute;
+  top: rem(48);
+  left: calc(50% - min(46.5vw, #{rem(620)}));
+  @include mq(md) {
+    width: rem(301);
+    height: rem(138);
+    top: rem(100);
+    left: calc(50% - min(47vw, #{rem(620)}));
+  }
+}
+
+.archive-campaign__blackeneds {
+  margin-top: rem(8);
+}
+
+.archive-campaign__categorys {
+  margin: rem(52) auto 0;
+	max-width: rem(500);
+  position: relative;
+
+  @include mq(md) {
+		max-width: 100%;
+    margin-top: rem(150);
+  }
+}
+
+.archive-campaign__cards {
+  margin-top: rem(40);
+}
+
+.archive-campaign__page-btn {
+  margin-top: rem(79);
+}

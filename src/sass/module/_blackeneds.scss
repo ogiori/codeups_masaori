@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.blackeneds {
+  display: flex;
+  gap: 0 rem(8);
+}
+
+.blackened {
+  display: flex;
+  align-items: center;
+	gap: 0 rem(8);
+}
+
+.blackened:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: rem(4);
+  height: rem(8);
+  background: url(../images/common/blackeneds_arrow.svg) no-repeat center /
+    contain;
+}
+
+.blackened a {
+  display: inline-flex;
+  font-size: rem(14);
+  line-height: calc(20 / 14);
+  font-weight: $regular;
+  align-items: center;
+  gap: 0 rem(5);
+}
