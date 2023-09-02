@@ -1,4 +1,4 @@
-@use "global"as *;
+@use "global" as *;
 
 .about__inner {
   max-width: rem(630);
@@ -10,7 +10,7 @@
 .about__inner::after {
   @include mq(md) {
     content: "";
-    background: url(../images/common/isogincyaku.png)no-repeat top / contain;
+    background: url(../images/common/isogincyaku.png) no-repeat top / contain;
     display: block;
     width: rem(194);
     height: rem(181);

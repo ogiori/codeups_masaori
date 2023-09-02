@@ -1,11 +1,14 @@
 @use "global" as *;
 
-.archive-campaign__inner {
+.archive-about__inner {
   max-width: rem(600);
   position: relative;
+  @include mq(md) {
+    max-width: 100%;
+  }
 }
 
-.archive-campaign__inner::before {
+.archive-about__inner::before {
   content: "";
   background: url(../images/common/fishs_r.png) no-repeat top / contain;
   display: block;
@@ -22,22 +25,27 @@
   }
 }
 
-.archive-campaign__blackeneds {
+.archive-about__blackeneds {
   margin-top: rem(8);
 }
 
-.archive-campaign__categorys {
-  margin: rem(52) auto 0;
-  position: relative;
+.archive-about__contents {
+  margin-top: rem(52);
   @include mq(md) {
     margin-top: rem(150);
   }
 }
 
-.archive-campaign__cards {
-  margin-top: rem(40);
+.archive-about__title {
+  margin-top: rem(36);
+  @include mq(md) {
+    margin-top: rem(120);
+  }
 }
 
-.archive-campaign__page-btn {
-  margin-top: rem(79);
+.archive-about__images {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
 }

@@ -1,0 +1,90 @@
+@use "global" as *;
+
+.about-contents {
+  position: relative;
+}
+
+.about-contents__wrap {
+  @include mq(md) {
+    display: flex;
+  }
+}
+
+.about-contents__img1 {
+  display: none;
+  @include mq(md) {
+    display: block;
+    width: calc(404 / 1080 * 100%);
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.about-contents__img1 img {
+  @include mq(md) {
+    aspect-ratio: 399/606;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.about-contents__img2 {
+  width: 100%;
+  @include mq(md) {
+    width: calc(890 / 1080 * 100%);
+    margin-top: rem(80);
+    margin-left: rem(-201);
+  }
+}
+
+.about-contents__img2 img {
+  aspect-ratio: 345 /228;
+  width: 100%;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 880/581;
+  }
+}
+
+.about-contents__block {
+  display: contents;
+  @include mq(md) {
+    display: block;
+    position: absolute;
+    top: rem(200);
+    left: rem(200);
+    z-index: 2;
+    display: flex;
+    gap: 0 rem(8);
+  }
+}
+
+.about-contents__title {
+  font-size: rem(40);
+  line-height: 1;
+  font-weight: $regular;
+  font-family: $gotu;
+  color: $white;
+  position: absolute;
+  top: rem(24);
+  left: rem(24);
+  @include mq(md) {
+    position: static;
+    width: 50%;
+    font-size: rem(80);
+    line-height: calc( 100/ 80);
+  }
+}
+
+.about-contents__text {
+  margin-top: rem(40);
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  font-weight: $regular;
+  @include mq(md) {
+    margin-top: rem(27);
+    padding-right: rem(25);
+    width: 50%;
+    color: $white;
+  }
+}

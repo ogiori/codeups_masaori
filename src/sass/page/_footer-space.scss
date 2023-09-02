@@ -1,6 +1,6 @@
 @use "global"as *;
 
-.top-footer {
+.footer-space {
   margin-top: rem(104);
 
   @include mq(md) {

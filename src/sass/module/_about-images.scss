@@ -1,0 +1,89 @@
+@use "global" as *;
+
+.about-images {
+  display: grid;
+  gap: rem(8) 0;
+}
+
+.about-images__top,
+.about-images__bottom {
+  display: grid;
+  gap: rem(8) 0;
+  width: 100%;
+}
+
+.about-images__top {
+  @include mq(md) {
+    grid-template-columns: 1fr 1fr;
+    // grid-template-columns: rem(492) rem(580);
+    grid-template-rows: 1fr 1fr;
+    gap: rem(8);
+    grid-template-areas:
+      "grid1 grid2"
+      "grid1 grid3";
+    .grid1 {
+      grid-area: grid1;
+    }
+    .grid2 {
+      grid-area: grid2;
+    }
+    .grid3 {
+      grid-area: grid3;
+    }
+  }
+}
+
+.about-images__bottom {
+  @include mq(md) {
+    grid-template-columns: 1fr 1fr;
+    // grid-template-columns: rem(580) rem(492);
+    grid-template-rows: 1fr 1fr;
+    gap: rem(8);
+    grid-template-areas:
+      "grid4 grid6"
+      "grid5 grid6";
+    .grid4 {
+      grid-area: grid4;
+    }
+    .grid5 {
+      grid-area: grid5;
+    }
+    .grid6 {
+      grid-area: grid6;
+    }
+  }
+}
+
+.about-images__item {
+  width: 100%;
+  @include mq(md) {
+    width: rem(580);
+    //  width: calc(580 / 1080 * 100%);
+  }
+}
+
+.about-images__item img {
+  aspect-ratio: 345 /219;
+  width: 100%;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 580 / 369;
+  }
+}
+
+.about-images__item.about-images__item--large {
+  width: 100%;
+  @include mq(md) {
+    width: rem(492);
+    // width: calc(492 / 1080 * 100%);
+  }
+}
+
+.about-images__item.about-images__item--large img {
+  aspect-ratio: 345 /524;
+  width: 100%;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 492 /746;
+  }
+}
