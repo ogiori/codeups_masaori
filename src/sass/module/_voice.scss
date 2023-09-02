@@ -2,7 +2,6 @@
 
 .voice__inner {
   max-width: rem(630);
-
   @include mq(md) {
     position: relative;
   }
@@ -44,7 +43,6 @@
 
 .voice__cards {
   margin-top: rem(42);
-
   @include mq(md) {
     margin-top: rem(28);
   }
@@ -53,7 +51,6 @@
 .voice__btn {
   text-align: center;
   margin: rem(40) auto 0;
-
   @include mq(md) {
     margin-top: rem(80);
   }

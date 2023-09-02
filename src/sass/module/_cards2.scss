@@ -1,9 +1,8 @@
-@use "global"as *;
+@use "global" as *;
 
 .cards2 {
   display: grid;
   gap: rem(40) 0;
-
   @include mq(md) {
     grid-template-columns: repeat(3, 1fr);
     gap: rem(40);

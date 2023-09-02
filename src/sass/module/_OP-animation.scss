@@ -32,7 +32,6 @@
   font-weight: 400;
   color: $green;
   text-transform: uppercase;
-
   @include mq(md) {
     font-size: rem(80);
     line-height: calc(100 / 80);
@@ -85,7 +84,6 @@
   font-weight: 400;
   color: $white;
   text-transform: uppercase;
-
   @include mq(md) {
     font-size: rem(80);
     line-height: calc(100 / 80);

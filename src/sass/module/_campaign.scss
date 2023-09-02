@@ -4,7 +4,6 @@
   padding: 0 10px;
   max-width: rem(630);
   margin: 0 auto;
-
   @include mq(md) {
     padding: 0 rem(25);
     max-width: rem(1141);
@@ -20,7 +19,6 @@
 .campaign__slider {
   margin-top: rem(28);
   margin-right: calc(50% - 50vw);
-
   @include mq(md) {
     margin-top: rem(-43);
   }
@@ -29,7 +27,6 @@
 .campaign__btn {
   text-align: center;
   margin: rem(29) auto 0;
-
   @include mq(md) {
     margin-top: rem(69);
   }

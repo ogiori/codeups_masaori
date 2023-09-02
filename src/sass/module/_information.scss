@@ -3,7 +3,6 @@
 .information {
   background-color: $blue;
   padding: rem(80) 0 rem(84);
-
   @include mq(md) {
     padding: rem(96) 0 rem(100);
   }
@@ -21,7 +20,6 @@
 
 .information__wrap {
   margin-top: rem(27);
-
   @include mq(md) {
     display: flex;
     align-items: center;
@@ -34,7 +32,6 @@
   //アニメーション
   position: relative;
   --clippath: inset(0 0 0 100%);
-
   @include mq(md) {
     width: calc(540 / 1080 * 100%);
   }
@@ -63,7 +60,6 @@
 
 .information__body {
   margin-top: rem(25);
-
   @include mq(md) {
     width: calc(492 / 1080 * 100%);
     margin-top: rem(-5);
@@ -76,7 +72,6 @@
   font-weight: $bold;
   padding-bottom: rem(3);
   border-bottom: rem(1) solid $green;
-
   @include mq(md) {
     font-size: rem(24);
     line-height: 1;

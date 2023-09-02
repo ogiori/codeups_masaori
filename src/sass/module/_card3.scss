@@ -1,9 +1,8 @@
-@use "global"as *;
+@use "global" as *;
 
 .card3 {
   padding: rem(16) rem(16) rem(24);
   box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
-
   @include mq(md) {
     padding: rem(24);
   }
@@ -47,7 +46,6 @@
   font-weight: $regular;
   color: $green;
   margin-left: auto;
-
   @include mq(md) {
     padding: rem(6) rem(15) rem(6) rem(15);
   }
@@ -60,7 +58,6 @@
   font-weight: $medium;
   padding-bottom: rem(3);
   border-bottom: rem(1) solid $green;
-
   @include mq(md) {
     margin-top: rem(6);
     font-size: rem(24);
@@ -75,7 +72,6 @@
   //アニメーション
   position: relative;
   --clippath: inset(0 0 0 100%);
-
   @include mq(md) {
     width: rem(180);
   }
@@ -99,7 +95,6 @@
   object-fit: cover;
   //アニメーション
   clip-path: inset(0 0 0 100%);
-
   @include mq(md) {
     aspect-ratio: 180/140;
   }
@@ -110,7 +105,6 @@
   font-size: rem(16);
   line-height: calc(24 / 16);
   font-weight: $regular;
-
   @include mq(md) {
     margin-top: rem(40);
   }

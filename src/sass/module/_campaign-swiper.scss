@@ -2,7 +2,6 @@
 
 .campaign-swiper__btn-wrap {
   display: none;
-
   @include mq(md) {
     display: flex;
     justify-content: flex-end;
@@ -15,7 +14,6 @@
 .campaign-swiper__container {
   width: 100%;
   height: auto;
-
   @include mq(md) {
     margin-top: rem(25);
   }

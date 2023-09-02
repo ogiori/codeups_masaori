@@ -10,7 +10,6 @@
   height: rem(80);
   background: rgba(13, 41, 54, 0.68);
   z-index: 10;
-
   @include mq(md) {
     height: rem(90);
     padding: rem(20) 0 rem(40);
@@ -34,7 +33,6 @@
   position: relative;
   z-index: 110;
   width: rem(102);
-
   @include mq(md) {
     width: rem(133);
   }
@@ -56,7 +54,6 @@
 .header__hamburger {
   position: relative;
   z-index: 110;
-
   @include mq(md) {
     display: none;
   }
@@ -74,7 +71,6 @@
   opacity: 0;
   visibility: hidden;
   transition: 0.3s ease;
-
   @include mq(md) {
     display: none;
   }
@@ -96,7 +92,6 @@
 //pc
 .header__nav-pc {
   display: none;
-
   @include mq(md) {
     display: block;
     height: inherit;

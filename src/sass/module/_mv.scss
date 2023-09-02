@@ -11,7 +11,6 @@
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   z-index: 1;
-
   @include mq(md) {
     top: 55.5%;
   }
@@ -28,7 +27,6 @@
   margin-right: rem(-19);
   word-break: break-word;
   width: rem(300);
-
   @include mq(md) {
     width: rem(800);
     margin-right: rem(-40);
@@ -45,7 +43,6 @@
   color: $white;
   word-break: break-word;
   max-width: rem(300);
-
   @include mq(md) {
     max-width: rem(800);
   }

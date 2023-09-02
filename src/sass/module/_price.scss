@@ -1,9 +1,8 @@
-@use "global"as *;
+@use "global" as *;
 
 .price {
   padding: rem(80) 0;
   background-color: $blue;
-
   @include mq(md) {
     padding: rem(101) 0 rem(103);
   }
@@ -11,7 +10,6 @@
 
 .price__inner {
   max-width: rem(630);
-
   @include mq(md) {
     position: relative;
   }
@@ -20,7 +18,7 @@
 .price__inner::after {
   @include mq(md) {
     content: "";
-    background: url(../images/common/fishs_l.png)no-repeat top / contain;
+    background: url(../images/common/fishs_l.png) no-repeat top / contain;
     display: block;
     // width: rem(437);
     width: min(30vw, #{rem(437)});
@@ -39,7 +37,6 @@
 
 .price__wrap {
   margin-top: rem(27);
-
   @include mq(md) {
     display: flex;
     flex-direction: row-reverse;
@@ -53,7 +50,6 @@
   //アニメーション
   position: relative;
   --clippath: inset(0 0 0 100%);
-
   @include mq(md) {
     width: calc(493 / 1080 * 100%);
   }
@@ -77,7 +73,6 @@
   object-fit: cover;
   //アニメーション
   clip-path: inset(0 0 0 100%);
-
   @include mq(md) {
     aspect-ratio: 493 / 746;
   }
@@ -85,7 +80,6 @@
 
 .price__list {
   margin-top: rem(41);
-
   @include mq(md) {
     width: calc(492 / 1080 * 100%);
     margin-top: 0;
@@ -95,7 +89,6 @@
 .price__btn {
   text-align: center;
   margin: rem(40) auto 0;
-
   @include mq(md) {
     margin-top: rem(80);
   }
