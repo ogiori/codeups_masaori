@@ -25,6 +25,19 @@
   }
 }
 
+.archive-about__inner::after {
+  @include mq(md) {
+    content: "";
+    background: url(../images/common/fishs_l.png) no-repeat center / contain;
+    display: block;
+    width: rem(310);
+    height: rem(138);
+    position: absolute;
+    top: rem(871);
+    right:calc(50% - min(48vw,#{rem(646)}));
+  }
+}
+
 .archive-about__blackeneds {
   margin-top: rem(8);
 }

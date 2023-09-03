@@ -86,5 +86,9 @@
     padding-right: rem(25);
     width: 50%;
     color: $white;
+     display: -webkit-box;
+    -webkit-line-clamp: 17;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
