@@ -224,3 +224,27 @@ const swiper1 = new Swiper(".js-campaign-swiper-container", {
     prevEl: ".swiper-button-prev.swiper1__prev",
   },
 });
+
+/*archive_aboutのモーダル*/
+// クリックイベントを設定するための要素を取得
+var images = document.querySelectorAll(".js-about-images img");
+
+// 各画像にクリックイベントを追加
+images.forEach(function (image) {
+  image.addEventListener("click", function () {
+    // クリックした画像のHTML(<img>タグ全体)を取得し、#grayDisplay内にコピー
+    var aboutImagesModal = document.querySelector(".js-about-images-modal");
+    aboutImagesModal.innerHTML = this.outerHTML;
+    // モーダルを表示する
+    aboutImagesModal.style.display = "block";
+    body.classList.add("is-active");
+  });
+});
+
+// モーダル画像背景または拡大画像自体をクリックして非表示にする
+var aboutImagesModal = document.querySelector(".js-about-images-modal");
+aboutImagesModal.addEventListener("click", function () {
+  // 非表示にする
+  aboutImagesModal.style.display = "none";
+  body.classList.remove("is-active");
+});
