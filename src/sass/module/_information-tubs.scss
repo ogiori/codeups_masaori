@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.information-tubs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 rem(19);
+  @include mq(md) {
+    gap: 0 rem(45);
+    text-align: center;
+  }
+}

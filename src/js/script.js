@@ -225,26 +225,54 @@ const swiper1 = new Swiper(".js-campaign-swiper-container", {
   },
 });
 
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 /*archive_aboutのモーダル*/
 // クリックイベントを設定するための要素を取得
-var images = document.querySelectorAll(".js-about-images img");
-
-// 各画像にクリックイベントを追加
-images.forEach(function (image) {
-  image.addEventListener("click", function () {
-    // クリックした画像のHTML(<img>タグ全体)を取得し、#grayDisplay内にコピー
-    var aboutImagesModal = document.querySelector(".js-about-images-modal");
-    aboutImagesModal.innerHTML = this.outerHTML;
-    // モーダルを表示する
-    aboutImagesModal.style.display = "block";
-    body.classList.add("is-active");
-  });
-});
-
-// モーダル画像背景または拡大画像自体をクリックして非表示にする
 var aboutImagesModal = document.querySelector(".js-about-images-modal");
-aboutImagesModal.addEventListener("click", function () {
-  // 非表示にする
-  aboutImagesModal.style.display = "none";
-  body.classList.remove("is-active");
-});
+if (aboutImagesModal) {
+  var images = document.querySelectorAll(".js-about-images img");
+  images.forEach(function (image) {
+    image.addEventListener("click", function () {
+      aboutImagesModal.innerHTML = this.outerHTML;
+      // モーダルを表示する
+      aboutImagesModal.style.display = "block";
+      document.body.classList.add("is-active");
+    });
+  });
+  aboutImagesModal.addEventListener("click", function () {
+    // 非表示にする
+    aboutImagesModal.style.display = "none";
+    document.body.classList.remove("is-active");
+  });
+};
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+/*information-tub*/
+// 最初のコンテンツを表示
+const firstContent = document.querySelector(".js-cards4-item:first-of-type");
+if (firstContent) {
+  firstContent.style.display = "block";
+  // タブ要素を取得
+  const tabs = document.querySelectorAll(".js-information-tub");
+  // タブがクリックされたときの処理を設定
+  tabs.forEach(function (tab, index) {
+    tab.addEventListener("click", function () {
+      // 現在の選択されているタブから "current" クラスを削除
+      const currentTab = document.querySelector(".current");
+      if (currentTab) {
+        currentTab.classList.remove("current");
+      }
+      // クリックされたタブに "current" クラスを追加
+      tab.classList.add("current");
+      // クリックされたタブのインデックスを取得
+      const tabIndex = Array.from(tabs).indexOf(tab);
+      // すべてのコンテンツを非表示
+      const contents = document.querySelectorAll(".js-cards4-item");
+      contents.forEach(function (content) {
+        content.style.display = "none";
+      });
+      // クリックされたタブに対応するコンテンツを表示
+      contents[tabIndex].style.display = "block";
+    });
+  });
+};

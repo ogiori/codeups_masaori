@@ -1,0 +1,54 @@
+@use "global" as *;
+
+.card4 {
+  border: 1px solid $green;
+  padding: rem(24);
+
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    gap: 0 rem(50);
+    border: 2px solid $green;
+    padding: rem(15) rem(24) rem(24);
+  }
+}
+
+.card4__wrap {
+  @include mq(md) {
+    width: 47.55%;
+    margin-top: rem(10);
+  }
+}
+
+.card4__title {
+  font-size: rem(24);
+  line-height: 1;
+  font-weight: $bold;
+  border-bottom: 1px solid $green;
+  padding-bottom: rem(7);
+}
+
+.card4__text {
+  margin-top: rem(8);
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  font-weight: $regular;
+}
+
+.card4__img {
+  margin-top: rem(8);
+  width: 100%;
+  @include mq(md) {
+    width: calc(492 / 1080 * 100%);
+     width: 47.55%;
+  }
+}
+
+.card4__img img {
+  aspect-ratio: 297 /189;
+  width: 100%;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 492 /313;
+  }
+}

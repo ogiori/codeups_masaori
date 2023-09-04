@@ -1,0 +1,84 @@
+@use "global" as *;
+
+.information-tub {
+  display: block;
+  padding: rem(10) rem(16);
+  background-color: $blue;
+  text-align: center;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: rem(14);
+  line-height: calc(20 / 14);
+  font-weight: $regular;
+  color: $green;
+  transition: all 0.3s;
+  @include mq(md) {
+    display: inline-flex;
+    min-width: rem(300);
+    padding: rem(13) rem(18);
+    align-items: center;
+    justify-content: center;
+    gap: 0 rem(8);
+    font-size: rem(24);
+    line-height: calc(35 / 24);
+    cursor: pointer;
+  }
+}
+
+.information-tub:hover {
+  @include mq(md) {
+    background-color: $green;
+    color: $white;
+  }
+}
+
+.information-tub.current {
+ background-color: $green;
+    color: $white;
+}
+
+.information-tub::before {
+  @include mq(md) {
+    content: "";
+    display: block;
+    width: rem(64);
+    height: rem(64);
+    transition: all 0.3s;
+  }
+}
+
+// ライセンス講座
+.information-tub.information-tub--license::before {
+  @include mq(md) {
+    background: url(../images/common/kujira.svg) no-repeat center / contain;
+  }
+}
+.information-tub.information-tub--license:hover::before,
+.information-tub.information-tub--license.current::before {
+  @include mq(md) {
+    background: url(../images/common/kujira-w.svg) no-repeat center / contain;
+  }
+}
+// ファンダイビング
+.information-tub.information-tub--fun::before {
+  @include mq(md) {
+    background: url(../images/common/same.svg) no-repeat center / contain;
+  }
+}
+.information-tub.information-tub--fun:hover::before,
+.information-tub.information-tub--fun.current::before {
+  @include mq(md) {
+    background: url(../images/common/same-w.svg) no-repeat center / contain;
+  }
+}
+// 体験ダイビング
+.information-tub.information-tub--experience::before {
+  @include mq(md) {
+    background: url(../images/common/sakana.svg) no-repeat center / contain;
+  }
+}
+.information-tub.information-tub--experience:hover::before,
+.information-tub.information-tub--experience.current::before {
+  @include mq(md) {
+    background: url(../images/common/sakana-w.svg) no-repeat center / contain;
+  }
+}
