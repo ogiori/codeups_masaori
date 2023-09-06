@@ -169,14 +169,12 @@ window.addEventListener("scroll", function () {
 /*ハンバーガーボタン*/
 const hamburger = document.querySelector(".js-hamburger");
 const modal = document.querySelector(".js-modal");
-const body = document.querySelector("body");
 
 hamburger.addEventListener("click", toggleModal);
-
 function toggleModal() {
+  document.body.classList.toggle("is-active");
   hamburger.classList.toggle("is-active");
   modal.classList.toggle("is-active");
-  body.classList.toggle("is-active");
 }
 
 /*画像アニメーション*/
@@ -236,15 +234,17 @@ if (aboutImagesModal) {
       aboutImagesModal.innerHTML = this.outerHTML;
       // モーダルを表示する
       aboutImagesModal.style.display = "block";
+      aboutImagesModal.classList.add("is-show");
       document.body.classList.add("is-active");
     });
   });
   aboutImagesModal.addEventListener("click", function () {
     // 非表示にする
     aboutImagesModal.style.display = "none";
+    aboutImagesModal.classList.remove("is-show");
     document.body.classList.remove("is-active");
   });
-};
+}
 
 // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 /*information-tub*/
@@ -275,4 +275,4 @@ if (firstContent) {
       contents[tabIndex].style.display = "block";
     });
   });
-};
+}
