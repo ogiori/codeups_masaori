@@ -13,10 +13,21 @@
   }
 }
 
+.card2.card2--hover:hover .card2__img img {
+  @include mq(md) {
+    transform: scale(1.1);
+  }
+}
+
+.card2__img {
+  overflow: hidden;
+}
+
 .card2__img img {
   aspect-ratio: 301 /202;
   width: 100%;
   object-fit: cover;
+  transition: all 0.3s;
 }
 
 .card2__time {

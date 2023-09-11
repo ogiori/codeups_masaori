@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.sidebar-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0 rem(14);
+  font-size: rem(24);
+  line-height: calc(35 / 24);
+  font-weight: $regular;
+  position: relative;
+}
+
+// クジラ
+.sidebar-title::before {
+  content: "";
+  display: block;
+  width: rem(40);
+  height: rem(40);
+  background: url(../images/common/kujira-b.svg) no-repeat center / contain;
+  margin-left: rem(23);
+}
+
+// 線
+.sidebar-title::after {
+  content: "";
+  display: inline-block;
+  width: rem(8);
+  height: rem(50);
+  position: absolute;
+  top: rem(-7);
+  left: rem(-5);
+  background-color: $green;
+}

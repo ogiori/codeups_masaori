@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.sidebar__title {
+  margin-left: rem(5);
+}
+
+.sidebar__title:not(:first-child) {
+  margin-top: rem(86);
+  @include mq(md) {
+    margin-top: rem(89);
+  }
+}
+
+.sidebar__popularity {
+  margin-top:rem(22);
+}
+
+.sidebar__evaluation {
+  margin-top: rem(23);
+}
+
+.sidebar__evaluation-btn {
+  margin-top: rem(43);
+  text-align: center;
+}
+
+.sidebar__campaign {
+  margin-top: rem(22);
+}
+
+.sidebar__campaign-cards {
+  display: grid;
+  gap: rem(40) 0;
+}
+
+.sidebar__campaign-btn {
+  margin-top: rem(40);
+  text-align: center;
+}
+
+.sidebar__archive {
+  margin-top: rem(22);
+}

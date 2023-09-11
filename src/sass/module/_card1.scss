@@ -1,4 +1,4 @@
-@use "global"as *;
+@use "global" as *;
 
 .card1 {
   display: flex;
@@ -16,6 +16,10 @@
   }
 }
 
+.card1__img.card1__img--sidebar img {
+aspect-ratio: 294/188;
+}
+
 .card1__body-top {
   padding: rem(16) rem(16) 0;
   @include mq(md) {
@@ -23,12 +27,16 @@
   }
 }
 
+.card1__body-top.card1__body-top--sidebar {
+padding: rem(16) rem(23) 0;
+}
+
 .card1__tag {
   display: inline-block;
   border: rem(1) solid $green;
   padding: rem(2) rem(12) rem(4) rem(11);
   font-size: rem(12);
-  line-height: calc(22/12);
+  line-height: calc(22 / 12);
   font-weight: $regular;
   color: $green;
   @include mq(md) {
@@ -49,10 +57,20 @@
 }
 
 .card1__title.card1__title--archive {
-	@include mq(md) {
-		font-size: rem(24);
-		line-height: calc(35 / 24);
-	}
+  @include mq(md) {
+    font-size: rem(24);
+    line-height: calc(35 / 24);
+  }
+}
+
+.card1__title.card1__title--sidebar {
+  text-align: center;
+  margin-top: rem(-1);
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: calc(24 / 14);
+    font-weight: $regular;
+  }
 }
 
 .card1__body-bottom {
@@ -63,10 +81,16 @@
   }
 }
 
+.card1__body-bottom.card1__body-bottom--sidebar {
+  @include mq(md) {
+  padding-bottom: rem(24);
+  }
+}
+
 .card1__body-bottom.card1__body-bottom--archive {
-	@include mq(md) {
-		margin-top: 0;
-	}
+  @include mq(md) {
+    margin-top: 0;
+  }
 }
 
 .card1__text {
@@ -82,12 +106,20 @@
   }
 }
 
+.card1__text.card1__text--sidebar {
+  @include mq(md) {
+    margin-top: rem(6);
+    font-size: rem(14);
+    line-height: calc(24 / 14);
+  }
+}
+
 .card1__wrap {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-	margin: rem(8) auto 0;
-	max-width: rem(300);
+  margin: rem(8) auto 0;
+  max-width: rem(300);
 }
 
 .card1__price1 {
@@ -102,6 +134,13 @@
   }
 }
 
+.card1__price1.card1__price1--sidebar {
+  @include mq(md) {
+    font-size: rem(20);
+    line-height: 1;
+  }
+}
+
 .card1__price1 span {
   position: relative;
 }
@@ -111,7 +150,7 @@
   display: block;
   width: 100%;
   height: rem(3);
-  background-color: #C94800;
+  background-color: #c94800;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -130,46 +169,53 @@
   }
 }
 
+.card1__price2.card1__price2--sidebar {
+  @include mq(md) {
+    font-size: rem(32);
+    line-height: 1;
+  }
+}
+
 // アーカイブカード追加項目
 .card1__archive_contents {
-	display: none;
-	@include mq(md) {
-		display: flex;
-		flex-direction: column;
-		flex-grow: 1;
-		margin-top: rem(-14);
-		padding-bottom: rem(44);
-		padding: 0 rem(24);
-	}
+  display: none;
+  @include mq(md) {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: rem(-14);
+    padding-bottom: rem(44);
+    padding: 0 rem(24);
+  }
 }
 
 .card1__archive-text {
-	font-size: rem(16);
-	line-height: calc(24 / 16);
-	font-weight: $regular;
-	padding-bottom: rem(32);
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  font-weight: $regular;
+  padding-bottom: rem(32);
 }
 
 .card1__cta {
-	margin-top: auto;
-	text-align: center;
+  margin-top: auto;
+  text-align: center;
 }
 
 .card1__period {
-	font-size: rem(16);
-	line-height: calc(18 / 16);
-	font-weight: $bold;
-	color: $green;
+  font-size: rem(16);
+  line-height: calc(18 / 16);
+  font-weight: $bold;
+  color: $green;
 }
 
 .card1__cta-text {
-	margin-top: rem(7);
-	font-size: rem(14);
-	line-height: calc(18 / 14);
-	font-weight: $regular;
-	color: $green;
+  margin-top: rem(7);
+  font-size: rem(14);
+  line-height: calc(18 / 14);
+  font-weight: $regular;
+  color: $green;
 }
 
 .card1__btn {
-	margin-top: rem(16);
+  margin-top: rem(16);
 }

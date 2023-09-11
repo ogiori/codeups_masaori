@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.card6__img {
+  width: 100%;
+}
+
+.card6__img img {
+  aspect-ratio: 294 / 218;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card6__meta {
+  margin-top: rem(16);
+  display: flex;
+  align-items: center;
+}
+
+.card6__age,.card6__gender {
+  font-size: rem(12);
+  line-height: calc(18 / 12);
+  font-weight: $regular;
+}
+
+.card6__title {
+  margin-top: rem(8);
+  font-size: rem(24);
+  line-height: calc(35 / 24);
+  font-weight: $medium;
+}

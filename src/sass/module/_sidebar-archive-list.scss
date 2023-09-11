@@ -1,0 +1,72 @@
+@use "global" as *;
+
+.accordion__item {
+  cursor: pointer;
+}
+
+.accordion__item:not(:first-child) {
+  margin-top: rem(4);
+}
+
+.accordion__title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0 rem(8);
+  font-size: rem(24);
+  line-height: calc(35 / 24);
+  font-weight: $regular;
+  color: $green;
+  cursor: pointer;
+}
+
+.accordion__title::before {
+  content: "";
+  display: block;
+  background: url(../images/common/trilateral.svg) no-repeat center / contain;
+  width: rem(25);
+  height: rem(25);
+  margin-top: rem(4);
+  transition: all 0.3s;
+}
+
+.accordion__contents {
+  display: none;
+  cursor: pointer;
+}
+
+.accordion__contents.is-open {
+  display: block;
+}
+
+.accordion__item.is-active .accordion__title::before {
+  transform: rotate(90deg);
+}
+
+.accordion__content {
+  margin-top: rem(3);
+  margin-left: rem(29);
+}
+
+.accordion__content a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0 rem(4);
+  font-size: rem(24);
+  line-height: calc(35 / 24);
+  font-weight: $regular;
+  color: $green;
+}
+
+.accordion__content a:hover {
+  @include mq(md) {
+    opacity: 0.7;
+  }
+}
+
+.accordion__content a::before {
+  content: "";
+  display: block;
+  background: url(../images/common/trilateral.svg) no-repeat center / contain;
+  width: rem(24);
+  height: rem(24);
+}
