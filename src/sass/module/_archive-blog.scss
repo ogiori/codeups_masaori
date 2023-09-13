@@ -38,6 +38,7 @@
   }
 }
 
+//左コンテンツ
 .archive-blog__left {
   @include mq(md) {
      width: calc(706 / 1080 * 100%);

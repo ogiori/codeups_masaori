@@ -13,12 +13,12 @@
 
 .page-btn__prev {
   margin-right: rem(40);
-	transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .page-btn__next {
   margin-left: rem(40);
-	transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .page-btn__prev:hover,
@@ -33,7 +33,7 @@
   width: rem(38);
   height: rem(38);
   border: 1px solid $green;
-	transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .page-btn__prev a::before,
@@ -42,7 +42,7 @@
   display: block;
   width: rem(8);
   height: rem(16);
-	transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .page-btn__prev a::before {
@@ -50,11 +50,11 @@
 }
 
 .page-btn__next a::before {
-   background: url(../images/common/page-arrow_r.svg) no-repeat center / contain;
+  background: url(../images/common/page-arrow_r.svg) no-repeat center / contain;
 }
 
 .page-btn__prev a:hover::before {
-	 background: url(../images/common/page-arrow_l-white.svg) no-repeat center / contain;
+  background: url(../images/common/page-arrow_l-white.svg) no-repeat center / contain;
 }
 
 .page-btn__next a:hover::before {
@@ -81,7 +81,8 @@
   transition: all 0.3s;
 }
 
-.page-btn__number a:hover,.page-btn__number a.current {
+.page-btn__number a:hover,
+.page-btn__number a.current {
   background-color: $green;
   color: $white;
 }

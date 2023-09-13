@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.single-blog__blackeneds {
+  margin-top: rem(8);
+}
+
+.single-blog__contents {
+  margin-top: rem(46);
+  @include mq(md) {
+    margin-top: rem(144);
+    display: flex;
+    gap: 0 rem(86);
+  }
+}
+// 左コンテンツ
+.single-blog__left {
+  @include mq(md) {
+    width: calc(700 / 1080 * 100%);
+  }
+}
+
+// 右コンテンツ
+.single-blog__right {
+  margin-top: rem(85);
+  padding: 0 rem(25);
+  @include mq(md) {
+    margin-top: rem(14);
+    padding: 0;
+     width: calc(294 / 1080 * 100%);
+  }
+}

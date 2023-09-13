@@ -16,19 +16,11 @@
   }
 }
 
-.card1__img.card1__img--sidebar img {
-aspect-ratio: 294/188;
-}
-
 .card1__body-top {
   padding: rem(16) rem(16) 0;
   @include mq(md) {
     padding-top: rem(24);
   }
-}
-
-.card1__body-top.card1__body-top--sidebar {
-padding: rem(16) rem(23) 0;
 }
 
 .card1__tag {
@@ -56,40 +48,11 @@ padding: rem(16) rem(23) 0;
   }
 }
 
-.card1__title.card1__title--archive {
-  @include mq(md) {
-    font-size: rem(24);
-    line-height: calc(35 / 24);
-  }
-}
-
-.card1__title.card1__title--sidebar {
-  text-align: center;
-  margin-top: rem(-1);
-  @include mq(md) {
-    font-size: rem(16);
-    line-height: calc(24 / 14);
-    font-weight: $regular;
-  }
-}
-
 .card1__body-bottom {
   padding: 0 rem(16) rem(24);
   margin-top: auto;
   @include mq(md) {
     padding-bottom: rem(40);
-  }
-}
-
-.card1__body-bottom.card1__body-bottom--sidebar {
-  @include mq(md) {
-  padding-bottom: rem(24);
-  }
-}
-
-.card1__body-bottom.card1__body-bottom--archive {
-  @include mq(md) {
-    margin-top: 0;
   }
 }
 
@@ -103,14 +66,6 @@ padding: rem(16) rem(23) 0;
     margin-top: rem(16);
     font-size: rem(16);
     line-height: calc(24 / 16);
-  }
-}
-
-.card1__text.card1__text--sidebar {
-  @include mq(md) {
-    margin-top: rem(6);
-    font-size: rem(14);
-    line-height: calc(24 / 14);
   }
 }
 
@@ -131,13 +86,6 @@ padding: rem(16) rem(23) 0;
   padding-left: rem(19);
   @include mq(md) {
     font-size: rem(24);
-  }
-}
-
-.card1__price1.card1__price1--sidebar {
-  @include mq(md) {
-    font-size: rem(20);
-    line-height: 1;
   }
 }
 
@@ -166,26 +114,6 @@ padding: rem(16) rem(23) 0;
   width: calc(119 / 211 * 100%);
   @include mq(md) {
     font-size: rem(40);
-  }
-}
-
-.card1__price2.card1__price2--sidebar {
-  @include mq(md) {
-    font-size: rem(32);
-    line-height: 1;
-  }
-}
-
-// アーカイブカード追加項目
-.card1__archive_contents {
-  display: none;
-  @include mq(md) {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    margin-top: rem(-14);
-    padding-bottom: rem(44);
-    padding: 0 rem(24);
   }
 }
 
@@ -219,3 +147,77 @@ padding: rem(16) rem(23) 0;
 .card1__btn {
   margin-top: rem(16);
 }
+
+//===== アーカイブページ =====
+.card1__archive_contents {
+  display: none;
+  @include mq(md) {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: rem(-14);
+    padding-bottom: rem(44);
+    padding: 0 rem(24);
+  }
+}
+
+.card1__title.card1__title--archive {
+  @include mq(md) {
+    font-size: rem(24);
+    line-height: calc(35 / 24);
+  }
+}
+
+.card1__body-bottom.card1__body-bottom--archive {
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+//===== サイドバー =====
+.card1__img.card1__img--sidebar img {
+aspect-ratio: 294/188;
+}
+
+.card1__body-top.card1__body-top--sidebar {
+padding: rem(16) rem(23) 0;
+}
+
+.card1__title.card1__title--sidebar {
+  text-align: center;
+  margin-top: rem(-1);
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: calc(24 / 14);
+    font-weight: $regular;
+  }
+}
+
+.card1__body-bottom.card1__body-bottom--sidebar {
+  @include mq(md) {
+  padding-bottom: rem(24);
+  }
+}
+
+.card1__text.card1__text--sidebar {
+  @include mq(md) {
+    margin-top: rem(6);
+    font-size: rem(14);
+    line-height: calc(24 / 14);
+  }
+}
+
+.card1__price1.card1__price1--sidebar {
+  @include mq(md) {
+    font-size: rem(20);
+    line-height: 1;
+  }
+}
+
+.card1__price2.card1__price2--sidebar {
+  @include mq(md) {
+    font-size: rem(32);
+    line-height: 1;
+  }
+}
+

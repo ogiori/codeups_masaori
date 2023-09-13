@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.archive-about__inner {
+.page-about__inner {
   max-width: rem(600);
   position: relative;
   @include mq(md) {
@@ -8,7 +8,7 @@
   }
 }
 
-.archive-about__inner::before {
+.page-about__inner::before {
   content: "";
   background: url(../images/common/fishs_r.png) no-repeat top / contain;
   display: block;
@@ -25,7 +25,7 @@
   }
 }
 
-.archive-about__inner::after {
+.page-about__inner::after {
   @include mq(md) {
     content: "";
     background: url(../images/common/fishs_l.png) no-repeat center / contain;
@@ -38,25 +38,25 @@
   }
 }
 
-.archive-about__blackeneds {
+.page-about__blackeneds {
   margin-top: rem(8);
 }
 
-.archive-about__contents {
+.page-about__contents {
   margin-top: rem(52);
   @include mq(md) {
     margin-top: rem(150);
   }
 }
 
-.archive-about__title {
+.page-about__title {
   margin-top: rem(36);
   @include mq(md) {
     margin-top: rem(120);
   }
 }
 
-.archive-about__images {
+.page-about__images {
   margin-top: rem(40);
   @include mq(md) {
     margin-top: rem(80);

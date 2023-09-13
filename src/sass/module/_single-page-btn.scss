@@ -1,0 +1,56 @@
+@use "global" as *;
+
+.single-page-btn {
+  display: flex;
+  justify-content: center;
+  gap: 0 rem(82);
+}
+
+.single-page-btn__prev,
+.single-page-btn__next {
+  background-color: $white;
+  width: rem(38);
+  height: rem(38);
+  transition: all 0.3s;
+}
+
+.single-page-btn__prev:hover,
+.single-page-btn__next:hover {
+  background-color: $green;
+}
+
+
+.single-page-btn__prev a,
+.single-page-btn__next a {
+  display: grid;
+  place-content: center;
+  width: inherit;
+  height: inherit;
+  border: 1px solid $green;
+  transition: all 0.3s;
+}
+
+.single-page-btn__prev a::before,
+.single-page-btn__next a::before {
+  content: "";
+  display: block;
+  width: rem(8);
+  height: rem(16);
+  transition: all 0.3s;
+}
+
+.single-page-btn__prev a::before {
+  background: url(../images/common/page-arrow_l.svg) no-repeat center / contain;
+}
+
+.single-page-btn__next a::before {
+  background: url(../images/common/page-arrow_r.svg) no-repeat center / contain;
+}
+
+.single-page-btn__prev a:hover::before {
+  background: url(../images/common/page-arrow_l-white.svg) no-repeat center / contain;
+}
+
+.single-page-btn__next a:hover::before {
+  background: url(../images/common/page-arrow_r-white.svg) no-repeat center / contain;
+}
