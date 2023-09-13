@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .header {
-  padding: rem(13) 0;
+  // padding: rem(13) 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -12,18 +12,20 @@
   z-index: 10;
   @include mq(md) {
     height: rem(90);
-    padding: rem(20) 0 rem(40);
+    // padding: rem(20) 0 rem(40);
   }
 }
 
 .header__inner {
   padding: 0 rem(5) 0 rem(15);
+  height: inherit;
   @include mq(md) {
     padding: 0 rem(31) 0 rem(40);
   }
 }
 
 .header__wrap {
+  height: inherit;
   display: flex;
   align-items: center;
   justify-content: space-between;

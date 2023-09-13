@@ -1,13 +1,13 @@
 @use "global" as *;
 
-.single-page {
-}
 
 .single-page__time {
   font-size: rem(14);
   line-height: calc(18 / 14);
   font-weight: $regular;
   font-family: $gotu;
+  position: relative;
+  z-index: 1;
 }
 
 .single-page__title {
@@ -17,6 +17,8 @@
   font-weight: $medium;
   border-bottom: 1px solid $green;
   padding-bottom: rem(4);
+  position: relative;
+  z-index: 1;
   @include mq(md) {
     font-size: rem(32);
     line-height: calc(46 / 32);

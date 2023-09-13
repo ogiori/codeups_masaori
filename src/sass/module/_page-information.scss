@@ -4,8 +4,12 @@
   margin-top: rem(8);
 }
 
-.page-information__inner {
+.page-information__inner.inner {
   position: relative;
+  max-width: rem(600);
+  @include mq(md) {
+    max-width: rem(1130);
+  }
 }
 
 .page-information__inner::before {

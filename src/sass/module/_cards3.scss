@@ -1,4 +1,4 @@
-@use "global"as *;
+@use "global" as *;
 
 .cards3 {
   display: grid;
@@ -12,4 +12,11 @@
 .cards3__item {
   display: flex;
   margin: 0 auto;
+}
+
+/*===== page-voice =====*/
+.cards3.cards3--voice {
+  @include mq(md) {
+    gap: rem(78) rem(40);
+  }
 }

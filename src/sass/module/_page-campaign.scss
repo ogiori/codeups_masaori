@@ -1,8 +1,11 @@
 @use "global" as *;
 
-.page-campaign__inner {
+.page-campaign__inner.inner {
   max-width: rem(600);
   position: relative;
+  @include mq(md) {
+    max-width: rem(1130);
+  }
 }
 
 .page-campaign__inner::before {

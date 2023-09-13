@@ -1,0 +1,83 @@
+@use "global" as *;
+
+.card7 {
+  border: 1px solid $green;
+  @include mq(md) {
+    display: flex;
+  }
+}
+
+.card7__title {
+  display: flex;
+  justify-content: center;
+  gap: 0 rem(8);
+  padding: rem(8);
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  font-weight: $bold;
+  color: $white;
+  background-color: $green;
+  @include mq(md) {
+    width: rem(200);
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: rem(8) 0;
+  }
+}
+
+.card7__title::before {
+  content: "";
+  display: block;
+  width: rem(24);
+  height: rem(24);
+  background: url(../images/common/kujira-w.svg) no-repeat center / contain;
+  @include mq(md) {
+    width: rem(64);
+    height: rem(64);
+  }
+}
+
+.card7__wrap {
+  display: flex;
+  // align-items: center;
+}
+
+.card7__wrap dt {
+  width: calc(240 / 345 * 100%);
+  text-align: center;
+  border-right: 1px solid $green;
+  display: grid;
+  place-content: center;
+  @include mq(md) {
+    width: rem(340);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: rem(17) rem(16);
+  }
+}
+
+.card7__wrap dd {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: calc(106 / 345 * 100%);
+  padding: rem(19) rem(16);
+  @include mq(md) {
+    width: rem(162);
+    padding: rem(17) rem(16);
+  }
+}
+
+.card7__wrap dt,
+.card7__wrap dd {
+  border-bottom: 1px solid $green;
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  font-weight: $regular;
+}
+
+.card7__wrap:last-child dt,
+.card7__wrap:last-child dd{
+  border-bottom: none;
+}

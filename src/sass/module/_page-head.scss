@@ -1,0 +1,100 @@
+@use "global" as *;
+
+.page-head {
+  width: 100%;
+  height: rem(460);
+  display: grid;
+  place-content: center;
+  position: relative;
+	@include mq(md) {
+		height: rem(548);
+	}
+}
+
+// 画像
+// campaign
+.page-head.page-head--campaign {
+  background: url(../images/common/page-campaign-head_sp.jpg) no-repeat
+    center / cover;
+  @include mq(md) {
+    background: url(../images/common/page-campaign-head_pc.jpg) no-repeat
+      center / cover;
+  }
+}
+// about
+.page-head.page-head--about {
+  background: url(../images/common/page-about-head_sp.jpg) no-repeat
+    center / cover;
+  @include mq(md) {
+    background: url(../images/common/page-about-head_pc.jpg) no-repeat
+      center / cover;
+  }
+}
+// information
+.page-head.page-head--information {
+  background: url(../images/common/page-information-head_sp.jpg) no-repeat
+    center / cover;
+  @include mq(md) {
+    background: url(../images/common/page-information-head_pc.jpg) no-repeat
+      center / cover;
+  }
+}
+
+// archive-blog
+.page-head.page-head--blog {
+  background: url(../images/common/archive-blog-head_sp.jpg) no-repeat
+    center / cover;
+  @include mq(md) {
+    background: url(../images/common/archive-blog-head_pc.jpg) no-repeat
+      center / cover;
+  }
+}
+
+// voice
+.page-head.page-head--voice {
+  background: url(../images/common/page-voice-head_sp.jpg) no-repeat
+    center / cover;
+  @include mq(md) {
+    background: url(../images/common/page-voice-head_pc.jpg) no-repeat
+      center / cover;
+  }
+}
+
+// price
+.page-head.page-head--price {
+  background: url(../images/common/page-price-head_sp.jpg) no-repeat
+    center / cover;
+  @include mq(md) {
+    background: url(../images/common/page-price-head_pc.jpg) no-repeat
+      center / cover;
+  }
+}
+
+.page-head::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: inherit;
+  background-color: rgba($green, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.page-head__title {
+  font-size: rem(40);
+  line-height: calc(48 / 40);
+  font-weight: $regular;
+  font-family: $lato;
+  color: $white;
+	position: relative;
+  @include mq(md) {
+		margin-top: rem(100);
+    font-size: rem(80);
+    line-height: calc(100 / 80);
+  }
+}
+
+.page-head__title::first-letter {
+  text-transform: uppercase;
+}
