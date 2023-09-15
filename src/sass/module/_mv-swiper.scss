@@ -1,7 +1,7 @@
 @use "global"as *;
 
 .mv-swiper {
-  overflow: hidden;
+  overflow: hidden;;
 }
 
 @keyframes zoomUp {
@@ -20,7 +20,7 @@
   animation: zoomUp 10s linear 0s 1 normal both;
 }
 
-.mv-slide__img img {
+.mv-swiper__img img {
   width: 100%;
   height: 100vh;
   object-fit: cover;

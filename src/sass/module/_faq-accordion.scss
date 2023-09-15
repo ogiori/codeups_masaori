@@ -1,0 +1,86 @@
+@use "global" as *;
+
+/* アコーディオン全体 */
+.faq-accordion {
+  display: grid;
+  gap: rem(40) 0;
+}
+
+/* アコーディオン */
+.faq-accordion__item {
+  border: 1px solid $green;
+  cursor: pointer;
+  @include mq(md) {
+    border: none;
+  }
+}
+
+/* アコーディオンのタイトル */
+.faq-accordion__title {
+  position: relative;
+  padding: rem(16);
+  cursor: pointer;
+  background-color: $green;
+  font-size: rem(16);
+  line-height: calc(23 / 16);
+  font-weight: $regular;
+  color: $white;
+  @include mq(md) {
+    padding: rem(25) rem(40);
+    font-size: rem(20);
+    line-height: calc(29 / 20);
+  }
+}
+
+/* (+)アイコン */
+.faq-accordion__title::before,
+.faq-accordion__title::after {
+  content: "";
+  position: absolute;
+  right: rem(15);
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  background-color: $white;
+  width: rem(28);
+  height: 1px;
+  transition: all 0.3s;
+  @include mq(md) {
+    right: rem(42);
+    width: rem(32);
+  }
+}
+
+.faq-accordion__title::after {
+  transform: rotate(90deg);
+}
+
+/* アコーディオンのコンテンツ */
+.faq-accordion__contents {
+  padding: rem(24) rem(16) rem(22);
+  font-size: rem(16);
+  line-height: calc(23 / 16);
+  font-weight: $regular;
+  display: none;
+  cursor: pointer;
+  @include mq(md) {
+    margin-top: rem(16);
+    border: 1px solid $green;
+    padding: rem(40);
+  }
+}
+
+.faq-accordion__contents.is-open {
+  display: block;
+}
+
+/* アコーディオン展開時の(-)アイコン */
+
+.faq-accordion__item.is-active .faq-accordion__title::before {
+  transform: rotate(0);
+}
+
+.faq-accordion__item.is-active .faq-accordion__title::after {
+  transform: rotate(180deg);
+  opacity: 0;
+}

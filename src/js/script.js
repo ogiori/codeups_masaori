@@ -218,8 +218,8 @@ const swiper1 = new Swiper(".js-campaign-swiper-container", {
   },
 
   navigation: {
-    nextEl: ".swiper-button-next.swiper1__next",
-    prevEl: ".swiper-button-prev.swiper1__prev",
+    nextEl: ".swiper-button-next.js-campaign-swiper-next",
+    prevEl: ".swiper-button-prev.js-campaign-swiper-prev",
   },
 });
 
@@ -277,8 +277,9 @@ if (firstContent) {
   });
 }
 
-// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-/*sidebarアコーディオン*/
+/* =================================================== */
+// アコーディオンの共通設定
+/* =================================================== */
 const slideUp = (el, duration = 300) => {
   el.style.height = el.offsetHeight + "px";
   el.offsetHeight;
@@ -339,7 +340,6 @@ const slideDown = (el, duration = 300) => {
     el.style.removeProperty("transition-timing-function");
   }, duration);
 };
-
 // 要素をスライドしながら交互に表示/非表示にする関数(jQueryのslideToggleと同じ)
 const slideToggle = (el, duration = 300) => {
   if (window.getComputedStyle(el).display === "none") {
@@ -350,9 +350,8 @@ const slideToggle = (el, duration = 300) => {
 };
 
 /* =================================================== */
-// DOM操作
+/*sidebarアコーディオン*/
 /* =================================================== */
-
 // アコーディオンを全て取得
 const accordions = document.querySelectorAll(".js-accordion");
 // 取得したアコーディオンをArrayに変換(IE対策)
@@ -379,6 +378,33 @@ accordionsArr.forEach((accordion) => {
       trigger.classList.toggle("is-active");
       // 開閉させる要素を取得
       const content = trigger.querySelector(".js-accordion__contents");
+      // 要素を展開or閉じる
+      slideToggle(content);
+    });
+  });
+});
+
+/* =================================================== */
+/*faqアコーディオン*/
+/* =================================================== */
+// アコーディオンを全て取得
+const faqAccordions = document.querySelectorAll(".js-faq-accordion");
+// 取得したアコーディオンをArrayに変換(IE対策)
+const faqAccordionsArr = Array.prototype.slice.call(faqAccordions);
+
+faqAccordionsArr.forEach((accordion) => {
+  // Triggerを全て取得
+  const accordionTriggers = accordion.querySelectorAll(".js-faq-accordion-trigger");
+  // TriggerをArrayに変換(IE対策)
+  const accordionTriggersArr = Array.prototype.slice.call(accordionTriggers);
+
+  accordionTriggersArr.forEach((trigger) => {
+    // Triggerにクリックイベントを付与
+    trigger.addEventListener("click", () => {
+      // '.is-active'クラスを付与or削除
+      trigger.classList.toggle("is-active");
+      // 開閉させる要素を取得
+      const content = trigger.querySelector(".js-faq-accordion__contents");
       // 要素を展開or閉じる
       slideToggle(content);
     });

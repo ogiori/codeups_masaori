@@ -70,6 +70,26 @@
   }
 }
 
+// FAQ
+.page-head.page-head--faq {
+  background: url(../images/common/page-faq-head_sp.jpg) no-repeat
+    center / cover;
+  @include mq(md) {
+    background: url(../images/common/page-faq-head_pc.jpg) no-repeat
+      center / cover;
+  }
+}
+
+// contact
+.page-head.page-head--faq {
+  background: url(../images/common/page-contact-head_sp.jpg) no-repeat
+    center / cover;
+  @include mq(md) {
+    background: url(../images/common/page-contact-head_pc.jpg) no-repeat
+      center / cover;
+  }
+}
+
 .page-head::before {
   content: "";
   display: block;
@@ -96,5 +116,10 @@
 }
 
 .page-head__title::first-letter {
+  text-transform: uppercase;
+}
+
+/* faqのみ大文字 */
+.page-head__title.page-head__title--faq {
   text-transform: uppercase;
 }

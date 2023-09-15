@@ -1,0 +1,224 @@
+@use "global" as *;
+
+/*===== 各種フォームリセット & スタイル =====*/
+
+/*===== テキスト、メール、TE、パスワード =====*/
+input[type="text"],
+input[type="mail"],
+input[type="tel"],
+input[type="password"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid #333;
+  border-radius: 0;
+}
+
+input[type="text"]:focus,
+input[type="mail"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+  border: 1px solid #333;
+  box-shadow: none;
+  outline: none;
+}
+
+// input[type=text]::placeholder,
+// input[type=mail]::placeholder,
+// input[type=tel]::placeholder,
+// input[type=password]::placeholder {}
+
+/*===== テキストエリア =====*/
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 200px;
+  /* textareaはheight指定 */
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid #333;
+  border-radius: 0;
+}
+
+textarea:focus {
+  border: 1px solid #333;
+  box-shadow: none;
+  outline: none;
+}
+
+// textarea::placeholder {}
+
+/*===== ラジオボタン =====*/
+input[type="radio"] {
+  position: absolute;
+  appearance: none;
+}
+
+input[type="radio"] + span {
+  display: block;
+  cursor: pointer;
+  padding-left: 30px;
+  position: relative;
+}
+
+input[type="radio"] + span::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+input[type="radio"] + span::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+input[type="radio"]:checked + span::after {
+  opacity: 1;
+}
+
+/*===== チェックボックス =====*/
+input[type="checkbox"] {
+  position: absolute;
+  appearance: none;
+}
+
+input[type="checkbox"] + span {
+  display: block;
+  cursor: pointer;
+  padding-left: 30px;
+  position: relative;
+}
+
+input[type="checkbox"] + span::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #333;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+input[type="checkbox"] + span::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 10px;
+  border-bottom: 3px solid #333;
+  border-left: 3px solid #333;
+  position: absolute;
+  left: 2px;
+  top: 32%;
+  transform: translateY(-50%) rotate(-45deg);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+input[type="checkbox"]:checked + span::after {
+  opacity: 1;
+}
+
+/*===== セレクトボックス =====*/
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  /* 調整 */
+  // background: transparent url(./images/card1.jpg) no-repeat center right/cover;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select:focus {
+  border: 1px solid #333;
+  box-shadow: none;
+  outline: none;
+}
+
+// option[selected][disabled] {
+//   display: none;
+// }
+
+/*===== ボタン =====*/
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  padding: 0;
+  width: 100%;
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+}
+button:hover,
+button:focus {
+  outline: none;
+}
+button::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+
+/*===== 送信ボタン =====*/
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid #333;
+  border-radius: 0;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  outline: none;
+}
+
+input[type="submit"]::-moz-focus-inner {
+  border: 1px solid #333;
+  padding: 0;
+}
+
+/*===== 共通スタイル =====*/
