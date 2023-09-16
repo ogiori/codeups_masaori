@@ -223,87 +223,73 @@
         </div>
 
         <!-- フォーム -->
-        <form action="" method="post"> <!-- wpでプラグインを使う時は消す -->
+        <form action="" method="post">
+          <!-- wpでプラグインを使う時は消す -->
           <div class="p-form">
             <dl class="p-form__list">
-              <!-- 会社名 -->
-              <div class="p-form__item">
-                <dt><label for="company_name">■会社名</label></dt>
-                <dd><input id="company_name" type="text" name="company_name" placeholder="会社名" required></dd>
-              </div>
 
-              <!-- 氏名 -->
+              <!-- お名前 -->
               <div class="p-form__item">
-                <dt><label for="name">■氏名</label></dt>
-                <dd><input id="name" type="text" name="name" placeholder="氏名" required></dd>
+                <dt><label for="name">お名前</label></dt>
+                <dd><input id="name" type="text" name="name" placeholder="沖縄　太郎" required></dd>
               </div>
 
               <!-- メール -->
               <div class="p-form__item">
-                <dt><label for="mail">■メールアドレス</label></dt>
-                <dd><input id="mail" type="mail" name="mail" placeholder="メールアドレス" required></dd>
+                <dt><label for="mail">メールアドレス</label></dt>
+                <dd><input id="mail" type="mail" name="mail" placeholder="aaa000@ggmail.com" required></dd>
               </div>
 
               <!-- 電話番号 -->
               <div class="p-form__item">
-                <dt><label for="tel">■電話番号</label></dt>
-                <dd><input id="tel" type="tel" name="tel" placeholder="電話番号" required></dd>
+                <dt><label for="tel">電話番号</label></dt>
+                <dd><input id="tel" type="tel" name="tel" placeholder="000-0000-0000" required></dd>
               </div>
 
               <!-- ラジオボタン -->
-              <div class="p-form__item">
-                <dt>■ラジオボタン</dt>
+              <div class="p-form__item p-form__item--radio">
+                <dt>お問合せ項目</dt>
                 <dd>
-                  <label><input id="radio1" type="radio" name="radio" required><span>ラジオ1</span></label>
+                  <label><input id="radio1" type="radio" name="radio" required><span>ダイビング講習について</span></label>
                 </dd>
                 <dd>
-                  <label><input id="radio2" type="radio" name="radio" required><span>ラジオ2</span></label>
+                  <label><input id="radio2" type="radio" name="radio" required><span>ファンデイビングについて</span></label>
                 </dd>
                 <dd>
-                  <label><input id="radio3" type="radio" name="radio" required><span>ラジオ3</span></label>
-                </dd>
-              </div>
-
-              <!-- チェックボックス -->
-              <div class="p-form__item">
-                <dt>■チェックボックス</dt>
-                <dd>
-                  <label><input type="checkbox" name="checkbox1"><span>チェックボックス1</span></label>
-                </dd>
-                <dd>
-                  <label><input type="checkbox" name="checkbox1"><span>チェックボックス2</span></label>
-                </dd>
-                <dd>
-                  <label><input type="checkbox" name="checkbox1"><span>チェックボックス3</span></label>
+                  <label><input id="radio3" type="radio" name="radio" required><span>体験ダイビングについて</span></label>
                 </dd>
               </div>
 
               <!-- セレクトボックス -->
-              <div class="p-form__item">
-                <dt>■セレクトボックス</dt>
+              <div class="p-form__item p-form__item--select">
+                <dt>キャンペーン</dt>
                 <dd>
                   <select name="select">
                     <option selected disabled>選択してください</option>
-                    <option value="select1">select1</option>
-                    <option value="select2">select2</option>
-                    <option value="select3">select3</option>
-                    <option value="select4">select4</option>
+                    <option value="select1">ライセンス講習</option>
+                    <option value="select2">ファンダイビング</option>
+                    <option value="select3">体験ダイビングについて</option>
                   </select>
                 </dd>
               </div>
 
               <!-- テキストエリア -->
               <div class="p-form__item">
-                <dt><label for="contact">■テキストエリア</label></dt>
+                <dt><label for="contact">お問合せ内容</label></dt>
                 <dd>
                   <textarea id="contact" type="contact" name="contact" placeholder="" required></textarea>
                 </dd>
               </div>
             </dl>
 
+            <!-- チェックボックス -->
+            <div class="p-form__item p-form__item--checkbox">
+              <label><input type="checkbox" name="checkbox1"><span>個人情報の取り扱いについて同意のうえ送信します。</span></label>
+            </div>
+
             <!-- 送信ボタン -->
             <div class="p-form__button">
-              <input type="submit" value="送信">
+              <span><input type="submit" value="Send"></span>
             </div>
 
           </div>
