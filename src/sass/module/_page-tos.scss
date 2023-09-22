@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.page-privacy__inner.inner {
+.page-tos__inner.inner {
   max-width: rem(600);
   position: relative;
   @include mq(md) {
@@ -8,7 +8,7 @@
   }
 }
 
-.page-privacy__inner.inner::before {
+.page-tos__inner.inner::before {
   content: "";
   background: url(../images/common/fishs_r.png) no-repeat center / contain;
   display: block;
@@ -25,11 +25,11 @@
   }
 }
 
-.page-privacy__blackeneds {
+.page-tos__blackeneds {
   margin-top: rem(8);
 }
 
-.page-privacy__contents-inner {
+.page-tos__contents-inner {
   @include mq(md) {
     max-width: rem(850);
     padding: 0 rem(25);
@@ -37,7 +37,7 @@
   }
 }
 
-.page-privacy__title {
+.page-tos__title {
   margin-top: rem(52);
   font-size: rem(24);
   line-height: calc(35 / 24);
@@ -51,7 +51,7 @@
   }
 }
 
-.page-privacy__wrap {
+.page-tos__wrap {
   margin-top: rem(40);
   font-size: rem(16);
   line-height: calc(32 / 16);
@@ -59,27 +59,27 @@
 }
 
 /*===== 番号リスト =====*/
-.page-privacy__ol-list {
+.page-tos__ol-list {
   counter-reset: number;
 }
 
-.page-privacy__ol-item {
+.page-tos__ol-item {
   padding-left: rem(23);
   text-indent: -1em;
 }
 
-.page-privacy__ol-item::before {
+.page-tos__ol-item::before {
   counter-increment: number;
   content: counter(number) ".";
 }
 
 /*===== 箇条書きリスト =====*/
-.page-privacy__ul-item {
+.page-tos__ul-item {
   display: inline-flex;
   gap: 0 rem(6);
 }
 
-.page-privacy__ul-item::before {
+.page-tos__ul-item::before {
   content: "・";
   width: rem(10);
   height: rem(10);
@@ -87,10 +87,8 @@
 }
 
 /*===== スペース =====*/
-.page-privacy__ol-list.page-privacy__ol-list--1,
-.page-privacy__text2,
-.page-privacy__ul-list.page-privacy__ul-list--1,
-.page-privacy__ul-list.page-privacy__ul-list--2,
-.page-privacy__text3 {
+.page-tos__ol-list.page-tos__ol-list--1,
+.page-tos__ol-list.page-tos__ol-list--2,
+.page-tos__text2 {
   margin-top: rem(32);
 }
