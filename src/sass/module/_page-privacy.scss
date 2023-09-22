@@ -1,0 +1,101 @@
+@use "global" as *;
+
+.page-privacy__inner.inner {
+  max-width: rem(600);
+  position: relative;
+  @include mq(md) {
+    max-width: rem(1130);
+  }
+}
+
+.page-privacy__inner.inner::before {
+  content: "";
+  background: url(../images/common/fishs_r.png) no-repeat center / contain;
+  display: block;
+  width: rem(120);
+  height: rem(55);
+  position: absolute;
+  top: rem(49);
+  left: calc(50% - min(46vw, #{rem(312)}));
+  @include mq(md) {
+    width: rem(301);
+    height: rem(138);
+    top: rem(102);
+    left: calc(50% - min(43vw, #{rem(646)}));
+  }
+}
+
+.page-privacy__blackeneds {
+  margin-top: rem(8);
+}
+
+.page-privacy__contents-inner {
+  @include mq(md) {
+    max-width: rem(850);
+    padding: 0 rem(25);
+    margin-inline: auto;
+  }
+}
+
+.page-privacy__title {
+  margin-top: rem(52);
+  font-size: rem(24);
+  line-height: calc(35 / 24);
+  font-weight: $medium;
+  position: relative;
+  z-index: 1;
+  @include mq(md) {
+    margin-top: rem(150);
+    font-size: rem(32);
+    line-height: calc(46D / 32);
+  }
+}
+
+.page-privacy__wrap {
+  margin-top: rem(40);
+  font-size: rem(16);
+  line-height: calc(32 / 16);
+  font-weight: $regular;
+}
+
+/*===== 番号リスト =====*/
+.page-privacy__ol-list {
+  counter-reset: number;
+}
+
+.page-privacy__ol-item {
+  padding-left: rem(23);
+  text-indent: -1em;
+}
+
+.page-privacy__ol-item::before {
+  counter-increment: number;
+  content: counter(number) ".";
+}
+
+/*===== 箇条書きリスト =====*/
+
+.page-privacy__ul-list {
+}
+
+.page-privacy__ul-item {
+  display: inline-flex;
+  gap: 0 rem(6);
+}
+
+.page-privacy__ul-item::before {
+  content: "・";
+  width: rem(10);
+  height: rem(10);
+  display: block;
+}
+
+/*===== スペース =====*/
+
+.page-privacy__ol-list.page-privacy__ol-list--1,
+.page-privacy__text2,
+.page-privacy__ul-list.page-privacy__ul-list--1,
+.page-privacy__ul-list.page-privacy__ul-list--2,
+.page-privacy__text3 {
+  margin-top: rem(32);
+}
