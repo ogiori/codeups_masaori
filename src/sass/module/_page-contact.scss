@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.page-contanct__inner.inner {
+  max-width: rem(600);
+  position: relative;
+  @include mq(md) {
+    max-width: rem(1130);
+  }
+}
+
+.page-contanct__inner::before {
+  content: "";
+  background: url(../images/common/fishs_r.png) no-repeat center / contain;
+  display: block;
+  width: rem(120);
+  height: rem(55);
+  position: absolute;
+  top: rem(49);
+  left: calc(50% - min(46vw, #{rem(312)}));
+  @include mq(md) {
+    width: rem(301);
+    height: rem(138);
+    top: rem(102);
+    left: calc(50% - min(43vw, #{rem(646)}));
+  }
+}
+
+.page-contanct__blackeneds {
+  margin-top: rem(8);
+}
+
+.page-contact__form {
+  margin-top: rem(52);
+  @include mq(md) {
+    max-width: rem(700);
+    margin-inline: auto;
+    margin-top: rem(150);
+  }
+}
