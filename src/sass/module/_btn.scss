@@ -76,3 +76,42 @@
     transform: scale(1, 1);
   }
 }
+
+/*===== 404ページ =====*/
+.btn.btn--white::before {
+ border: rem(1) solid $white;
+}
+
+.btn.btn--white span {
+   padding: rem(14) rem(33) rem(14) rem(41);
+  background-color: $white;
+  color: $green;
+  border: rem(1) solid $white;
+}
+
+.btn.btn--white span::before {
+  background: url(../images/common/arrow_green.svg) no-repeat center / contain;
+}
+
+.btn.btn--white span::after {
+background-color: $green;
+}
+
+.btn.btn--white span:hover {
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.btn.btn--white span:hover::before {
+  @include mq(md) {
+    background: url(../images/common/arrow.svg) no-repeat center / contain;
+  }
+}
+
+
+// .btn.btn--white span:hover::after {
+//   @include mq(md) {
+//     transform: scale(1, 1);
+//   }
+// }
