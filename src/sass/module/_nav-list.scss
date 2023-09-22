@@ -67,3 +67,23 @@
   padding: rem(10) rem(4);
   margin-left: 0;
 }
+
+/*===== サイトマップ =====*/
+
+.nav-list.nav-list--sitemap {
+  color: $navy;
+  background-color: initial;
+  @include mq(md) {
+    gap: 0 rem(115);
+  }
+}
+
+.nav-list__wrap.nav-list__wrap--sitemap {
+@include mq(md) {
+  gap: 0 rem(111);
+}
+}
+
+.nav-list__item.nav-list__item--sitemap::before {
+  background: url(../images/common/hitode-n.svg)no-repeat center / contain;
+}

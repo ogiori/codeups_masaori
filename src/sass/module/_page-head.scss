@@ -90,6 +90,18 @@
   }
 }
 
+// sitemap
+.page-head.page-head--sitemap {
+  background: url(../images/common/page-sitemap-head_sp.jpg) no-repeat
+    center / cover;
+  @include mq(md) {
+    background: url(../images/common/page-sitemap-head_pc.jpg) no-repeat
+      center / cover;
+  }
+}
+
+page-sitemap-head_sp
+
 .page-head::before {
   content: "";
   display: block;
