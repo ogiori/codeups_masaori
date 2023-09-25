@@ -16,7 +16,9 @@
 
 .single-page-btn__prev:hover,
 .single-page-btn__next:hover {
-  background-color: $green;
+  @include mq(md) {
+    background-color: $green;
+  }
 }
 
 
@@ -48,9 +50,13 @@
 }
 
 .single-page-btn__prev a:hover::before {
-  background: url(../images/common/page-arrow_l-white.svg) no-repeat center / contain;
+  @include mq(md) {
+    background: url(../images/common/page-arrow_l-white.svg) no-repeat center / contain;
+  }
 }
 
 .single-page-btn__next a:hover::before {
-  background: url(../images/common/page-arrow_r-white.svg) no-repeat center / contain;
+  @include mq(md) {
+    background: url(../images/common/page-arrow_r-white.svg) no-repeat center / contain;
+  }
 }

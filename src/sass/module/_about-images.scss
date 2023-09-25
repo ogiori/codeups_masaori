@@ -68,6 +68,12 @@
   }
 }
 
+.about-images__item img:hover {
+  @include mq(md) {
+    cursor: pointer;
+  }
+}
+
 .about-images__item.about-images__item--large img {
   aspect-ratio: 345 /524;
   width: 100%;

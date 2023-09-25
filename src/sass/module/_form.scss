@@ -250,7 +250,7 @@ input[type="checkbox"]:checked + span::after {
   margin-top: rem(40);
   @include mq(md) {
     margin-top: rem(80);
-    max-width: rem(373);
+    max-width: rem(375);
   }
 }
 
@@ -267,6 +267,7 @@ select {
   font-size: rem(12);
   line-height: calc(17 / 12);
   font-weight: $regular;
+  color: $black;
   @include mq(md) {
     margin-top: rem(0);
     padding: rem(6) rem(8);
@@ -298,7 +299,7 @@ select:focus {
   height: rem(11);
   background: url(../images/common/trilateral.svg) no-repeat center / contain;
   position: absolute;
-  top: 47%;
+  top: 52%;
   right: rem(10);
   transform: rotate(90deg);
   @include mq(md) {
@@ -348,14 +349,18 @@ select:focus {
   z-index: -1;
   transition: all 0.3s;
 }
+
 .form__button:hover::after {
-  transform: scale(1, 1);
+  @include mq(md) {
+    transform: scale(1, 1);
+  }
 }
 
 //矢印
 .form__button span {
   position: relative;
 }
+
 .form__button span::after {
   content: "";
   display: block;
@@ -369,8 +374,11 @@ select:focus {
   pointer-events: none;
   transition: all 0.3s;
 }
+
 .form__button span:hover::after {
-  background: url(../images/common/arrow_green.svg) no-repeat center / contain;
+  @include mq(md) {
+    background: url(../images/common/arrow_green.svg) no-repeat center / contain;
+  }
 }
 
 //送信ボタン
@@ -394,7 +402,13 @@ input[type="submit"] {
   font-weight: $regular;
 }
 
-input[type="submit"]:hover,
+input[type="submit"]:hover {
+  @include mq(md) {
+    outline: none;
+    color: $green;
+  }
+}
+
 input[type="submit"]:focus {
   outline: none;
   color: $green;

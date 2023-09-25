@@ -69,7 +69,6 @@
 }
 
 /*===== サイトマップ =====*/
-
 .nav-list.nav-list--sitemap {
   color: $navy;
   background-color: initial;
@@ -86,4 +85,11 @@
 
 .nav-list__item.nav-list__item--sitemap::before {
   background: url(../images/common/hitode-n.svg)no-repeat center / contain;
+}
+
+//safariのみ対応
+::-webkit-full-page-media,
+:future,
+:root .nav-list__item a {
+padding: rem(10) rem(8);
 }

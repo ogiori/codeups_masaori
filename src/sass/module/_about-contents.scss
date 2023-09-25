@@ -72,7 +72,7 @@
     position: static;
     width: 50%;
     font-size: rem(80);
-    line-height: calc( 100/ 80);
+    line-height: calc(100 / 80);
   }
 }
 
@@ -86,9 +86,18 @@
     padding-right: rem(25);
     width: 50%;
     color: $white;
-     display: -webkit-box;
+    display: -webkit-box;
     -webkit-line-clamp: 17;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+}
+
+//safariのみ対応
+::-webkit-full-page-media,
+:future,
+:root .about-contents__block {
+  @include mq(md) {
+    gap: 0 rem(3);
   }
 }

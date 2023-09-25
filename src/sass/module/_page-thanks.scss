@@ -1,7 +1,11 @@
 @use "global" as *;
 
-.page-thanks__inner {
+.page-thanks__inner.inner {
   position: relative;
+  padding: 0 9px;
+  @include mq(md) {
+    padding: 0 25px;
+  }
 }
 
 .page-thanks__inner::before {

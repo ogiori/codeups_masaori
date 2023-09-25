@@ -16,7 +16,7 @@
   height: rem(55);
   position: absolute;
   top: rem(49);
-  left:calc(50% - min(46vw, #{rem(234)}));
+  left:calc(50% - min(46vw, #{rem(331)}));
   @include mq(md) {
     width: rem(301);
     height: rem(138);

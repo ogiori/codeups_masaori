@@ -12,8 +12,9 @@
   }
 }
 
-.archive-blog-cards_item {
+.archive-blog-cards__item {
   position: relative;
   z-index: 1;
   display: flex;
+  background-color: $white;
 }
