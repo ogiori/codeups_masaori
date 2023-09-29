@@ -5,7 +5,13 @@
   gap: rem(40) 0;
   @include mq(md) {
     grid-template-columns: repeat(3, 1fr);
-    gap: rem(40);
+    gap: rem(80) rem(40);
+  }
+}
+
+.cards2.cards2--2columns {
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -13,4 +19,6 @@
   display: flex;
   margin: 0 auto;
   background-color: $white;
+  position: relative;
+  z-index: 1;
 }

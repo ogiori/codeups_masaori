@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.category__inner.inner {
+  max-width: rem(630);
+  @include mq(md) {
+    max-width: rem(1130);
+  }
+}

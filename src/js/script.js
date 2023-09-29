@@ -202,12 +202,12 @@ triggers.forEach((trigger) => {
 /*Campaignスライダー*/
 const swiper1 = new Swiper(".js-campaign-swiper-container", {
   loop: true, // デフォルトはfalse
-  // autoplay: {
-  //   // 自動再生
-  //   delay: 2000, // 1秒後に次のスライド（初期値：3000）
-  //   disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
-  //   // スライドの表示枚数
-  // },
+  autoplay: {
+    // 自動再生
+    delay: 2000, // 1秒後に次のスライド（初期値：3000）
+    disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
+    // スライドの表示枚数
+  },
   speed: 1000,
   slidesPerView: "auto",
   spaceBetween: 24,

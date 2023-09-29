@@ -36,7 +36,6 @@
 </head>
 
 <body>
-
   <!-- ヘッダー -->
   <header class="header">
     <div class="header__inner">
@@ -201,89 +200,97 @@
 
   <main>
 
-    <section class="page-information">
-      <!-- トップ画像 -->
-      <div class="page-information__head js-mv">
-        <div class="page-head page-head--information">
-          <h1 class="page-head__title">information</h1>
-        </div>
+  <!-- トップ画像 -->
+  <div class="page-head">
+    <picture class="page-head__img">
+      <!-- 768px以上なら表示 -->
+      <source srcset="assets/images/common/page-information-head_pc.jpg" media="(min-width: 768px)">
+      <!-- 768px以下なら表示 -->
+      <img src="assets/images/common/page-information-head_sp.jpg" alt="">
+    </picture>
+    <h1 class="page-head__title">information</h1>
+  </div>
+
+  <!-- ぱんくず -->
+  <div class="blackened-space">
+    <div class="inner">
+      <ul class="blackeneds">
+        <li class="blackeneds__item">
+          <a href="#">TOP</a>
+        </li>
+        <li class="blackeneds__item">
+          <a href="#">キャンペーン</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+    <!-- タブ -->
+    <div class="information-list-space information-list">
+      <div class="information-list__inner inner inner-icon">
+
+        <ul class="information-tubs">
+          <li class="information-tubs__item">
+            <p class="information-tub information-tub--license js-information-tub current">ライセンス<br class="u-mobile">講習
+            </p>
+          </li>
+          <li class="information-tubs__item">
+            <p class="information-tub information-tub--fun js-information-tub">ファン<br class="u-mobile">ダイビング</p>
+          </li>
+          <li class="information-tubs__item">
+            <p class="information-tub information-tub--experience js-information-tub">体験<br class="u-mobile">ダイビング</p>
+          </li>
+        </ul>
+
       </div>
+    </div>
 
-      <div class="page-information__inner inner">
-
-        <!-- ぱんくず -->
-        <div class="page-information__blackeneds">
-          <ul class="blackeneds">
-            <li class="blackened">
-              <a href="#">TOP</a>
-            </li>
-            <li class="blackened">
-              <a href="#">ダイビング情報</a>
-            </li>
-          </ul>
-        </div>
-        <!-- タブ -->
-        <div class="page-information__tubs">
-          <ul class="information-tubs">
-            <li class="information-tubs__item">
-              <p class="information-tub information-tub--license js-information-tub current">ライセンス<br
-                  class="u-mobile">講習</p>
-            </li>
-            <li class="information-tubs__item">
-              <p class="information-tub information-tub--fun js-information-tub">ファン<br class="u-mobile">ダイビング</p>
-            </li>
-            <li class="information-tubs__item">
-              <p class="information-tub information-tub--experience js-information-tub">体験<br class="u-mobile">ダイビング</p>
-            </li>
-          </ul>
-        </div>
-
-        <div class="page-information__contents">
-          <!-- 1 -->
-          <ul class="cards4">
-            <li class="cards4__item js-cards4-item">
-              <div class="card4">
-                <div class="card4__wrap">
-                  <h2 class="card4__title">ライセンス講習</h2>
-                  <p class="card4__text">
-                    泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします！スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう！
-                  </p>
-                </div>
-                <figure class="card4__img">
-                  <img src="assets/images/common/information_img.jpg" alt="">
-                </figure>
+    <!-- コンテンツ -->
+    <div class="information-contents-space information-contents">
+      <div class="information-contents__inner inner">
+        <ul class="cards4">
+          <li class="cards4__item js-cards4-item">
+            <div class="card4">
+              <div class="card4__wrap">
+                <h2 class="card4__title">ライセンス講習</h2>
+                <p class="card4__text">
+                  泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします！スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう！
+                </p>
               </div>
-            </li>
-            <li class="cards4__item js-cards4-item">
-              <div class="card4">
-                <div class="card4__wrap">
-                  <h2 class="card4__title">ファンダイビング</h2>
-                  <p class="card4__text">
-                    ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
-                  </p>
-                </div>
-                <figure class="card4__img">
-                  <img src="assets/images/common/gallery5.jpg" alt="">
-                </figure>
+              <figure class="card4__img">
+                <img src="assets/images/common/information_img.jpg" alt="">
+              </figure>
+            </div>
+          </li>
+          <li class="cards4__item js-cards4-item">
+            <div class="card4">
+              <div class="card4__wrap">
+                <h2 class="card4__title">ファンダイビング</h2>
+                <p class="card4__text">
+                  ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
+                </p>
               </div>
-            </li>
-            <li class="cards4__item js-cards4-item">
-              <div class="card4">
-                <div class="card4__wrap">
-                  <h2 class="card4__title">体験ダイビング</h2>
-                  <p class="card4__text">
-                    ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
-                  </p>
-                </div>
-                <figure class="card4__img">
-                  <img src="assets/images/common/gallery3.jpg" alt="">
-                </figure>
+              <figure class="card4__img">
+                <img src="assets/images/common/gallery5.jpg" alt="">
+              </figure>
+            </div>
+          </li>
+          <li class="cards4__item js-cards4-item">
+            <div class="card4">
+              <div class="card4__wrap">
+                <h2 class="card4__title">体験ダイビング</h2>
+                <p class="card4__text">
+                  ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
+                </p>
               </div>
-            </li>
-          </ul>
-        </div>
+              <figure class="card4__img">
+                <img src="assets/images/common/gallery3.jpg" alt="">
+              </figure>
+            </div>
+          </li>
+        </ul>
       </div>
-    </section>
+    </div>
 
     <!-- Contact -->
     <section id="contact" class="archive-contact contact">
@@ -340,6 +347,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- フッター -->

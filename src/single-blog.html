@@ -201,35 +201,40 @@
 
   <main>
 
-    <!-- ブログ詳細 -->
-    <section class="single-blog">
-      <!-- トップ画像 -->
-      <div class="single-blog__head js-mv">
-        <div class="page-head page-head--blog">
-          <h1 class="page-head__title">blog</h1>
-        </div>
+    <!-- トップ画像 -->
+    <div class="page-head">
+      <picture class="page-head__img">
+        <!-- 768px以上なら表示 -->
+        <source srcset="assets/images/common/archive-blog-head_pc.jpg" media="(min-width: 768px)">
+        <!-- 768px以下なら表示 -->
+        <img src="assets/images/common/archive-blog-head_sp.jpg" alt="">
+      </picture>
+      <h1 class="page-head__title">blog</h1>
+    </div>
+
+    <!-- ぱんくず -->
+    <div class="blackened-space">
+      <div class="inner">
+        <ul class="blackeneds">
+          <li class="blackeneds__item">
+            <a href="#">TOP</a>
+          </li>
+          <li class="blackeneds__item">
+            <a href="#">ブログ一覧</a>
+          </li>
+          <li class="blackeneds__item">
+            <a href="#">ブログ詳細</a>
+          </li>
+        </ul>
       </div>
+    </div>
 
-      <div class="single-blog__inner inner">
-
-        <!-- ぱんくず -->
-        <div class="single-blog__blackeneds">
-          <ul class="blackeneds">
-            <li class="blackened">
-              <a href="#">TOP</a>
-            </li>
-            <li class="blackened">
-              <a href="#">ブログ一覧</a>
-            </li>
-            <li class="blackened">
-              <a href="#">ブログ詳細</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="single-blog__contents">
+    <!-- コンテンツ -->
+    <div class="sidebar-contents">
+      <div class="inner inner-icon">
+        <div class="sidebar-content">
           <!-- 左コンテンツ -->
-          <div class="single-blog__left">
+          <div class="sidebar-content__left">
 
             <div class="single-page">
               <!-- 時間・タグ -->
@@ -281,12 +286,11 @@
                   </li>
                 </ul>
               </div>
-
             </div>
           </div>
 
           <!-- 右コンテンツ -->
-          <div class="single-blog__right">
+          <div class="sidebar-content__right">
             <div class="sidebar">
               <!-- 人気記事 -->
               <div class="sidebar__title">
@@ -439,10 +443,10 @@
               </div>
             </div>
           </div>
-
         </div>
+
       </div>
-    </section>
+    </div>
 
     <!-- Contact -->
     <section id="contact" class="archive-contact contact">

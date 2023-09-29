@@ -2,7 +2,6 @@
 
 .footer-space {
   margin-top: rem(104);
-
   @include mq(md) {
     margin-top: rem(160);
   }

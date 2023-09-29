@@ -1,7 +1,11 @@
 @use "global" as *;
 
-.about-contents {
+.about-contents__inner.inner {
+  max-width: rem(630);
   position: relative;
+  @include mq(md) {
+    max-width: rem(1130);
+  }
 }
 
 .about-contents__wrap {
@@ -50,12 +54,13 @@
   display: contents;
   @include mq(md) {
     display: block;
+    max-width: rem(840);
     position: absolute;
     top: rem(200);
-    left: rem(200);
+    left: calc(50% - #{rem(333)});
     z-index: 2;
     display: flex;
-    gap: 0 rem(8);
+    gap: 0 4%;
   }
 }
 
@@ -67,10 +72,10 @@
   color: $white;
   position: absolute;
   top: rem(24);
-  left: rem(24);
+  left: rem(39);
   @include mq(md) {
     position: static;
-    width: 50%;
+    width: 48%;
     font-size: rem(80);
     line-height: calc(100 / 80);
   }
@@ -83,8 +88,7 @@
   font-weight: $regular;
   @include mq(md) {
     margin-top: rem(27);
-    padding-right: rem(25);
-    width: 50%;
+    width: 48%;
     color: $white;
     display: -webkit-box;
     -webkit-line-clamp: 17;

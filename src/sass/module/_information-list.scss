@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.information-list__inner.inner {
+  max-width: rem(650);
+  @include mq(md) {
+    max-width: rem(1130);
+  }
+}

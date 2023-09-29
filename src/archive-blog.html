@@ -198,40 +198,45 @@
       </div>
     </div>
   </header>
+
   <main>
 
-    <!-- ブログ一覧 -->
-    <section class="archive-blog">
+    <!-- トップ画像 -->
+    <div class="page-head">
+      <picture class="page-head__img">
+        <!-- 768px以上なら表示 -->
+        <source srcset="assets/images/common/archive-blog-head_pc.jpg" media="(min-width: 768px)">
+        <!-- 768px以下なら表示 -->
+        <img src="assets/images/common/archive-blog-head_sp.jpg" alt="">
+      </picture>
+      <h1 class="page-head__title">blog</h1>
+    </div>
 
-      <!-- トップ画像 -->
-      <div class="archive-blog__head js-mv">
-        <div class="page-head page-head--blog">
-          <h1 class="page-head__title">blog</h1>
-        </div>
+    <!-- ぱんくず -->
+    <div class="blackened-space">
+      <div class="inner">
+        <ul class="blackeneds">
+          <li class="blackeneds__item">
+            <a href="#">TOP</a>
+          </li>
+          <li class="blackeneds__item">
+            <a href="#">ブログ一覧</a>
+          </li>
+        </ul>
       </div>
+    </div>
 
-      <div class="archive-blog__inner inner">
+    <div class="sidebar-contents">
+      <div class="inner inner-icon">
 
-        <!-- ぱんくず -->
-        <div class="archive-blog__blackeneds">
-          <ul class="blackeneds">
-            <li class="blackened">
-              <a href="#">TOP</a>
-            </li>
-            <li class="blackened">
-              <a href="#">ブログ一覧</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="archive-blog__contents">
+        <div class="sidebar-content">
           <!-- 左コンテンツ -->
-          <div class="archive-blog__left">
+          <div class="sidebar-content__left">
             <!-- カード群 -->
-            <div class="archive-blog__cards">
-              <ul class="archive-blog-cards">
+            <div class="sidebar-content__cards">
+              <ul class="cards2 cards2--2columns">
                 <!-- 1 -->
-                <li class="archive-blog-cards__item">
+                <li class="cards2__item">
                   <a href="single-blog.html" class="card2 card2--hover">
                     <div class="card2__img">
                       <img src="assets/images/common/blog_img1.jpg" alt="サンゴの写真" />
@@ -245,7 +250,7 @@
                   </a>
                 </li>
                 <!-- 2 -->
-                <li class="archive-blog-cards__item">
+                <li class="cards2__item">
                   <a href="#" class="card2 card2--hover">
                     <div class="card2__img">
                       <img src="assets/images/common/blog_img2.jpg" alt="亀の写真" />
@@ -259,7 +264,7 @@
                   </a>
                 </li>
                 <!-- 3 -->
-                <li class="archive-blog-cards__item">
+                <li class="cards2__item">
                   <a href="#" class="card2 card2--hover">
                     <div class="card2__img">
                       <img src="assets/images/common/blog_img3.jpg" alt="魚の写真" />
@@ -273,7 +278,7 @@
                   </a>
                 </li>
                 <!-- 4 -->
-                <li class="archive-blog-cards__item">
+                <li class="cards2__item">
                   <a href="#" class="card2 card2--hover">
                     <div class="card2__img">
                       <img src="assets/images/common/gallery4.jpg" alt="魚の写真" />
@@ -287,7 +292,7 @@
                   </a>
                 </li>
                 <!-- 5 -->
-                <li class="archive-blog-cards__item">
+                <li class="cards2__item">
                   <a href="#" class="card2 card2--hover">
                     <div class="card2__img">
                       <img src="assets/images/common/archive-blog_img5.jpg" alt="サンゴの写真" />
@@ -301,7 +306,7 @@
                   </a>
                 </li>
                 <!-- ６ -->
-                <li class="archive-blog-cards__item">
+                <li class="cards2__item">
                   <a href="#" class="card2 card2--hover">
                     <div class="card2__img">
                       <img src="assets/images/common/campaign_img3.jpg" alt="クラゲの写真" />
@@ -315,7 +320,7 @@
                   </a>
                 </li>
                 <!-- ７ -->
-                <li class="archive-blog-cards__item">
+                <li class="cards2__item">
                   <a href="#" class="card2 card2--hover">
                     <div class="card2__img">
                       <img src="assets/images/common/blog_img3.jpg" alt="魚の写真" />
@@ -329,7 +334,7 @@
                   </a>
                 </li>
                 <!-- 8 -->
-                <li class="archive-blog-cards__item">
+                <li class="cards2__item">
                   <a href="#" class="card2 card2--hover">
                     <div class="card2__img">
                       <img src="assets/images/common/gallery4.jpg" alt="魚の写真" />
@@ -343,7 +348,7 @@
                   </a>
                 </li>
                 <!-- 9 -->
-                <li class="archive-blog-cards__item">
+                <li class="cards2__item">
                   <a href="#" class="card2 card2--hover">
                     <div class="card2__img">
                       <img src="assets/images/common/archive-blog_img5.jpg" alt="サンゴの写真" />
@@ -357,7 +362,7 @@
                   </a>
                 </li>
                 <!-- 10 -->
-                <li class="archive-blog-cards__item">
+                <li class="cards2__item">
                   <a href="#" class="card2 card2--hover">
                     <div class="card2__img">
                       <img src="assets/images/common/campaign_img3.jpg" alt="クラゲの写真" />
@@ -374,7 +379,7 @@
               </ul>
             </div>
             <!-- ページネーション -->
-            <div class="archive-blog__page-btn">
+            <div class="sidebar-content__page-btn">
               <div class="page-btn">
                 <!-- 前 -->
                 <div class="page-btn__prev">
@@ -404,7 +409,7 @@
           </div>
 
           <!-- 右コンテンツ -->
-          <div class="archive-blog__right">
+          <div class="sidebar-content__right">
             <div class="sidebar">
               <!-- 人気記事 -->
               <div class="sidebar__title">
@@ -558,8 +563,14 @@
             </div>
           </div>
         </div>
+
+
+
+
       </div>
-    </section>
+    </div>
+
+
 
     <!-- Contact -->
     <section id="contact" class="archive-contact contact">

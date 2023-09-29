@@ -11,6 +11,8 @@
   font-weight: $regular;
   color: $green;
   transition: all 0.3s;
+  position: relative;
+  z-index: 1;
   @include mq(md) {
     display: inline-flex;
     min-width: rem(300);

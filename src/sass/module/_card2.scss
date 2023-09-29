@@ -5,6 +5,7 @@
   padding: rem(16) rem(17) rem(24);
   background-color: $white;
   box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
+  transition: opacity 0.3s;
 }
 
 .card2:hover {
@@ -27,7 +28,7 @@
   aspect-ratio: 301 /202;
   width: 100%;
   object-fit: cover;
-  transition: all 0.3s;
+  transition: transform 0.3s;
 }
 
 .card2__time {

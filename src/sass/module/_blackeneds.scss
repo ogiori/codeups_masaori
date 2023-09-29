@@ -1,17 +1,17 @@
 @use "global" as *;
 
-.blackened__list {
+.blackeneds {
   display: flex;
   gap: 0 rem(8);
 }
 
-.blackened__item {
+.blackeneds__item {
   display: flex;
   align-items: center;
 	gap: 0 rem(8);
 }
 
-.blackened__item:not(:last-child)::after {
+.blackeneds__item:not(:last-child)::after {
   content: "";
   display: block;
   width: rem(4);
@@ -20,7 +20,7 @@
     contain;
 }
 
-.blackened__item a {
+.blackeneds__item a {
   display: inline-flex;
   font-size: rem(14);
   line-height: calc(20 / 14);
@@ -28,5 +28,3 @@
   align-items: center;
   gap: 0 rem(5);
 }
-
-
