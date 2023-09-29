@@ -1,17 +1,17 @@
 @use "global" as *;
 
-.blackeneds {
+.blackened__list {
   display: flex;
   gap: 0 rem(8);
 }
 
-.blackened {
+.blackened__item {
   display: flex;
   align-items: center;
 	gap: 0 rem(8);
 }
 
-.blackened:not(:last-child)::after {
+.blackened__item:not(:last-child)::after {
   content: "";
   display: block;
   width: rem(4);
@@ -20,7 +20,7 @@
     contain;
 }
 
-.blackened a {
+.blackened__item a {
   display: inline-flex;
   font-size: rem(14);
   line-height: calc(20 / 14);
@@ -29,12 +29,4 @@
   gap: 0 rem(5);
 }
 
-/*===== 404ページ =====*/
-.blackened.blackened--white:not(:last-child)::after {
-background: url(../images/common/blackeneds_arrow-white.svg) no-repeat center /
-    contain;
-}
 
-.blackened.blackened--white a {
-color: $white;
-}

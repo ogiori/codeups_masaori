@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.inner-icon {
+  position: relative;
+}
+
+.inner-icon::before {
+  content: "";
+  background: url(../images/common/fishs_r.png) no-repeat top / contain;
+  display: block;
+  width: rem(122);
+  height: rem(138);
+  position: absolute;
+  top: rem(-25);
+  left: calc(50% - min(46.5vw, #{rem(620)}));
+  @include mq(md) {
+    width: rem(301);
+    height: rem(138);
+    top: rem(-70);
+    left: calc(50% - min(47vw, #{rem(620)}));
+  }
+}

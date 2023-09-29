@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.archive-campaign__inner.inner {
+  max-width: rem(630);
+  padding: 0 rem(48);
+  @include mq(md) {
+    max-width: rem(1130);
+    padding:0 rem(25);
+  }
+}

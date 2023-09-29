@@ -49,21 +49,20 @@
 }
 
 .card1__body-bottom {
-  padding: 0 rem(16) rem(24);
+  padding: rem(8) rem(16) rem(24);
   margin-top: auto;
   @include mq(md) {
+    padding-top: rem(16);
     padding-bottom: rem(40);
   }
 }
 
 .card1__text {
-  margin-top: rem(8);
   text-align: center;
   font-size: rem(14);
   line-height: calc(24 / 14);
   font-weight: $regular;
   @include mq(md) {
-    margin-top: rem(16);
     font-size: rem(16);
     line-height: calc(24 / 16);
   }
@@ -121,7 +120,10 @@
   font-size: rem(16);
   line-height: calc(24 / 16);
   font-weight: $regular;
-  padding-bottom: rem(32);
+  padding-bottom: rem(28);
+  @include mq(md) {
+    padding-bottom: rem(32);
+  }
 }
 
 .card1__cta {
@@ -134,6 +136,7 @@
   line-height: calc(18 / 16);
   font-weight: $bold;
   color: $green;
+  font-family: $lato;
 }
 
 .card1__cta-text {
@@ -148,7 +151,50 @@
   margin-top: rem(16);
 }
 
-//===== アーカイブページ =====
+/*===== archiveキャンペーン =====*/
+.card1__img.card1__img--campaign img {
+  aspect-ratio: 280/189;
+  @include mq(md) {
+    aspect-ratio: 333/222;
+  }
+}
+
+.card1__body-top.card1__body-top--campaign {
+  @include mq(md) {
+    padding: rem(24) rem(23) 0;
+  }
+}
+
+.card1__wrap.card1__wrap--campaign {
+  margin-top: rem(6);
+  @include mq(md) {
+    margin-top: rem(8);
+  }
+}
+
+.card1__price1.card1__price1--archive {
+  width: calc(96 / 211 * 100%);
+  @include mq(md) {
+    padding-left: rem(10);
+    width: 49.49763%;
+  }
+}
+
+.card1__title.card1__title--archive {
+  @include mq(md) {
+    font-size: rem(24);
+    line-height: calc(35 / 24);
+    padding-bottom: rem(4);
+  }
+}
+
+.card1__body-bottom.card1__body-bottom--archive {
+  @include mq(md) {
+    padding-top: rem(24);
+    padding-bottom: rem(38);
+  }
+}
+
 .card1__archive_contents {
   display: none;
   @include mq(md) {
@@ -161,26 +207,13 @@
   }
 }
 
-.card1__title.card1__title--archive {
-  @include mq(md) {
-    font-size: rem(24);
-    line-height: calc(35 / 24);
-  }
-}
-
-.card1__body-bottom.card1__body-bottom--archive {
-  @include mq(md) {
-    margin-top: 0;
-  }
-}
-
 //===== サイドバー =====
 .card1__img.card1__img--sidebar img {
-aspect-ratio: 294/188;
+  aspect-ratio: 294/188;
 }
 
 .card1__body-top.card1__body-top--sidebar {
-padding: rem(16) rem(23) 0;
+  padding: rem(16) rem(23) 0;
 }
 
 .card1__title.card1__title--sidebar {
@@ -195,7 +228,7 @@ padding: rem(16) rem(23) 0;
 
 .card1__body-bottom.card1__body-bottom--sidebar {
   @include mq(md) {
-  padding-bottom: rem(24);
+    padding-bottom: rem(24);
   }
 }
 
@@ -220,4 +253,3 @@ padding: rem(16) rem(23) 0;
     line-height: 1;
   }
 }
-

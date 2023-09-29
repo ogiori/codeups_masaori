@@ -1,9 +1,18 @@
 @use "global" as *;
 
-.categorys {
+.categorys__inner.inner {
+  max-width: rem(630);
+  @include mq(md) {
+    max-width: rem(1130);
+  }
+}
+
+.categorys__list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: rem(16) rem(21);
+  position: relative;
+  z-index: 1;
   @include mq(md) {
     display: flex;
     flex-wrap: wrap;
