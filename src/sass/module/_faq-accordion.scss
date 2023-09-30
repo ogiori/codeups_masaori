@@ -32,6 +32,25 @@
   }
 }
 
+/* アコーディオンのコンテンツ */
+.faq-accordion__contents {
+  padding: rem(24) rem(16) rem(22);
+  font-size: rem(16);
+  line-height: calc(23 / 16);
+  font-weight: $regular;
+  display: block;
+  cursor: pointer;
+  @include mq(md) {
+    margin-top: rem(16);
+    border: 1px solid $green;
+    padding: rem(40);
+  }
+}
+
+.faq-accordion__contents.is-open {
+  display: none;
+}
+
 /* (+)アイコン */
 .faq-accordion__title::before,
 .faq-accordion__title::after {
@@ -51,36 +70,13 @@
   }
 }
 
-.faq-accordion__title::after {
-  transform: rotate(90deg);
-}
-
-/* アコーディオンのコンテンツ */
-.faq-accordion__contents {
-  padding: rem(24) rem(16) rem(22);
-  font-size: rem(16);
-  line-height: calc(23 / 16);
-  font-weight: $regular;
-  display: none;
-  cursor: pointer;
-  @include mq(md) {
-    margin-top: rem(16);
-    border: 1px solid $green;
-    padding: rem(40);
-  }
-}
-
-.faq-accordion__contents.is-open {
-  display: block;
-}
-
 /* アコーディオン展開時の(-)アイコン */
-
 .faq-accordion__item.is-active .faq-accordion__title::before {
   transform: rotate(0);
 }
 
 .faq-accordion__item.is-active .faq-accordion__title::after {
-  transform: rotate(180deg);
-  opacity: 0;
+  transform: rotate(90deg);
+  opacity: 1;
 }
+

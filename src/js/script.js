@@ -278,7 +278,7 @@ if (firstContent) {
 }
 
 /* =================================================== */
-// アコーディオンの共通設定
+// アコーディオン共通設定
 /* =================================================== */
 const slideUp = (el, duration = 300) => {
   el.style.height = el.offsetHeight + "px";
@@ -307,7 +307,7 @@ const slideUp = (el, duration = 300) => {
   }, duration);
 };
 
-// 要素をスライドしながら表示する関数(jQueryのslideDownと同じ)
+// 要素をスライドしながら表示する関数
 const slideDown = (el, duration = 300) => {
   el.classList.add("is-open");
   el.style.removeProperty("display");
