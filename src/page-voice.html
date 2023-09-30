@@ -200,226 +200,239 @@
   </header>
 
   <main>
-    <section class="page-voice">
-      <!-- トップ画像 -->
-      <div class="page-voice__head js-mv">
-        <div class="page-head page-head--voice">
-          <h1 class="page-head__title">voice</h1>
-        </div>
+
+    <!-- トップ画像 -->
+    <div class="page-head">
+      <picture class="page-head__img">
+        <!-- 768px以上なら表示 -->
+        <source srcset="assets/images/common/page-voice-head_pc.jpg" media="(min-width: 768px)">
+        <!-- 768px以下なら表示 -->
+        <img src="assets/images/common/page-voice-head_sp.jpg" alt="">
+      </picture>
+      <h1 class="page-head__title">voice</h1>
+    </div>
+
+    <!-- ぱんくず -->
+    <div class="blackened-space">
+      <div class="inner">
+        <ul class="blackeneds">
+          <li class="blackeneds__item">
+            <a href="#">TOP</a>
+          </li>
+          <li class="blackeneds__item">
+            <a href="#">お客様の声</a>
+          </li>
+        </ul>
       </div>
+    </div>
 
+
+    <!-- カテゴリーリスト -->
+    <div class="category-space category">
+      <div class="category__inner inner inner-icon">
+
+        <ul class="categorys">
+          <li class="categorys__item">
+            <a href="#" class="category-tag">ALL</a>
+          </li>
+          <li class="categorys__item">
+            <a href="#" class="category-tag">ライセンス講習</a>
+          </li>
+          <li class="categorys__item">
+            <a href="#" class="category-tag">ファンダイビング</a>
+          </li>
+          <li class="categorys__item">
+            <a href="#" class="category-tag">体験ダイビング</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- カード郡 -->
+    <div class="page-voice-space page-voice">
       <div class="page-voice__inner inner">
-
-        <!-- ぱんくず -->
-        <div class="page-voice__blackeneds">
-          <ul class="blackeneds">
-            <li class="blackened">
-              <a href="#">TOP</a>
-            </li>
-            <li class="blackened">
-              <a href="#">お客様の声</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- コンテンツ -->
-        <!-- カテゴリー -->
-        <div class="page-voice__categorys">
-          <ul class="categorys">
-            <li class="categorys__item">
-              <a href="#" class="category-tag">ALL</a>
-            </li>
-            <li class="categorys__item">
-              <a href="#" class="category-tag">ライセンス講習</a>
-            </li>
-            <li class="categorys__item">
-              <a href="#" class="category-tag">ファンダイビング</a>
-            </li>
-            <li class="categorys__item">
-              <a href="#" class="category-tag">体験ダイビング</a>
-            </li>
-          </ul>
-        </div>
-        <!-- カード郡 -->
-        <div class="page-voice__cards">
-          <ul class="cards3 cards3--voice">
-            <li class="cards3__item">
-              <div class="card3">
-                <div class="card3__wrap1">
-                  <div class="card3__wrap2">
-                    <div class="card3__wrap3">
-                      <div class="card3__meta">
-                        <p class="card3__age">20代</p>
-                        <p class="card3__gender">(女性)</p>
-                      </div>
-                      <p class="card3__tag">ライセンス講習</p>
+        <ul class="cards3">
+          <li class="cards3__item">
+            <div class="card3">
+              <div class="card3__wrap1">
+                <div class="card3__wrap2">
+                  <div class="card3__wrap3">
+                    <div class="card3__meta">
+                      <p class="card3__age">20代</p>
+                      <p class="card3__gender">(女性)</p>
                     </div>
-                    <h3 class="card3__title">ここにタイトルが入ります。ここにタイトル</h3>
+                    <p class="card3__tag">ライセンス講習</p>
                   </div>
-                  <div class="card3__img js-trigger">
-                    <img src="assets/images/common/voice_img1.jpg" alt="20代、女性の写真" />
-                  </div>
+                  <h3 class="card3__title">ここにタイトルが入ります。ここにタイトル</h3>
                 </div>
-                <p class="card3__text">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                  ここにテキストが入ります。ここにテキストが入ります。
-                </p>
-              </div>
-            </li>
-            <li class="cards3__item">
-              <div class="card3">
-                <div class="card3__wrap1">
-                  <div class="card3__wrap2">
-                    <div class="card3__wrap3">
-                      <div class="card3__meta">
-                        <p class="card3__age">30代</p>
-                        <p class="card3__gender">(男性)</p>
-                      </div>
-                      <p class="card3__tag">ファンダイビング</p>
-                    </div>
-                    <h3 class="card3__title">ここにタイトルが入ります。ここにタイトル</h3>
-                  </div>
-                  <div class="card3__img js-trigger">
-                    <img src="assets/images/common/voice_img2.jpg" alt="30代、男性の写真" />
-                  </div>
+                <div class="card3__img js-trigger">
+                  <img src="assets/images/common/voice_img1.jpg" alt="20代、女性の写真" />
                 </div>
-                <p class="card3__text">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                  ここにテキストが入ります。ここにテキストが入ります。
-                </p>
               </div>
-            </li>
-            <li class="cards3__item">
-              <div class="card3">
-                <div class="card3__wrap1">
-                  <div class="card3__wrap2">
-                    <div class="card3__wrap3">
-                      <div class="card3__meta">
-                        <p class="card3__age">30代</p>
-                        <p class="card3__gender">(女性)</p>
-                      </div>
-                      <p class="card3__tag">体験ダイビング</p>
-                    </div>
-                    <h3 class="card3__title">ここにタイトルが入ります。ここにタイトル</h3>
-                  </div>
-                  <div class="card3__img js-trigger">
-                    <img src="assets/images/common/voice_img3.jpg" alt="30代、男性の写真" />
-                  </div>
-                </div>
-                <p class="card3__text">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                  ここにテキストが入ります。ここにテキストが入ります。
-                </p>
-              </div>
-            </li>
-            <li class="cards3__item">
-              <div class="card3">
-                <div class="card3__wrap1">
-                  <div class="card3__wrap2">
-                    <div class="card3__wrap3">
-                      <div class="card3__meta">
-                        <p class="card3__age">20代</p>
-                        <p class="card3__gender">(女性)</p>
-                      </div>
-                      <p class="card3__tag">体験ダイビング</p>
-                    </div>
-                    <h3 class="card3__title">ここにタイトルが入ります。ここにタイトル</h3>
-                  </div>
-                  <div class="card3__img js-trigger">
-                    <img src="assets/images/common/voice_img4.jpg" alt="30代、男性の写真" />
-                  </div>
-                </div>
-                <p class="card3__text">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                  ここにテキストが入ります。ここにテキストが入ります。
-                </p>
-              </div>
-            </li>
-            <li class="cards3__item">
-              <div class="card3">
-                <div class="card3__wrap1">
-                  <div class="card3__wrap2">
-                    <div class="card3__wrap3">
-                      <div class="card3__meta">
-                        <p class="card3__age">30代</p>
-                        <p class="card3__gender">(カップル)</p>
-                      </div>
-                      <p class="card3__tag">ファンダイビング</p>
-                    </div>
-                    <h3 class="card3__title">ここにタイトルが入ります。ここにタイトル</h3>
-                  </div>
-                  <div class="card3__img js-trigger">
-                    <img src="assets/images/common/voice_img5.jpg" alt="30代、男性の写真" />
-                  </div>
-                </div>
-                <p class="card3__text">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                  ここにテキストが入ります。ここにテキストが入ります。
-                </p>
-              </div>
-            </li>
-            <li class="cards3__item">
-              <div class="card3">
-                <div class="card3__wrap1">
-                  <div class="card3__wrap2">
-                    <div class="card3__wrap3">
-                      <div class="card3__meta">
-                        <p class="card3__age">20代</p>
-                        <p class="card3__gender">(女性)</p>
-                      </div>
-                      <p class="card3__tag">ライセンス講習</p>
-                    </div>
-                    <h3 class="card3__title">ここにタイトルが入ります。ここにタイトル</h3>
-                  </div>
-                  <div class="card3__img js-trigger">
-                    <img src="assets/images/common/voice_img6.jpg" alt="30代、男性の写真" />
-                  </div>
-                </div>
-                <p class="card3__text">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                  ここにテキストが入ります。ここにテキストが入ります。
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <!-- ページネーション -->
-        <div class="page-voice__page-btn">
-          <div class="page-btn">
-            <!-- 前 -->
-            <div class="page-btn__prev">
-              <a href="#"></a>
+              <p class="card3__text">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                ここにテキストが入ります。ここにテキストが入ります。
+              </p>
             </div>
-            <!-- 番号 -->
-            <ul class="page-btn__warp">
-              <li class="page-btn__number">
-                <a href="#">1</a>
-              </li>
-              <li class="page-btn__number">
-                <a href="#">2</a>
-              </li>
-              <li class="page-btn__number">
-                <a href="#">3</a>
-              </li>
-              <li class="page-btn__number">
-                <a href="#">4</a>
-              </li>
-            </ul>
-            <!-- 次 -->
-            <div class="page-btn__next">
-              <a href="#"></a>
+          </li>
+          <li class="cards3__item">
+            <div class="card3">
+              <div class="card3__wrap1">
+                <div class="card3__wrap2">
+                  <div class="card3__wrap3">
+                    <div class="card3__meta">
+                      <p class="card3__age">30代</p>
+                      <p class="card3__gender">(男性)</p>
+                    </div>
+                    <p class="card3__tag">ファンダイビング</p>
+                  </div>
+                  <h3 class="card3__title">ここにタイトルが入ります。ここにタイトル</h3>
+                </div>
+                <div class="card3__img js-trigger">
+                  <img src="assets/images/common/voice_img2.jpg" alt="30代、男性の写真" />
+                </div>
+              </div>
+              <p class="card3__text">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                ここにテキストが入ります。ここにテキストが入ります。
+              </p>
             </div>
+          </li>
+          <li class="cards3__item">
+            <div class="card3">
+              <div class="card3__wrap1">
+                <div class="card3__wrap2">
+                  <div class="card3__wrap3">
+                    <div class="card3__meta">
+                      <p class="card3__age">30代</p>
+                      <p class="card3__gender">(女性)</p>
+                    </div>
+                    <p class="card3__tag">体験ダイビング</p>
+                  </div>
+                  <h3 class="card3__title">ここにタイトルが入ります。ここにタイトル</h3>
+                </div>
+                <div class="card3__img js-trigger">
+                  <img src="assets/images/common/voice_img3.jpg" alt="30代、男性の写真" />
+                </div>
+              </div>
+              <p class="card3__text">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                ここにテキストが入ります。ここにテキストが入ります。
+              </p>
+            </div>
+          </li>
+          <li class="cards3__item">
+            <div class="card3">
+              <div class="card3__wrap1">
+                <div class="card3__wrap2">
+                  <div class="card3__wrap3">
+                    <div class="card3__meta">
+                      <p class="card3__age">20代</p>
+                      <p class="card3__gender">(女性)</p>
+                    </div>
+                    <p class="card3__tag">体験ダイビング</p>
+                  </div>
+                  <h3 class="card3__title">ここにタイトルが入ります。ここにタイトル</h3>
+                </div>
+                <div class="card3__img js-trigger">
+                  <img src="assets/images/common/voice_img4.jpg" alt="30代、男性の写真" />
+                </div>
+              </div>
+              <p class="card3__text">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                ここにテキストが入ります。ここにテキストが入ります。
+              </p>
+            </div>
+          </li>
+          <li class="cards3__item">
+            <div class="card3">
+              <div class="card3__wrap1">
+                <div class="card3__wrap2">
+                  <div class="card3__wrap3">
+                    <div class="card3__meta">
+                      <p class="card3__age">30代</p>
+                      <p class="card3__gender">(カップル)</p>
+                    </div>
+                    <p class="card3__tag">ファンダイビング</p>
+                  </div>
+                  <h3 class="card3__title">ここにタイトルが入ります。ここにタイトル</h3>
+                </div>
+                <div class="card3__img js-trigger">
+                  <img src="assets/images/common/voice_img5.jpg" alt="30代、男性の写真" />
+                </div>
+              </div>
+              <p class="card3__text">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                ここにテキストが入ります。ここにテキストが入ります。
+              </p>
+            </div>
+          </li>
+          <li class="cards3__item">
+            <div class="card3">
+              <div class="card3__wrap1">
+                <div class="card3__wrap2">
+                  <div class="card3__wrap3">
+                    <div class="card3__meta">
+                      <p class="card3__age">20代</p>
+                      <p class="card3__gender">(女性)</p>
+                    </div>
+                    <p class="card3__tag">ライセンス講習</p>
+                  </div>
+                  <h3 class="card3__title">ここにタイトルが入ります。ここにタイトル</h3>
+                </div>
+                <div class="card3__img js-trigger">
+                  <img src="assets/images/common/voice_img6.jpg" alt="30代、男性の写真" />
+                </div>
+              </div>
+              <p class="card3__text">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                ここにテキストが入ります。ここにテキストが入ります。
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ページネーション -->
+    <div class="pagination-space pagination-space--voice pagination">
+      <div class="inner">
+
+        <div class="page-btn">
+          <!-- 前 -->
+          <div class="page-btn__prev">
+            <a href="#"></a>
+          </div>
+          <!-- 番号 -->
+          <ul class="page-btn__warp">
+            <li class="page-btn__number">
+              <a href="#">1</a>
+            </li>
+            <li class="page-btn__number">
+              <a href="#">2</a>
+            </li>
+            <li class="page-btn__number">
+              <a href="#">3</a>
+            </li>
+            <li class="page-btn__number">
+              <a href="#">4</a>
+            </li>
+          </ul>
+          <!-- 次 -->
+          <div class="page-btn__next">
+            <a href="#"></a>
           </div>
         </div>
+
       </div>
-    </section>
+    </div>
 
     <!-- Contact -->
     <section id="contact" class="archive-contact contact">

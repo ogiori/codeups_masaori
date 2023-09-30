@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.pagination-space {
+  margin-top: rem(81);
+}
+
+.pagination-space.pagination-space--voice {
+  @include mq(md) {
+    margin-top: rem(72);
+  }
+}

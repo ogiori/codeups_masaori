@@ -5,18 +5,11 @@
   gap: rem(40) 0;
   @include mq(md) {
     grid-template-columns: repeat(2, 1fr);
-    gap: rem(40);
+    gap: rem(78) rem(40);
   }
 }
 
 .cards3__item {
   display: flex;
   margin: 0 auto;
-}
-
-/*===== page-voice =====*/
-.cards3.cards3--voice {
-  @include mq(md) {
-    gap: rem(78) rem(40);
-  }
 }
