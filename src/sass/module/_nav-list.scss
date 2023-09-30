@@ -1,4 +1,4 @@
-@use "global"as *;
+@use "global" as *;
 
 .nav-list {
   display: flex;
@@ -37,7 +37,7 @@
   content: "";
   margin-top: rem(10);
   display: block;
-  background: url(../images/common/hitode.svg)no-repeat center / contain;
+  background: url(../images/common/hitode.svg) no-repeat center / contain;
   width: rem(18);
   height: rem(18);
 }
@@ -72,24 +72,26 @@
 .nav-list.nav-list--sitemap {
   color: $navy;
   background-color: initial;
+  position: relative;
+  z-index: 1;
   @include mq(md) {
     gap: 0 rem(115);
   }
 }
 
 .nav-list__wrap.nav-list__wrap--sitemap {
-@include mq(md) {
-  gap: 0 rem(111);
-}
+  @include mq(md) {
+    gap: 0 rem(111);
+  }
 }
 
 .nav-list__item.nav-list__item--sitemap::before {
-  background: url(../images/common/hitode-n.svg)no-repeat center / contain;
+  background: url(../images/common/hitode-n.svg) no-repeat center / contain;
 }
 
 //safariのみ対応
 ::-webkit-full-page-media,
 :future,
 :root .nav-list__item a {
-padding: rem(10) rem(8);
+  padding: rem(10) rem(8);
 }

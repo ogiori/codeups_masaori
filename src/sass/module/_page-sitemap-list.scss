@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.page-sitemap-list__inner.inner {
+  max-width: rem(375);
+  padding: 0 rem(9);
+
+  @include mq(md) {
+    max-width: rem(1130);
+    padding: 0 rem(25);
+  }
+}
