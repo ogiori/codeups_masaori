@@ -18,7 +18,7 @@
   color: $white;
   background-color: $green;
   @include mq(md) {
-    width: rem(200);
+    width: calc(200 / 702 * 100%);
     align-items: center;
     flex-direction: column-reverse;
     gap: rem(8) 0;
@@ -37,9 +37,14 @@
   }
 }
 
+.card7__list {
+  @include mq(md) {
+    width: calc(502 / 702 * 100%);
+  }
+}
+
 .card7__wrap {
   display: flex;
-  // align-items: center;
 }
 
 .card7__wrap dt {
@@ -49,10 +54,9 @@
   display: grid;
   place-content: center;
   @include mq(md) {
-    width: rem(340);
+    width: calc(340 / 502 * 100%);
     display: flex;
     justify-content: flex-start;
-    align-items: center;
     padding: rem(17) rem(16);
   }
 }
@@ -64,7 +68,7 @@
   width: calc(106 / 345 * 100%);
   padding: rem(19) rem(16);
   @include mq(md) {
-    width: rem(162);
+    width: calc(162 / 502 * 100%);
     padding: rem(17) rem(16);
   }
 }
@@ -78,6 +82,6 @@
 }
 
 .card7__wrap:last-child dt,
-.card7__wrap:last-child dd{
+.card7__wrap:last-child dd {
   border-bottom: none;
 }
