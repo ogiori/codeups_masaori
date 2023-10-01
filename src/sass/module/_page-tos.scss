@@ -1,51 +1,19 @@
 @use "global" as *;
 
 .page-tos__inner.inner {
-  max-width: rem(600);
-  position: relative;
-  @include mq(md) {
-    max-width: rem(1130);
-  }
-}
-
-.page-tos__inner.inner::before {
-  content: "";
-  background: url(../images/common/fishs_r.png) no-repeat center / contain;
-  display: block;
-  width: rem(120);
-  height: rem(55);
-  position: absolute;
-  top: rem(49);
-  left: calc(50% - min(46vw, #{rem(312)}));
-  @include mq(md) {
-    width: rem(301);
-    height: rem(138);
-    top: rem(102);
-    left: calc(50% - min(43vw, #{rem(646)}));
-  }
-}
-
-.page-tos__blackeneds {
-  margin-top: rem(8);
-}
-
-.page-tos__contents-inner {
+  max-width: rem(630);
   @include mq(md) {
     max-width: rem(850);
-    padding: 0 rem(25);
-    margin-inline: auto;
   }
 }
 
 .page-tos__title {
-  margin-top: rem(52);
   font-size: rem(24);
   line-height: calc(35 / 24);
   font-weight: $medium;
   position: relative;
   z-index: 1;
   @include mq(md) {
-    margin-top: rem(150);
     font-size: rem(32);
     line-height: calc(46 / 32);
   }
@@ -87,8 +55,7 @@
 }
 
 /*===== スペース =====*/
-.page-tos__ol-list.page-tos__ol-list--1,
-.page-tos__ol-list.page-tos__ol-list--2,
+.page-tos__ol-list,
 .page-tos__text2 {
   margin-top: rem(32);
 }
