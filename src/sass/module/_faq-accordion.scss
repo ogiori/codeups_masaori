@@ -47,10 +47,6 @@
   }
 }
 
-.faq-accordion__contents.is-open {
-  display: none;
-}
-
 /* (+)アイコン */
 .faq-accordion__title::before,
 .faq-accordion__title::after {
@@ -71,12 +67,11 @@
 }
 
 /* アコーディオン展開時の(-)アイコン */
-.faq-accordion__item.is-active .faq-accordion__title::before {
+.faq-accordion__item.is-close .faq-accordion__title::before {
   transform: rotate(0);
 }
 
-.faq-accordion__item.is-active .faq-accordion__title::after {
+.faq-accordion__item.is-close .faq-accordion__title::after {
   transform: rotate(90deg);
   opacity: 1;
 }
-

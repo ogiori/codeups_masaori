@@ -402,7 +402,7 @@ faqAccordionsArr.forEach((accordion) => {
     // Triggerにクリックイベントを付与
     trigger.addEventListener("click", () => {
       // '.is-active'クラスを付与or削除
-      trigger.classList.toggle("is-active");
+      trigger.classList.toggle("is-close");
       // 開閉させる要素を取得
       const content = trigger.querySelector(".js-faq-accordion__contents");
       // 要素を展開or閉じる
