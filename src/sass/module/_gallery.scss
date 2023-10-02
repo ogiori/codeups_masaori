@@ -18,8 +18,8 @@
 }
 
 //ラージサイズ
-.gallery__item:nth-child(5n + 1),
-.gallery__item:nth-child(6n + 1) {
+.gallery__item:nth-child(6n),
+.gallery__item:nth-child(6n+1) {
   @include mq(md) {
     grid-column: span 6;
     grid-row: span 2;
@@ -37,8 +37,8 @@
 }
 
 // ラージサイズ
-.gallery__item:nth-child(5n + 1) img,
-.gallery__item:nth-child(6n + 1) img {
+.gallery__item:nth-child(6n) img,
+.gallery__item:nth-child(6n+1) img {
   aspect-ratio: 345 /523;
   @include mq(md) {
     aspect-ratio: 492 /746;
