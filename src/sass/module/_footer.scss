@@ -84,6 +84,7 @@
   transition: 0.3s ease;
   width: rem(48);
   height: rem(48);
+  z-index: 1;
   @include mq(md) {
     bottom: rem(20);
     right: rem(20);
