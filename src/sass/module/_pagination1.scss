@@ -1,35 +1,35 @@
 @use "global" as *;
 
-.page-btn {
+.pagination1 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.page-btn__warp {
+.pagination1__warp {
   display: flex;
   gap: 0 rem(12);
 }
 
-.page-btn__prev {
+.pagination1__prev {
   margin-right: rem(40);
   transition: all 0.3s;
 }
 
-.page-btn__next {
+.pagination1__next {
   margin-left: rem(40);
   transition: all 0.3s;
 }
 
-.page-btn__prev:hover,
-.page-btn__next:hover {
+.pagination1__prev:hover,
+.pagination1__next:hover {
   @include mq(md) {
     background-color: $green;
   }
 }
 
-.page-btn__prev a,
-.page-btn__next a {
+.pagination1__prev a,
+.pagination1__next a {
   display: grid;
   place-content: center;
   width: rem(38);
@@ -38,8 +38,8 @@
   transition: all 0.3s;
 }
 
-.page-btn__prev a::before,
-.page-btn__next a::before {
+.pagination1__prev a::before,
+.pagination1__next a::before {
   content: "";
   display: block;
   width: rem(8);
@@ -47,27 +47,27 @@
   transition: all 0.3s;
 }
 
-.page-btn__prev a::before {
+.pagination1__prev a::before {
   background: url(../images/common/page-arrow_l.svg) no-repeat center / contain;
 }
 
-.page-btn__next a::before {
+.pagination1__next a::before {
   background: url(../images/common/page-arrow_r.svg) no-repeat center / contain;
 }
 
-.page-btn__prev a:hover::before {
+.pagination1__prev a:hover::before {
   @include mq(md) {
     background: url(../images/common/page-arrow_l-white.svg) no-repeat center / contain;
   }
 }
 
-.page-btn__next a:hover::before {
+.pagination1__next a:hover::before {
   @include mq(md) {
     background: url(../images/common/page-arrow_r-white.svg) no-repeat center / contain;
   }
 }
 
-.page-btn__number {
+.pagination1__number {
   display: grid;
   place-content: center;
   width: rem(38);
@@ -75,7 +75,7 @@
   border: 1px solid $green;
 }
 
-.page-btn__number a {
+.pagination1__number a {
   display: grid;
   place-content: center;
   width: inherit;
@@ -87,14 +87,14 @@
   transition: all 0.3s;
 }
 
-.page-btn__number a:hover {
+.pagination1__number a:hover {
   @include mq(md) {
     background-color: $green;
   color: $white;
   }
 }
 
-.page-btn__number a.current {
+.pagination1__number a.current {
   background-color: $green;
   color: $white;
 }

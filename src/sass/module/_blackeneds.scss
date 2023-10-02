@@ -8,7 +8,7 @@
 .blackeneds__item {
   display: flex;
   align-items: center;
-	gap: 0 rem(8);
+  gap: 0 rem(8);
 }
 
 .blackeneds__item:not(:last-child)::after {
@@ -16,8 +16,7 @@
   display: block;
   width: rem(4);
   height: rem(8);
-  background: url(../images/common/blackeneds_arrow.svg) no-repeat center /
-    contain;
+  background: url(../images/common/blackeneds_arrow.svg) no-repeat center / contain;
 }
 
 .blackeneds__item a {
@@ -27,4 +26,13 @@
   font-weight: $regular;
   align-items: center;
   gap: 0 rem(5);
+}
+
+/*===== 404ページ =====*/
+.blackeneds__item.blackeneds__item--404:not(:last-child)::after {
+  background: url(../images/common/blackeneds_arrow-white.svg) no-repeat center / contain;
+}
+
+.blackeneds__item.blackeneds__item--404 a {
+  color: $white;
 }

@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.page-blog__inner.inner {
+  max-width: rem(630);
+  @include mq(md) {
+   max-width: rem(1130);
+  }
+}
+
+.page-blog__wrap {
+  @include mq(md) {
+    display: flex;
+    gap: 0 rem(80);
+  }
+}
+
+.page-blog__left {
+  padding: 0 rem(6);
+  @include mq(md) {
+    padding: 0;
+    width: calc(706 / 1080 * 100%);
+  }
+}
+
+.page-blog__pagination {
+  margin-top: rem(80);
+}
+
+.page-blog__right {
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: 0;
+    width: calc(294 / 1080 * 100%);
+  }
+}
+
+/*===== single-blog =====*/
+.page-blog__wrap.page-blog__wrap--single {
+  gap: 0 rem(86);
+}
+
+.page-blog__left.page-blog__left--single {
+  @include mq(md) {
+    width: calc(700 / 1080 * 100%);
+  }
+}

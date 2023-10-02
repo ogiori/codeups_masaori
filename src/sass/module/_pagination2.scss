@@ -1,29 +1,29 @@
 @use "global" as *;
 
-.single-page-btn {
+.pagination2 {
   display: flex;
   justify-content: center;
   gap: 0 rem(82);
 }
 
-.single-page-btn__prev,
-.single-page-btn__next {
+.pagination2__prev,
+.pagination2__next {
   background-color: $white;
   width: rem(38);
   height: rem(38);
   transition: all 0.3s;
 }
 
-.single-page-btn__prev:hover,
-.single-page-btn__next:hover {
+.pagination2__prev:hover,
+.pagination2__next:hover {
   @include mq(md) {
     background-color: $green;
   }
 }
 
 
-.single-page-btn__prev a,
-.single-page-btn__next a {
+.pagination2__prev a,
+.pagination2__next a {
   display: grid;
   place-content: center;
   width: inherit;
@@ -32,8 +32,8 @@
   transition: all 0.3s;
 }
 
-.single-page-btn__prev a::before,
-.single-page-btn__next a::before {
+.pagination2__prev a::before,
+.pagination2__next a::before {
   content: "";
   display: block;
   width: rem(8);
@@ -41,21 +41,21 @@
   transition: all 0.3s;
 }
 
-.single-page-btn__prev a::before {
+.pagination2__prev a::before {
   background: url(../images/common/page-arrow_l.svg) no-repeat center / contain;
 }
 
-.single-page-btn__next a::before {
+.pagination2__next a::before {
   background: url(../images/common/page-arrow_r.svg) no-repeat center / contain;
 }
 
-.single-page-btn__prev a:hover::before {
+.pagination2__prev a:hover::before {
   @include mq(md) {
     background: url(../images/common/page-arrow_l-white.svg) no-repeat center / contain;
   }
 }
 
-.single-page-btn__next a:hover::before {
+.pagination2__next a:hover::before {
   @include mq(md) {
     background: url(../images/common/page-arrow_r-white.svg) no-repeat center / contain;
   }

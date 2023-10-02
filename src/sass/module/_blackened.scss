@@ -1,0 +1,10 @@
+@use "global" as *;
+
+/*===== 404ページ =====*/
+.blackened {
+  background: $green;
+ padding-top: rem(88);
+ @include mq(md) {
+   padding-top: rem(99);
+ }
+}

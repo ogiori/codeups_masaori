@@ -1,56 +1,89 @@
 @use "global" as *;
 
-.single-blog__inner.inner {
-  max-width: rem(600);
+.single-blog__time {
+  font-size: rem(14);
+  line-height: calc(18 / 14);
+  font-weight: $regular;
+  font-family: $gotu;
   position: relative;
-  @include mq(md) {
-    max-width: rem(1130);
-  }
+  z-index: 1;
 }
 
-.single-blog__inner::before {
-  content: "";
-  background: url(../images/common/fishs_r.png) no-repeat center / contain;
-  display: block;
-  width: rem(120);
-  height: rem(55);
-  position: absolute;
-  top: rem(49);
-  left: calc(50% - min(46vw, #{rem(320)}));
-  @include mq(md) {
-    width: rem(301);
-    height: rem(138);
-    top: rem(102);
-    left: calc(50% - min(49vw, #{rem(621)}));
-  }
-}
-
-.single-blog__blackeneds {
+.single-blog__title {
   margin-top: rem(8);
-}
-
-.single-blog__contents {
-  margin-top: rem(46);
+  font-size: rem(24);
+  line-height: calc(35 / 24);
+  font-weight: $medium;
+  border-bottom: 1px solid $green;
+  padding-bottom: rem(4);
+  position: relative;
+  z-index: 1;
   @include mq(md) {
-    margin-top: rem(144);
-    display: flex;
-    gap: 0 rem(86);
-  }
-}
-// 左コンテンツ
-.single-blog__left {
-  @include mq(md) {
-    width: calc(700 / 1080 * 100%);
+    font-size: rem(32);
+    line-height: calc(46 / 32);
+    padding-bottom:0;
   }
 }
 
-// 右コンテンツ
-.single-blog__right {
-  margin-top: rem(85);
-  padding: 0 rem(25);
+.single-blog__img1,
+.single-blog__img2 {
+  margin-top: rem(24);
   @include mq(md) {
-    margin-top: rem(14);
-    padding: 0;
-     width: calc(294 / 1080 * 100%);
+    margin-top: rem(40);
+  }
+}
+
+.single-blog__img1 img,
+.single-blog__img2 img {
+  aspect-ratio: 345 /231;
+  width: 100%;
+  object-fit: cover;
+  @include mq(md) {
+     aspect-ratio: 700 /468;
+  }
+}
+
+.single-blog__text1,
+.single-blog__text2,
+.single-blog__text-bottom {
+  margin-top: rem(24);
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  font-weight: $regular;
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.single-blog__list {
+  margin-top: rem(24);
+  display: grid;
+  gap: rem(4) 0;
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.single-blog__item {
+  display: flex;
+  align-items: center;
+  gap: 0 rem(9);
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  font-weight: $regular;
+}
+
+.single-blog__item::before {
+  content: "";
+  display: block;
+  width: rem(18);
+  height: rem(18);
+  background: url(../images/common/hitode-green.svg) no-repeat center / contain;
+}
+
+.single-blog__pagination {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(80);
   }
 }
