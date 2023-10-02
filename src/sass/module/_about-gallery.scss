@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.about-gallery__inner.inner {
+  max-width: rem(630);
+  @include mq(md) {
+    max-width: rem(1130);
+  }
+}
+
+.about-gallery__contents {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}

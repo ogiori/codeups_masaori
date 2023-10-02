@@ -200,41 +200,47 @@
   </header>
 
   <main>
-    <section class="page-thanks">
-      <!-- トップ画像 -->
-      <div class="page-contanct__head js-mv">
-        <div class="page-head page-head--faq">
-          <h1 class="page-head__title page-head__title--contact">contact</h1>
-        </div>
+
+    <!-- トップ画像 -->
+    <div class="page-head">
+      <picture class="page-head__img">
+        <!-- 768px以上なら表示 -->
+        <source srcset="assets/images/common/page-contact-head_pc.jpg" media="(min-width: 768px)">
+        <!-- 768px以下なら表示 -->
+        <img src="assets/images/common/page-contact-head_sp.jpg" alt="">
+      </picture>
+      <h1 class="page-head__title">Contact</h1>
+    </div>
+
+    <!-- ぱんくず -->
+    <div class="blackened-space">
+      <div class="inner">
+        <ul class="blackeneds">
+          <li class="blackeneds__item">
+            <a href="#">TOP</a>
+          </li>
+          <li class="blackeneds__item">
+            <a href="#">お問い合わせ</a>
+          </li>
+          <li class="blackeneds__item">
+            <a href="#">送信完了</a>
+          </li>
+        </ul>
       </div>
+    </div>
 
-      <div class="page-thanks__inner inner">
+    <section class="page-thanks-space page-thanks">
+      <div class="page-thanks__inner inner inner-icon">
 
-        <!-- ぱんくず -->
-        <div class="page-thanks__blackeneds">
-          <ul class="blackeneds">
-            <li class="blackened">
-              <a href="#">TOP</a>
-            </li>
-            <li class="blackened">
-              <a href="#">お問い合わせ</a>
-            </li>
-            <li class="blackened">
-              <a href="#">送信完了</a>
-            </li>
-          </ul>
-        </div>
-
-          <h2 class="page-thanks__title">お問い合わせ内容を送信完了しました。</h2>
-
-          <p class="page-thanks__text">このたびは、お問い合わせ頂き<br class="u-mobile">誠にありがとうございます。<br>
-            お送り頂きました内容を確認の上、<br class="u-mobile">3営業日以内に折り返しご連絡させて頂きます。<br>
-            また、ご記入頂いたメールアドレスへ、<br class="u-mobile">自動返信の確認メールをお送りしております。
-          </p>
+        <h2 class="page-thanks__title">お問い合わせ内容を送信完了しました。</h2>
+        <p class="page-thanks__text">このたびは、お問い合わせ頂き<br class="u-mobile">誠にありがとうございます。<br>
+          お送り頂きました内容を確認の上、<br class="u-mobile">3営業日以内に折り返しご連絡させて頂きます。<br>
+          また、ご記入頂いたメールアドレスへ、<br class="u-mobile">自動返信の確認メールをお送りしております。
+        </p>
 
       </div>
     </section>
-
+    
   </main>
 
   <!-- フッター -->

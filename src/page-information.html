@@ -200,45 +200,48 @@
 
   <main>
 
-  <!-- トップ画像 -->
-  <div class="page-head">
-    <picture class="page-head__img">
-      <!-- 768px以上なら表示 -->
-      <source srcset="assets/images/common/page-information-head_pc.jpg" media="(min-width: 768px)">
-      <!-- 768px以下なら表示 -->
-      <img src="assets/images/common/page-information-head_sp.jpg" alt="">
-    </picture>
-    <h1 class="page-head__title">information</h1>
-  </div>
-
-  <!-- ぱんくず -->
-  <div class="blackened-space">
-    <div class="inner">
-      <ul class="blackeneds">
-        <li class="blackeneds__item">
-          <a href="#">TOP</a>
-        </li>
-        <li class="blackeneds__item">
-          <a href="#">キャンペーン</a>
-        </li>
-      </ul>
+    <!-- トップ画像 -->
+    <div class="page-head">
+      <picture class="page-head__img">
+        <!-- 768px以上なら表示 -->
+        <source srcset="assets/images/common/page-information-head_pc.jpg" media="(min-width: 768px)">
+        <!-- 768px以下なら表示 -->
+        <img src="assets/images/common/page-information-head_sp.jpg" alt="">
+      </picture>
+      <h1 class="page-head__title">information</h1>
     </div>
-  </div>
+
+    <!-- ぱんくず -->
+    <div class="blackened-space">
+      <div class="inner">
+        <ul class="blackeneds">
+          <li class="blackeneds__item">
+            <a href="#">TOP</a>
+          </li>
+          <li class="blackeneds__item">
+            <a href="#">ダイビング情報</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <!-- タブ -->
     <div class="information-list-space information-list">
-      <div class="information-list__inner inner inner-icon">
+      <div class="information-list__inner inner inner-icon inner-icon--1">
 
         <ul class="information-tubs">
           <li class="information-tubs__item">
-            <p class="information-tub information-tub--license js-information-tub current">ライセンス<br class="u-mobile">講習
+            <p id="tab1" class="information-tub information-tub--license js-information-tub current">ライセンス<br
+                class="u-mobile">講習
             </p>
           </li>
           <li class="information-tubs__item">
-            <p class="information-tub information-tub--fun js-information-tub">ファン<br class="u-mobile">ダイビング</p>
+            <p id="tab2" class="information-tub information-tub--fun js-information-tub">ファン<br class="u-mobile">ダイビング
+            </p>
           </li>
           <li class="information-tubs__item">
-            <p class="information-tub information-tub--experience js-information-tub">体験<br class="u-mobile">ダイビング</p>
+            <p id="tab3" class="information-tub information-tub--experience js-information-tub">体験<br
+                class="u-mobile">ダイビング</p>
           </li>
         </ul>
 
@@ -246,10 +249,10 @@
     </div>
 
     <!-- コンテンツ -->
-    <div class="information-contents-space information-contents">
+    <section class="information-contents-space information-contents">
       <div class="information-contents__inner inner">
         <ul class="cards4">
-          <li class="cards4__item js-cards4-item">
+          <li id="tab1-content" class="cards4__item js-cards4-item">
             <div class="card4">
               <div class="card4__wrap">
                 <h2 class="card4__title">ライセンス講習</h2>
@@ -262,7 +265,7 @@
               </figure>
             </div>
           </li>
-          <li class="cards4__item js-cards4-item">
+          <li id="tab2-content" class="cards4__item js-cards4-item">
             <div class="card4">
               <div class="card4__wrap">
                 <h2 class="card4__title">ファンダイビング</h2>
@@ -275,7 +278,7 @@
               </figure>
             </div>
           </li>
-          <li class="cards4__item js-cards4-item">
+          <li id="tab3-content" class="cards4__item js-cards4-item">
             <div class="card4">
               <div class="card4__wrap">
                 <h2 class="card4__title">体験ダイビング</h2>
@@ -290,7 +293,7 @@
           </li>
         </ul>
       </div>
-    </div>
+    </section>
 
     <!-- Contact -->
     <section id="contact" class="archive-contact contact">
@@ -400,14 +403,14 @@
                 <li class="nav-list__item">
                   <a href="#information">ダイビング情報</a>
                 </li>
-                <li class="nav-list__item">
-                  <a href="#">ライセンス講習</a>
+                <li id="tab1-menu" class="nav-list__item js-nav-list-item current">
+                  <a href="">ライセンス講習</a>
                 </li>
-                <li class="nav-list__item">
-                  <a href="#">体験ダイビング</a>
+                <li id="tab3-menu" class="nav-list__item js-nav-list-item">
+                  <a href="">体験ダイビング</a>
                 </li>
-                <li class="nav-list__item">
-                  <a href="#">ファンダイビング</a>
+                <li id="tab2-menu" class="nav-list__item js-nav-list-item">
+                  <a href="">ファンダイビング</a>
                 </li>
               </ul>
               <!-- ブログ -->

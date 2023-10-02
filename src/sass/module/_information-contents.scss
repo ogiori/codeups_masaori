@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.information-list__inner.inner {
+.information-contents__inner.inner {
   max-width: rem(630);
   @include mq(md) {
     max-width: rem(1130);

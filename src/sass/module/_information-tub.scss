@@ -15,8 +15,8 @@
   z-index: 1;
   @include mq(md) {
     display: inline-flex;
-    min-width: rem(300);
-    padding: rem(13) rem(18);
+    width: 100%;
+    padding: rem(13) rem(5);
     align-items: center;
     justify-content: center;
     gap: 0 rem(8);

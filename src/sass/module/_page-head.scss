@@ -34,6 +34,8 @@
 }
 
 .page-head__title {
+  width: 100%;
+  text-align: center;
   font-size: rem(40);
   line-height: calc(48 / 40);
   font-weight: $regular;

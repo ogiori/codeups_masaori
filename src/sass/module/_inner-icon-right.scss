@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.inner-icon-right {
+  position: relative;
+}
+
+.inner-icon-right::after {
+  @include mq(md) {
+    background: url(../images/common/fishs_l.png) no-repeat center/contain;
+    content: "";
+    display: block;
+    width: rem(301);
+    height: rem(138);
+    position: absolute;
+    right: calc(50% - min(49vw, rem(639)));
+    top: -5%;
+  }
+}

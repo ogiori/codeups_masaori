@@ -1,4 +1,4 @@
-/*クッキー登録*/
+/*===== クッキー登録 =====*/
 function setCookie(name, value, days) {
   const date = new Date();
   date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
@@ -6,7 +6,8 @@ function setCookie(name, value, days) {
   document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
 
-/*クッキーを取得*/
+
+/*===== クッキーを取得 =====*/
 function getCookie(name) {
   const value = "; " + document.cookie; // 全てのクッキーの文字列を取得し、先頭に"; "を追加
   const parts = value.split("; " + name + "="); // クッキーの文字列を分割し、指定された名前の前にある部分と後ろにある部分を配列に格納
@@ -16,7 +17,9 @@ function getCookie(name) {
     return ""; // 名前が見つからなかった場合、空の文字列を返します
   }
 }
-/*オープニングアニメーション*/
+
+
+/*===== オープニングアニメーション =====*/
 const animation = document.querySelector(".js-op-animation");
 const mask = document.querySelector(".js-op-animation-mask");
 const title1 = document.querySelector(".js-op-animation-title1-block");
@@ -29,7 +32,8 @@ const animationTl = gsap.timeline({
   },
 });
 
-/*アニメーション再生*/
+
+/*===== アニメーション再生 =====*/
 function playAnimation() {
   // タイムライン
   animationTl
@@ -69,7 +73,6 @@ function playAnimation() {
       "+=1"
     );
 }
-
 // オープニングアニメーションに関わる要素を非表示
 function hideAnimation() {
   gsap.set(".js-op-animation", {
@@ -77,7 +80,8 @@ function hideAnimation() {
   });
 }
 
-/*mvスライダー*/
+
+/*===== mvスライダー =====*/
 //オープニングアニメーションが 有・なし で、始まるタイミングをズラしたい。
 function mvSwiper() {
   new Swiper(".js-mv-swiper", {
@@ -90,7 +94,6 @@ function mvSwiper() {
     speed: 2000,
   });
 }
-
 // まず最初に読み込まれる所
 document.addEventListener("DOMContentLoaded", function () {
   const animationPlayed = getCookie("animationPlayed");
@@ -108,7 +111,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-/*ページスクロール*/
+
+/*===== ページスクロール =====*/
 document.querySelectorAll('a[href^="#"]').forEach(function (link) {
   link.addEventListener("click", function (event) {
     event.preventDefault();
@@ -129,7 +133,8 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
   });
 });
 
-/*page-top*/
+
+/*===== page-top =====*/
 //スクロールした時に処理を実行
 window.addEventListener("scroll", function () {
   //トップへ戻るボタンを取得
@@ -166,7 +171,8 @@ window.addEventListener("scroll", function () {
   }
 });
 
-/*ハンバーガーボタン*/
+
+/*===== ハンバーガーボタン =====*/
 const hamburger = document.querySelector(".js-hamburger");
 const modal = document.querySelector(".js-modal");
 
@@ -177,7 +183,8 @@ function toggleModal() {
   modal.classList.toggle("is-active");
 }
 
-/*画像アニメーション*/
+
+/*===== 画像アニメーション =====*/
 const triggers = document.querySelectorAll(".js-trigger");
 triggers.forEach((trigger) => {
   const images = trigger.querySelectorAll(".js-trigger img");
@@ -199,7 +206,8 @@ triggers.forEach((trigger) => {
     });
 });
 
-/*Campaignスライダー*/
+
+/*===== Campaignスライダー =====*/
 const swiper1 = new Swiper(".js-campaign-swiper-container", {
   loop: true, // デフォルトはfalse
   autoplay: {
@@ -223,12 +231,12 @@ const swiper1 = new Swiper(".js-campaign-swiper-container", {
   },
 });
 
-// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-/*archive_aboutのモーダル*/
+
+/*===== archive_aboutのモーダル =====*/
 // クリックイベントを設定するための要素を取得
-var aboutImagesModal = document.querySelector(".js-about-images-modal");
+var aboutImagesModal = document.querySelector(".js-gallery");
 if (aboutImagesModal) {
-  var images = document.querySelectorAll(".js-about-images img");
+  var images = document.querySelectorAll(".js-gallery img");
   images.forEach(function (image) {
     image.addEventListener("click", function () {
       aboutImagesModal.innerHTML = this.outerHTML;
@@ -246,16 +254,19 @@ if (aboutImagesModal) {
   });
 }
 
-// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-/*information-tub*/
+
+/*===== Informationタブ =====*/
 // 最初のコンテンツを表示
 const firstContent = document.querySelector(".js-cards4-item:first-of-type");
 if (firstContent) {
   firstContent.style.display = "block";
   // タブ要素を取得
   const tabs = document.querySelectorAll(".js-information-tub");
+  // フッターメニュー要素を取得
+  const footerMenuItems = document.querySelectorAll(".js-nav-list-item");
+
   // タブがクリックされたときの処理を設定
-  tabs.forEach(function (tab, index) {
+  tabs.forEach(function (tab) {
     tab.addEventListener("click", function () {
       // 現在の選択されているタブから "current" クラスを削除
       const currentTab = document.querySelector(".current");
@@ -264,22 +275,38 @@ if (firstContent) {
       }
       // クリックされたタブに "current" クラスを追加
       tab.classList.add("current");
-      // クリックされたタブのインデックスを取得
-      const tabIndex = Array.from(tabs).indexOf(tab);
+      // クリックされたタブのIDを取得
+      const tabId = tab.id;
       // すべてのコンテンツを非表示
       const contents = document.querySelectorAll(".js-cards4-item");
       contents.forEach(function (content) {
         content.style.display = "none";
       });
       // クリックされたタブに対応するコンテンツを表示
-      contents[tabIndex].style.display = "block";
+      const contentToDisplay = document.querySelector(`#${tabId}-content`);
+      if (contentToDisplay) {
+        contentToDisplay.style.display = "block";
+      }
+
+      // フッターメニューにもカレントを設定
+      // 現在の選択されているフッターメニューから "current" クラスを削除
+      const currentFooterMenuItem = document.querySelector(".js-nav-list-item.current");
+      if (currentFooterMenuItem) {
+        currentFooterMenuItem.classList.remove("current");
+      }
+      // クリックされたタブに対応するフッターメニューのIDを取得
+      const menuId = tabId;
+      // 対応するフッターメニューに "current" クラスを追加
+      const correspondingFooterMenuItem = document.querySelector(`#${menuId}-menu`);
+      if (correspondingFooterMenuItem) {
+        correspondingFooterMenuItem.classList.add("current");
+      }
     });
   });
 }
 
-/* =================================================== */
-// アコーディオン共通設定
-/* =================================================== */
+
+/*===== アコーディオン共通設定 =====*/
 const slideUp = (el, duration = 300) => {
   el.style.height = el.offsetHeight + "px";
   el.offsetHeight;
@@ -306,7 +333,6 @@ const slideUp = (el, duration = 300) => {
     el.classList.remove("is-open");
   }, duration);
 };
-
 // 要素をスライドしながら表示する関数
 const slideDown = (el, duration = 300) => {
   el.classList.add("is-open");
@@ -349,9 +375,8 @@ const slideToggle = (el, duration = 300) => {
   }
 };
 
-/* =================================================== */
-/*sidebarアコーディオン*/
-/* =================================================== */
+
+/*===== sidebarアコーディオン =====*/
 // アコーディオンを全て取得
 const accordions = document.querySelectorAll(".js-accordion");
 // 取得したアコーディオンをArrayに変換(IE対策)
@@ -384,9 +409,8 @@ accordionsArr.forEach((accordion) => {
   });
 });
 
-/* =================================================== */
-/*faqアコーディオン*/
-/* =================================================== */
+
+/*===== faqアコーディオン =====*/
 // アコーディオンを全て取得
 const faqAccordions = document.querySelectorAll(".js-faq-accordion");
 // 取得したアコーディオンをArrayに変換(IE対策)

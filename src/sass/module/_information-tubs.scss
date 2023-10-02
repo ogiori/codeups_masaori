@@ -1,11 +1,18 @@
 @use "global" as *;
 
 .information-tubs {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0 rem(19);
+  display: flex;
+  gap:rem(19);
   @include mq(md) {
-    gap: 0 rem(45);
+    gap: 0;
     text-align: center;
+    justify-content: space-between;
+  }
+}
+
+.information-tubs__item {
+  width: 100%;
+  @include mq(md) {
+   width: calc(300 / 1080 * 100%);
   }
 }

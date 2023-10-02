@@ -20,3 +20,10 @@
     left: calc(50% - min(47vw, #{rem(620)}));
   }
 }
+
+.inner-icon.inner-icon--1::before {
+  top: rem(-93);
+  @include mq(md) {
+    top: rem(-70);
+  }
+}
