@@ -1,8 +1,8 @@
 @use "global" as *;
 
-.information-tubs {
+.information-tabs {
   display: flex;
-  gap:rem(19);
+  gap: rem(19);
   @include mq(md) {
     gap: 0;
     text-align: center;
@@ -10,9 +10,9 @@
   }
 }
 
-.information-tubs__item {
+.information-tabs__item {
   width: 100%;
   @include mq(md) {
-   width: calc(300 / 1080 * 100%);
+    width: calc(300 / 1080 * 100%);
   }
 }

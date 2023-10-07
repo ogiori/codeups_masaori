@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.information-tub {
+.information-tab {
   display: block;
   padding: rem(10) rem(15);
   background-color: $blue;
@@ -26,19 +26,19 @@
   }
 }
 
-.information-tub:hover {
+.information-tab:hover {
   @include mq(md) {
     background-color: $green;
     color: $white;
   }
 }
 
-.information-tub.current {
- background-color: $green;
-    color: $white;
+.information-tab.current {
+  background-color: $green;
+  color: $white;
 }
 
-.information-tub::before {
+.information-tab::before {
   @include mq(md) {
     content: "";
     display: block;
@@ -49,37 +49,37 @@
 }
 
 // ライセンス講座
-.information-tub.information-tub--license::before {
+.information-tab.information-tab--license::before {
   @include mq(md) {
     background: url(../images/common/kujira.svg) no-repeat center / contain;
   }
 }
-.information-tub.information-tub--license:hover::before,
-.information-tub.information-tub--license.current::before {
+.information-tab.information-tab--license:hover::before,
+.information-tab.information-tab--license.current::before {
   @include mq(md) {
     background: url(../images/common/kujira-w.svg) no-repeat center / contain;
   }
 }
 // ファンダイビング
-.information-tub.information-tub--fun::before {
+.information-tab.information-tab--fun::before {
   @include mq(md) {
     background: url(../images/common/same.svg) no-repeat center / contain;
   }
 }
-.information-tub.information-tub--fun:hover::before,
-.information-tub.information-tub--fun.current::before {
+.information-tab.information-tab--fun:hover::before,
+.information-tab.information-tab--fun.current::before {
   @include mq(md) {
     background: url(../images/common/same-w.svg) no-repeat center / contain;
   }
 }
 // 体験ダイビング
-.information-tub.information-tub--experience::before {
+.information-tab.information-tab--experience::before {
   @include mq(md) {
     background: url(../images/common/sakana.svg) no-repeat center / contain;
   }
 }
-.information-tub.information-tub--experience:hover::before,
-.information-tub.information-tub--experience.current::before {
+.information-tab.information-tab--experience:hover::before,
+.information-tab.information-tab--experience.current::before {
   @include mq(md) {
     background: url(../images/common/sakana-w.svg) no-repeat center / contain;
   }

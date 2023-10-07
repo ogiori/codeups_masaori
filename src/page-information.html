@@ -37,7 +37,7 @@
 
 <body>
   <!-- ヘッダー -->
-  <header class="header">
+  <header class="header js-header">
     <div class="header__inner">
       <div class="header__wrap">
         <h1 class="header__logo">
@@ -229,18 +229,22 @@
     <div class="information-list-space information-list">
       <div class="information-list__inner inner inner-icon inner-icon--1">
 
-        <ul class="information-tubs">
-          <li class="information-tubs__item">
-            <p id="tab1" class="information-tub information-tub--license js-information-tub current">ライセンス<br
-                class="u-mobile">講習
+        <ul class="information-tabs">
+          <!-- ライセンス -->
+          <li class="information-tabs__item">
+            <p data-tab-id="tab1-content" class="information-tab information-tab--license js-information-tab current">
+              ライセンス<br class="u-mobile">講習
             </p>
           </li>
-          <li class="information-tubs__item">
-            <p id="tab2" class="information-tub information-tub--fun js-information-tub">ファン<br class="u-mobile">ダイビング
+          <!-- ファン -->
+          <li class="information-tabs__item">
+            <p data-tab-id="tab3-content" class="information-tab information-tab--fun js-information-tab">ファン<br
+                class="u-mobile">ダイビング
             </p>
           </li>
-          <li class="information-tubs__item">
-            <p id="tab3" class="information-tub information-tub--experience js-information-tub">体験<br
+          <!-- 体験 -->
+          <li class="information-tabs__item">
+            <p data-tab-id="tab2-content" class="information-tab information-tab--experience js-information-tab">体験<br
                 class="u-mobile">ダイビング</p>
           </li>
         </ul>
@@ -252,7 +256,7 @@
     <section class="information-contents-space information-contents">
       <div class="information-contents__inner inner">
         <ul class="cards4">
-          <li id="tab1-content" class="cards4__item js-cards4-item">
+          <li id="tab1" class="cards4__item js-cards4-item">
             <div class="card4">
               <div class="card4__wrap">
                 <h2 class="card4__title">ライセンス講習</h2>
@@ -265,7 +269,7 @@
               </figure>
             </div>
           </li>
-          <li id="tab2-content" class="cards4__item js-cards4-item">
+          <li id="tab3" class="cards4__item js-cards4-item">
             <div class="card4">
               <div class="card4__wrap">
                 <h2 class="card4__title">ファンダイビング</h2>
@@ -278,7 +282,7 @@
               </figure>
             </div>
           </li>
-          <li id="tab3-content" class="cards4__item js-cards4-item">
+          <li id="tab2" class="cards4__item js-cards4-item">
             <div class="card4">
               <div class="card4__wrap">
                 <h2 class="card4__title">体験ダイビング</h2>
@@ -401,16 +405,16 @@
               <!-- ダイビング情報 -->
               <ul class="nav-list__items">
                 <li class="nav-list__item">
-                  <a href="#information">ダイビング情報</a>
+                  <a href="page-information.html">ダイビング情報</a>
                 </li>
-                <li id="tab1-menu" class="nav-list__item js-nav-list-item current">
-                  <a href="">ライセンス講習</a>
+                <li data-tab-id="tab1" class="nav-list__item js-nav-list-item">
+                  <a href="#license">ライセンス講習</a>
                 </li>
-                <li id="tab3-menu" class="nav-list__item js-nav-list-item">
-                  <a href="">体験ダイビング</a>
+                <li data-tab-id="tab2" class="nav-list__item js-nav-list-item">
+                  <a href="#experience">体験ダイビング</a>
                 </li>
-                <li id="tab2-menu" class="nav-list__item js-nav-list-item">
-                  <a href="">ファンダイビング</a>
+                <li data-tab-id="tab3" class="nav-list__item js-nav-list-item">
+                  <a href="#fun">ファンダイビング</a>
                 </li>
               </ul>
               <!-- ブログ -->
@@ -432,7 +436,7 @@
               <!-- 料金一覧 -->
               <ul class="nav-list__items">
                 <li class="nav-list__item">
-                  <a href="#price">料金一覧</a>
+                  <a href="#">料金一覧</a>
                 </li>
                 <li class="nav-list__item">
                   <a href="#">ライセンス講習</a>

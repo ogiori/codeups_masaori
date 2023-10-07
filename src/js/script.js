@@ -6,7 +6,6 @@ function setCookie(name, value, days) {
   document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
 
-
 /*===== クッキーを取得 =====*/
 function getCookie(name) {
   const value = "; " + document.cookie; // 全てのクッキーの文字列を取得し、先頭に"; "を追加
@@ -17,7 +16,6 @@ function getCookie(name) {
     return ""; // 名前が見つからなかった場合、空の文字列を返します
   }
 }
-
 
 /*===== オープニングアニメーション =====*/
 const animation = document.querySelector(".js-op-animation");
@@ -31,7 +29,6 @@ const animationTl = gsap.timeline({
     duration: 1,
   },
 });
-
 
 /*===== アニメーション再生 =====*/
 function playAnimation() {
@@ -80,7 +77,6 @@ function hideAnimation() {
   });
 }
 
-
 /*===== mvスライダー =====*/
 //オープニングアニメーションが 有・なし で、始まるタイミングをズラしたい。
 function mvSwiper() {
@@ -111,28 +107,26 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
 /*===== ページスクロール =====*/
-document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-  link.addEventListener("click", function (event) {
-    event.preventDefault();
-    // リンクを取得
-    const href = link.getAttribute("href");
-    // ヘッダーの高さ
-    const header = document.querySelector("header").offsetHeight;
-    // ジャンプ先のid名をセット
-    const target = href === "#" || href === "" ? document.documentElement : document.querySelector(href);
-    // トップからジャンプ先の要素までの距離を取得
-    const position = target.offsetTop - header;
-    // スムーススクロールを行う
-    // 600はスクロール速度で単位はミリ秒
-    window.scrollTo({
-      top: position,
-      behavior: "smooth",
-    });
-  });
-});
-
+// document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+//   link.addEventListener("click", function (event) {
+//     event.preventDefault();
+//     // リンクを取得
+//     const href = link.getAttribute("href");
+//     // ヘッダーの高さ
+//     const header = document.querySelector("header").offsetHeight;
+//     // ジャンプ先のid名をセット
+//     const target = href === "#" || href === "" ? document.documentElement : document.querySelector(href);
+//     // トップからジャンプ先の要素までの距離を取得
+//     const position = target.offsetTop - header - 200;
+//     // スムーススクロールを行う
+//     // 600はスクロール速度で単位はミリ秒
+//     window.scrollTo({
+//       top: position,
+//       behavior: "smooth",
+//     });
+//   });
+// });
 
 /*===== page-top =====*/
 //スクロールした時に処理を実行
@@ -171,7 +165,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-
 /*===== ハンバーガーボタン =====*/
 const hamburger = document.querySelector(".js-hamburger");
 const modal = document.querySelector(".js-modal");
@@ -182,7 +175,6 @@ function toggleModal() {
   hamburger.classList.toggle("is-active");
   modal.classList.toggle("is-active");
 }
-
 
 /*===== 画像アニメーション =====*/
 const triggers = document.querySelectorAll(".js-trigger");
@@ -205,7 +197,6 @@ triggers.forEach((trigger) => {
       clipPath: "inset(0 0 0 0%)",
     });
 });
-
 
 /*===== Campaignスライダー =====*/
 const swiper1 = new Swiper(".js-campaign-swiper-container", {
@@ -231,7 +222,6 @@ const swiper1 = new Swiper(".js-campaign-swiper-container", {
   },
 });
 
-
 /*===== archive_aboutのモーダル =====*/
 // クリックイベントを設定するための要素を取得
 var aboutImagesModal = document.querySelector(".js-gallery");
@@ -254,19 +244,15 @@ if (aboutImagesModal) {
   });
 }
 
-
 /*===== Informationタブ =====*/
 // 最初のコンテンツを表示
 const firstContent = document.querySelector(".js-cards4-item:first-of-type");
 if (firstContent) {
   firstContent.style.display = "block";
   // タブ要素を取得
-  const tabs = document.querySelectorAll(".js-information-tub");
-  // フッターメニュー要素を取得
-  const footerMenuItems = document.querySelectorAll(".js-nav-list-item");
-
+  const tabs = document.querySelectorAll(".js-information-tab");
   // タブがクリックされたときの処理を設定
-  tabs.forEach(function (tab) {
+  tabs.forEach(function (tab, index) {
     tab.addEventListener("click", function () {
       // 現在の選択されているタブから "current" クラスを削除
       const currentTab = document.querySelector(".current");
@@ -275,36 +261,69 @@ if (firstContent) {
       }
       // クリックされたタブに "current" クラスを追加
       tab.classList.add("current");
-      // クリックされたタブのIDを取得
-      const tabId = tab.id;
+      // クリックされたタブのインデックスを取得
+      const tabIndex = Array.from(tabs).indexOf(tab);
       // すべてのコンテンツを非表示
       const contents = document.querySelectorAll(".js-cards4-item");
       contents.forEach(function (content) {
         content.style.display = "none";
       });
       // クリックされたタブに対応するコンテンツを表示
-      const contentToDisplay = document.querySelector(`#${tabId}-content`);
-      if (contentToDisplay) {
-        contentToDisplay.style.display = "block";
-      }
-
-      // フッターメニューにもカレントを設定
-      // 現在の選択されているフッターメニューから "current" クラスを削除
-      const currentFooterMenuItem = document.querySelector(".js-nav-list-item.current");
-      if (currentFooterMenuItem) {
-        currentFooterMenuItem.classList.remove("current");
-      }
-      // クリックされたタブに対応するフッターメニューのIDを取得
-      const menuId = tabId;
-      // 対応するフッターメニューに "current" クラスを追加
-      const correspondingFooterMenuItem = document.querySelector(`#${menuId}-menu`);
-      if (correspondingFooterMenuItem) {
-        correspondingFooterMenuItem.classList.add("current");
-      }
+      contents[tabIndex].style.display = "block";
     });
   });
 }
+// ============================
+// フッターメニューの各項目を取得
+const footerMenuItems = document.querySelectorAll(".js-nav-list-item");
+// フッターメニューがクリックされたときの処理を設定
+footerMenuItems.forEach(function (menuItem, index) {
+  menuItem.addEventListener("click", function () {
+    // クリックされたメニュー項目に対応するタブを表示
+    const tabId = menuItem.getAttribute("data-tab-id");
+    const tabToShow = document.querySelector(`#${tabId}`);
+    if (tabToShow) {
+      // すべてのタブを非表示
+      const tabs = document.querySelectorAll(".js-cards4-item");
+      tabs.forEach(function (tab) {
+        tab.style.display = "none";
+      });
+      // クリックされたメニュー項目に対応するタブを表示
+      tabToShow.style.display = "block";
+    }
+  });
+});
 
+// フッターメニューの各項目を取得
+// Informationタブ要素を取得
+const informationTabs = document.querySelectorAll(".js-information-tab");
+
+// フッターメニューがクリックされたときの処理を設定
+footerMenuItems.forEach(function (menuItem) {
+  menuItem.addEventListener("click", function () {
+    // 現在の選択されているメニュー項目から "current" クラスを削除
+    const currentMenuItem = document.querySelector(".js-nav-list-item.current");
+    if (currentMenuItem) {
+      currentMenuItem.classList.remove("current");
+    }
+    // クリックされたメニュー項目に "current" クラスを追加
+    menuItem.classList.add("current");
+
+    // クリックされたメニュー項目に対応するInformationタブを探す
+    const tabId = menuItem.getAttribute("data-tab-id");
+    const matchingTab = document.querySelector(`.js-information-tab[data-tab-id="${tabId}-content"]`);
+
+    if (matchingTab) {
+      // 現在の選択されているInformationタブから "current" クラスを削除
+      const currentInformationTab = document.querySelector(".js-information-tab.current");
+      if (currentInformationTab) {
+        currentInformationTab.classList.remove("current");
+      }
+      // クリックされたメニュー項目に対応するInformationタブに "current" クラスを追加
+      matchingTab.classList.add("current");
+    }
+  });
+});
 
 /*===== アコーディオン共通設定 =====*/
 const slideUp = (el, duration = 300) => {
@@ -375,7 +394,6 @@ const slideToggle = (el, duration = 300) => {
   }
 };
 
-
 /*===== sidebarアコーディオン =====*/
 // アコーディオンを全て取得
 const accordions = document.querySelectorAll(".js-accordion");
@@ -409,7 +427,6 @@ accordionsArr.forEach((accordion) => {
   });
 });
 
-
 /*===== faqアコーディオン =====*/
 // アコーディオンを全て取得
 const faqAccordions = document.querySelectorAll(".js-faq-accordion");
@@ -434,3 +451,7 @@ faqAccordionsArr.forEach((accordion) => {
     });
   });
 });
+
+/* ===================== */
+/* テスト */
+/* ===================== */
