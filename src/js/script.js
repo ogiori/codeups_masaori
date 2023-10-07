@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-/*===== ページスクロール =====*/
+// /*===== ページスクロール =====*/
 // document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 //   link.addEventListener("click", function (event) {
 //     event.preventDefault();
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //     // ジャンプ先のid名をセット
 //     const target = href === "#" || href === "" ? document.documentElement : document.querySelector(href);
 //     // トップからジャンプ先の要素までの距離を取得
-//     const position = target.offsetTop - header - 200;
+//     const position = target.offsetTop - header;
 //     // スムーススクロールを行う
 //     // 600はスクロール速度で単位はミリ秒
 //     window.scrollTo({
@@ -273,7 +273,7 @@ if (firstContent) {
     });
   });
 }
-// ============================
+
 // フッターメニューの各項目を取得
 const footerMenuItems = document.querySelectorAll(".js-nav-list-item");
 // フッターメニューがクリックされたときの処理を設定
@@ -451,7 +451,3 @@ faqAccordionsArr.forEach((accordion) => {
     });
   });
 });
-
-/* ===================== */
-/* テスト */
-/* ===================== */
