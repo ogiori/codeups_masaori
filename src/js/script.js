@@ -245,12 +245,34 @@ if (aboutImagesModal) {
 }
 
 /*===== Informationタブ =====*/
-// 最初のコンテンツを表示
-const firstContent = document.querySelector(".js-cards4-item:first-of-type");
-if (firstContent) {
-  firstContent.style.display = "block";
+//page-information.html のみ実行
+if (window.location.pathname === "/page-information.html") {
+
+  /*===== ハッシュでの表示きりかえ =====*/
+  // URLからハッシュ部分を取得
+  var hash = window.location.hash;
+
   // タブ要素を取得
   const tabs = document.querySelectorAll(".js-information-tab");
+
+  // ハッシュに基づいてコンテンツ要素を表示
+  switch (hash) {
+    // 体験ダイビング
+    case "#experience":
+      document.getElementById("experience").style.display = "block";
+      document.querySelector('[data-tab-id="experience-content"]').classList.add("current");
+      break;
+    // ファン
+    case "#fun":
+      document.getElementById("fun").style.display = "block";
+      document.querySelector('[data-tab-id="fun-content"]').classList.add("current");
+      break;
+    default:
+      // ライセンス
+      document.getElementById("license").style.display = "block";
+      document.querySelector('[data-tab-id="license-content"]').classList.add("current");
+  }
+
   // タブがクリックされたときの処理を設定
   tabs.forEach(function (tab, index) {
     tab.addEventListener("click", function () {
@@ -272,58 +294,55 @@ if (firstContent) {
       contents[tabIndex].style.display = "block";
     });
   });
-}
 
-// フッターメニューの各項目を取得
-const footerMenuItems = document.querySelectorAll(".js-nav-list-item");
-// フッターメニューがクリックされたときの処理を設定
-footerMenuItems.forEach(function (menuItem, index) {
-  menuItem.addEventListener("click", function () {
-    // クリックされたメニュー項目に対応するタブを表示
-    const tabId = menuItem.getAttribute("data-tab-id");
-    const tabToShow = document.querySelector(`#${tabId}`);
-    if (tabToShow) {
-      // すべてのタブを非表示
-      const tabs = document.querySelectorAll(".js-cards4-item");
-      tabs.forEach(function (tab) {
-        tab.style.display = "none";
-      });
+  // フッターメニューの各項目を取得
+  const footerMenuItems = document.querySelectorAll(".js-nav-list-item");
+  // フッターメニューがクリックされたときの処理を設定
+  footerMenuItems.forEach(function (menuItem, index) {
+    menuItem.addEventListener("click", function () {
       // クリックされたメニュー項目に対応するタブを表示
-      tabToShow.style.display = "block";
-    }
-  });
-});
-
-// フッターメニューの各項目を取得
-// Informationタブ要素を取得
-const informationTabs = document.querySelectorAll(".js-information-tab");
-
-// フッターメニューがクリックされたときの処理を設定
-footerMenuItems.forEach(function (menuItem) {
-  menuItem.addEventListener("click", function () {
-    // 現在の選択されているメニュー項目から "current" クラスを削除
-    const currentMenuItem = document.querySelector(".js-nav-list-item.current");
-    if (currentMenuItem) {
-      currentMenuItem.classList.remove("current");
-    }
-    // クリックされたメニュー項目に "current" クラスを追加
-    menuItem.classList.add("current");
-
-    // クリックされたメニュー項目に対応するInformationタブを探す
-    const tabId = menuItem.getAttribute("data-tab-id");
-    const matchingTab = document.querySelector(`.js-information-tab[data-tab-id="${tabId}-content"]`);
-
-    if (matchingTab) {
-      // 現在の選択されているInformationタブから "current" クラスを削除
-      const currentInformationTab = document.querySelector(".js-information-tab.current");
-      if (currentInformationTab) {
-        currentInformationTab.classList.remove("current");
+      const tabId = menuItem.getAttribute("data-tab-id");
+      const tabToShow = document.querySelector(`#${tabId}`);
+      if (tabToShow) {
+        // すべてのタブを非表示
+        const tabs = document.querySelectorAll(".js-cards4-item");
+        tabs.forEach(function (tab) {
+          tab.style.display = "none";
+        });
+        // クリックされたメニュー項目に対応するタブを表示
+        tabToShow.style.display = "block";
       }
-      // クリックされたメニュー項目に対応するInformationタブに "current" クラスを追加
-      matchingTab.classList.add("current");
-    }
+    });
   });
-});
+
+  // フッターメニューの各項目を取得
+  // フッターメニューがクリックされたときの処理を設定
+  footerMenuItems.forEach(function (menuItem) {
+    menuItem.addEventListener("click", function () {
+      // 現在の選択されているメニュー項目から "current" クラスを削除
+      const currentMenuItem = document.querySelector(".js-nav-list-item.current");
+      if (currentMenuItem) {
+        currentMenuItem.classList.remove("current");
+      }
+      // クリックされたメニュー項目に "current" クラスを追加
+      menuItem.classList.add("current");
+
+      // クリックされたメニュー項目に対応するInformationタブを探す
+      const tabId = menuItem.getAttribute("data-tab-id");
+      const matchingTab = document.querySelector(`.js-information-tab[data-tab-id="${tabId}-content"]`);
+
+      if (matchingTab) {
+        // 現在の選択されているInformationタブから "current" クラスを削除
+        const currentInformationTab = document.querySelector(".js-information-tab.current");
+        if (currentInformationTab) {
+          currentInformationTab.classList.remove("current");
+        }
+        // クリックされたメニュー項目に対応するInformationタブに "current" クラスを追加
+        matchingTab.classList.add("current");
+      }
+    });
+  });
+};
 
 /*===== アコーディオン共通設定 =====*/
 const slideUp = (el, duration = 300) => {
